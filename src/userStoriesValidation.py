@@ -1,8 +1,8 @@
 # this file is to check and validate user stories
-<<<<<<< HEAD
+
 
 #for test
-=======
+#=======
 from datetime import datetime
 
 error_locations = []
@@ -53,8 +53,19 @@ def birth_before_marriage(individuals, families):
 
     return return_flag
 
-def birth_before_date():
-    pass
+#US03 - Birth should occur before death of an individual
+def birth_before_death(individuals):
+
+    return_flag = True
+    error_type = "US03"
+    for individual in individuals:
+        if individual.deathDate and individual.birthday:
+            if individual.deathDate < individual.birthday:
+                error_descrip = "Birth occurs before death."
+                error_location = [individual.uid]
+                report_error(error_type, error_descrip, error_location)
+                return_flag = False
+    return return_flag
 
 # report Error to the console
 def report_error(error_type, description, locations):
@@ -70,4 +81,3 @@ def report_error(error_type, description, locations):
     error_locations.extend(locations)
 
 
->>>>>>> 6f9c3edeafa66e1375153f39c3e4c3a6efb07aca

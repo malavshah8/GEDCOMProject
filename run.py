@@ -56,7 +56,7 @@ def printSummary(individual, families):
 #    print(', '.join("%s: %s" % item for item in attrs.items()))
 
     print('----------------------------------------------------------------------------------------------------------------------------------------')
-    # For prnting Families
+    # For printing Families
     y.field_names = ["Fid","Marriage","Husband","Husband Name","Wife","Wife Name","Children","Divorce"]
     for line in families:
         attrs = vars(line)
