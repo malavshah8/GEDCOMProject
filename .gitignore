@@ -201,6 +201,7 @@ var/
 sdist/
 develop-eggs/
 .installed.cfg
+.idea/
 .idea/workspace.xml
 
 # Installer logs

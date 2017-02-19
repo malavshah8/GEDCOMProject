@@ -1,11 +1,16 @@
 # this file is to check and validate user stories
+<<<<<<< HEAD
 
 
 #for test
 #=======
+=======
+>>>>>>> 9474778bd70eb09140be0d6ee7b71a21a4a94d47
 from datetime import datetime
+from unittest import TestCase
 
 error_locations = []
+
 
 def story_validation(individuals, families):
     # To print Errors
@@ -16,13 +21,12 @@ def story_validation(individuals, families):
 
     # Sprint 1
     birth_before_marriage(individuals, families)
-
+    us05(individuals, families)
 
 ###########################################################################################
 
-#US02 - Birth should occur before marriage of that individual
+# US02 - Birth should occur before marriage of that individual
 def birth_before_marriage(individuals, families):
-
     # For each individual check if birth occurs before marriage
     return_flag = True
     error_type = "US02"
@@ -53,6 +57,7 @@ def birth_before_marriage(individuals, families):
 
     return return_flag
 
+<<<<<<< HEAD
 #US03 - Birth should occur before death of an individual
 def birth_before_death(individuals):
 
@@ -65,11 +70,50 @@ def birth_before_death(individuals):
                 error_location = [individual.uid]
                 report_error(error_type, error_descrip, error_location)
                 return_flag = False
+=======
+
+def birth_before_date():
+    pass
+########################################################################
+#US05 Marriage before Death
+def us05(individuals, families):
+
+    # For each individual check if marriage occurs before death
+    return_flag = True
+    error_type = "US05"
+    for family in families:
+        if family.marriage:
+            # Search through individuals to get husband and wife
+            husband = None
+            wife = None
+
+            for indiv in individuals:
+                if indiv.uid == family.husband:
+                    husband = indiv
+                if indiv.uid == family.wife:
+                    wife = indiv
+
+            if wife.alive == False:
+                if family.marriage < wife.deathDate:
+                    # Found a case spouse marries before birthday
+                    error_descrip = "Death of Wife occurs before marriage"
+                    error_location = [wife.uid]
+                    report_error(error_type, error_descrip, error_location)
+                    return_flag = False
+
+            if husband.alive == False:
+                if husband.deathDate < family.marriage:
+                    error_descrip = "Death of Husband occurs before marriage"
+                    error_location = [husband.uid]
+                    report_error(error_type, error_descrip, error_location)
+                    return_flag = False
+
+>>>>>>> 9474778bd70eb09140be0d6ee7b71a21a4a94d47
     return return_flag
 
 # report Error to the console
 def report_error(error_type, description, locations):
-    #report("ERROR", error_type, description, locations)
+    # report("ERROR", error_type, description, locations)
 
     if isinstance(locations, list):
         locations = ','.join(locations)
@@ -78,6 +122,10 @@ def report_error(error_type, description, locations):
         .format(error_type, description, locations)
     print(estr)
 
+<<<<<<< HEAD
     error_locations.extend(locations)
 
 
+=======
+    error_locations.extend(locations)
+>>>>>>> 9474778bd70eb09140be0d6ee7b71a21a4a94d47
