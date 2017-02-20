@@ -14,6 +14,7 @@ def story_validation(individuals, families):
 
     # Sprint 1
     birth_before_marriage(individuals, families)
+    birth_before_death(individuals)
     us05(individuals, families)
 
 ###########################################################################################
@@ -63,8 +64,8 @@ def birth_before_death(individuals):
                 report_error(error_type, error_descrip, error_location)
                 return_flag = False
 
-def birth_before_date():
-    pass
+    return return_flag
+
 ########################################################################
 #US05 Marriage before Death
 def us05(individuals, families):
@@ -93,7 +94,7 @@ def us05(individuals, families):
                     return_flag = False
 
             if husband.alive == False:
-                if husband.deathDate < family.marriage:
+                if  family.marriage > husband.deathDate:
                     error_descrip = "Death of Husband occurs before marriage"
                     error_location = [husband.uid]
                     report_error(error_type, error_descrip, error_location)

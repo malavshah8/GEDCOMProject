@@ -37,6 +37,19 @@ class test_birth_before_marriage(TestCase):
                 self.assertNotEquals(husband.birthday, wife.birthday)
 
 
+    def test_birth_before_marriage_3(self):
+        individuals, families = GEDCOMParser(fail_file)
+        self.assertFalse(birth_before_marriage(individuals, families))
+
+    def test_birth_before_marriage_4(self):
+        individuals, families = GEDCOMParser(pass_file)
+        self.assertIsNot(individuals, familyClass)
+
+    def test_birth_before_marriage_5(self):
+        individuals, families = GEDCOMParser(pass_file)
+        self.assertNotIsInstance(families,individualPerson)
+
+
 
 class test_birth_before_death(TestCase):
     def test_birth_before_death1(self):
@@ -62,21 +75,3 @@ class test_birth_before_death(TestCase):
     def test_birth_before_death5(self):
         individuals, _ = GEDCOMParser(acceptfile)
         self.assertIs(birth_before_death(individuals),True)
-
-
-
-
-
-
-    def test_birth_before_marriage_3(self):
-        individuals, families = GEDCOMParser(fail_file)
-        self.assertFalse(birth_before_marriage(individuals, families))
-
-    def test_birth_before_marriage_4(self):
-        individuals, families = GEDCOMParser(pass_file)
-        self.assertIsNot(individuals, familyClass)
-
-    def test_birth_before_marriage_5(self):
-        individuals, families = GEDCOMParser(pass_file)
-        self.assertNotIsInstance(families,individualPerson)
-

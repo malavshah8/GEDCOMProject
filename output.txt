@@ -3,13 +3,17 @@ Path accepted
 
 User Story             Description:                                  Location
 --------------------------------------------------------------------------------
+US02            Birth of wife occurs after marriage                   @I1@      
+US02            Birth of wife occurs after marriage                   @I1@      
 US02            Birth of wife occurs after marriage                   @I14@     
+US05            Death of Wife occurs before marriage                  @I1@      
+US05            Death of Wife occurs before marriage                  @I1@      
 
 
 +-------+------------------------------+------------+-----+------------+-------+-----------+------------------+
 |   id  |             Name             |  Birthday  | Sex | Death Date | Alive |   Child   |      Spouse      |
 +-------+------------------------------+------------+-----+------------+-------+-----------+------------------+
-|  @I1@ |    ['Edina', '/Schulz/']     | 1890-01-08 |  F  | 1977-08-16 | False |     []    | ['@F1@', '@F2@'] |
+|  @I1@ |    ['Edina', '/Schulz/']     | 1936-01-08 |  F  | 1977-08-16 | False |     []    | ['@F1@', '@F2@'] |
 |  @I2@ | ['Charles', '/Bettencourt/'] | 1888-05-18 |  M  | 1933-12-02 | False |     []    |     ['@F2@']     |
 |  @I3@ |   ['Ross', '/Rothschild/']   | 1891-05-15 |  M  | 1986-11-03 | False |     []    |     ['@F1@']     |
 |  @I4@ |  ['Henry', '/Bettencourt/']  | 1915-07-06 |  M  | 1947-04-01 | False |  ['@F2@'] |        []        |
