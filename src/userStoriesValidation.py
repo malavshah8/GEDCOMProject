@@ -51,7 +51,6 @@ def birth_before_marriage(individuals, families):
 
     return return_flag
 
-
 #US03 - Birth should occur before death of an individual
 
 def birth_before_death(individuals):
@@ -115,6 +114,6 @@ def report_error(error_type, description, locations):
         .format(error_type, description, locations)
     print(estr)
 
-    error_locations.extend(locations)
 
+    error_locations.extend(locations)
 

@@ -1,10 +1,9 @@
 from unittest import TestCase
 import os
 from .parser import GEDCOMParser
+
 from .userStoriesValidation import birth_before_marriage, birth_before_death
 from .classModels import individualPerson, familyClass
-
-
 
 cur_path = os.path.dirname(__file__)
 FAIL_DIR = "gedcom_files/fail/"
@@ -34,6 +33,7 @@ class test_birth_before_marriage(TestCase):
                     if indiv.uid == family.wife:
                         wife = indiv
                 self.assertNotEquals(husband.birthday, wife.birthday)
+
 
     def test_birth_before_marriage_3(self):
         individuals, families = GEDCOMParser(fail_file)
