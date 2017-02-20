@@ -1,12 +1,10 @@
 from unittest import TestCase
 import os
 from .parser import GEDCOMParser
-<<<<<<< HEAD
 from .userStoriesValidation import birth_before_marriage, birth_before_death
-=======
 from .classModels import individualPerson, familyClass
-from .userStoriesValidation import birth_before_marriage
->>>>>>> 9474778bd70eb09140be0d6ee7b71a21a4a94d47
+
+
 
 cur_path = os.path.dirname(__file__)
 FAIL_DIR = "gedcom_files/fail/"
@@ -15,10 +13,8 @@ acceptfile = "/Users/malavshah/GEDCOMProject/gedcom_files/pass/Family.ged"
 fail_file = os.path.relpath("..\\" + FAIL_DIR + acceptfile, cur_path)
 pass_file = os.path.relpath("..\\" + PASS_DIR + acceptfile, cur_path)
 
-<<<<<<< HEAD
+
 fail_file1 = "/Users/malavshah/GEDCOMProject/gedcom_files/fail/Family.ged"
-=======
->>>>>>> 9474778bd70eb09140be0d6ee7b71a21a4a94d47
 
 class test_birth_before_marriage(TestCase):
 
@@ -39,7 +35,18 @@ class test_birth_before_marriage(TestCase):
                         wife = indiv
                 self.assertNotEquals(husband.birthday, wife.birthday)
 
-<<<<<<< HEAD
+    def test_birth_before_marriage_3(self):
+        individuals, families = GEDCOMParser(fail_file)
+        self.assertFalse(birth_before_marriage(individuals, families))
+
+    def test_birth_before_marriage_4(self):
+        individuals, families = GEDCOMParser(pass_file)
+        self.assertIsNot(individuals, familyClass)
+
+    def test_birth_before_marriage_5(self):
+        individuals, families = GEDCOMParser(pass_file)
+        self.assertNotIsInstance(families,individualPerson)
+
 
 class test_birth_before_death(TestCase):
     def test_birth_before_death1(self):
@@ -67,19 +74,3 @@ class test_birth_before_death(TestCase):
         self.assertIs(birth_before_death(individuals),True)
 
 
-
-
-
-=======
-    def test_birth_before_marriage_3(self):
-        individuals, families = GEDCOMParser(fail_file)
-        self.assertFalse(birth_before_marriage(individuals, families))
-
-    def test_birth_before_marriage_4(self):
-        individuals, families = GEDCOMParser(pass_file)
-        self.assertIsNot(individuals, familyClass)
-
-    def test_birth_before_marriage_5(self):
-        individuals, families = GEDCOMParser(pass_file)
-        self.assertNotIsInstance(families,individualPerson)
->>>>>>> 9474778bd70eb09140be0d6ee7b71a21a4a94d47

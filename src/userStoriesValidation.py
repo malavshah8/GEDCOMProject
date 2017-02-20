@@ -1,11 +1,5 @@
 # this file is to check and validate user stories
-<<<<<<< HEAD
 
-
-#for test
-#=======
-=======
->>>>>>> 9474778bd70eb09140be0d6ee7b71a21a4a94d47
 from datetime import datetime
 from unittest import TestCase
 
@@ -57,8 +51,9 @@ def birth_before_marriage(individuals, families):
 
     return return_flag
 
-<<<<<<< HEAD
+
 #US03 - Birth should occur before death of an individual
+
 def birth_before_death(individuals):
 
     return_flag = True
@@ -70,10 +65,9 @@ def birth_before_death(individuals):
                 error_location = [individual.uid]
                 report_error(error_type, error_descrip, error_location)
                 return_flag = False
-=======
+    return return_flag
 
-def birth_before_date():
-    pass
+
 ########################################################################
 #US05 Marriage before Death
 def us05(individuals, families):
@@ -108,7 +102,6 @@ def us05(individuals, families):
                     report_error(error_type, error_descrip, error_location)
                     return_flag = False
 
->>>>>>> 9474778bd70eb09140be0d6ee7b71a21a4a94d47
     return return_flag
 
 # report Error to the console
@@ -122,10 +115,6 @@ def report_error(error_type, description, locations):
         .format(error_type, description, locations)
     print(estr)
 
-<<<<<<< HEAD
     error_locations.extend(locations)
 
 
-=======
-    error_locations.extend(locations)
->>>>>>> 9474778bd70eb09140be0d6ee7b71a21a4a94d47
