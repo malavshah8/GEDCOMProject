@@ -68,3 +68,31 @@ class test_birth_before_death(TestCase):
     def test_birth_before_death5(self):
         individuals, _ = GEDCOMParser(acceptfile)
         self.assertIs(birth_before_death(individuals),True)
+        
+    #Test Case 2 : Husband's death date coincides with marriage
+    def test_2(self):
+        individuals, families = GEDCOMParser(pass_file)
+        for family in families:
+            if family.marriage:
+                husband = None
+                for indiv in individuals:
+                    if indiv.uid == family.husband:
+                        husband = indiv
+                if husband.alive==False:
+                    self.assertNotEquals(husband.deathDate, family.marriage)
+
+    # Test Case 3: Wife's death date coincides with marriage
+    def test_3(self):
+        individuals, families = GEDCOMParser(pass_file)
+        for family in families:
+            if family.marriage:
+                wife = None
+                for indiv in individuals:
+                    if indiv.uid == family.wife:
+                        wife = indiv
+                if wife.alive==False:
+                    self.assertNotEquals(wife.deathDate, family.marriage)
+    # Test Case 4: Testing User Story 05
+    def test_4(self):
+        individuals, families = GEDCOMParser(pass_file)
+        self.assertTrue(us05(individuals, families))     
