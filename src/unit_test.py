@@ -7,14 +7,14 @@ from .classModels import individualPerson, familyClass
 
 cur_path = os.path.dirname(__file__)
 
-FAIL_DIR = "gedcom_files/fail/"
-PASS_DIR = "gedcom_files/pass/"
-
-fail_file = os.path.relpath("..\\" + FAIL_DIR + acceptfile, cur_path)
-pass_file = os.path.relpath("..\\" + PASS_DIR + acceptfile, cur_path)
+FAIL_DIR = "gedcom_files/fail/Family.ged"
+PASS_DIR = "gedcom_files/pass/Family.ged"
 
 acceptfile = "/Users/malavshah/GEDCOMProject/gedcom_files/pass/Family.ged"
 fail_file1 = "/Users/malavshah/GEDCOMProject/gedcom_files/fail/Family.ged"
+
+fail_file = os.path.relpath("..\\" + FAIL_DIR, cur_path)
+pass_file = os.path.relpath("..\\" + PASS_DIR, cur_path)
 
 class test_birth_before_marriage(TestCase):
 
