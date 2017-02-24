@@ -2,7 +2,7 @@
 
 from datetime import datetime
 from unittest import TestCase
-
+from dateutil.relativedelta import relativedelta
 error_locations = []
 
 
@@ -17,6 +17,7 @@ def story_validation(individuals, families):
     birth_before_marriage(individuals, families)
     birth_before_death(individuals)
     us05(individuals, families)
+    us07(individuals)
 
 ###########################################################################################
 
@@ -102,7 +103,25 @@ def us05(individuals, families):
                     return_flag = False
 
     return return_flag
-
+#################################################
+# US07 Checks whether a person lived for more than 150 years.
+def us07(individuals):
+    return_flag = True
+    error_type = "US07"
+    today=datetime.now()
+    for indiv in individuals:
+        person=indiv.uid
+        if indiv.alive == False and relativedelta(indiv.deathDate, indiv.birthday).years > 150:
+            error_descrip="lived longer than 150 years"
+            error_location = indiv.uid
+            report_error(error_type,error_descrip,error_location)
+            return_flag= False
+        if indiv.alive == True and relativedelta(today,indiv.birthday).years > 150:
+            error_descrip = "lived longer than 150 years"
+            error_location = indiv.uid
+            report_error(error_type, error_descrip, error_location)
+            return_flag = False
+    return return_flag
 # report Error to the console
 def report_error(error_type, description, locations):
     # report("ERROR", error_type, description, locations)
