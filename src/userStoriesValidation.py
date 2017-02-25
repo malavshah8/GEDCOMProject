@@ -18,6 +18,7 @@ def story_validation(individuals, families):
     birth_before_death(individuals)
     us05(individuals, families)
     us07(individuals)
+    marriage_before_divorce(families)
 
 ###########################################################################################
 
@@ -122,6 +123,21 @@ def us07(individuals):
             report_error(error_type, error_descrip, error_location)
             return_flag = False
     return return_flag
+
+#################################################
+# US04 Checks Marriage before Divorce.
+def marriage_before_divorce(families):
+    return_flag = True
+    error_type = "US04"
+    for family in families:
+        if family.marriage and family.divorce:
+            if family.marriage > family.divorce:
+                error_descrip = "Marriage occurs after divorce"
+                error_location = [family.uid, family.husband, family.wife]
+                report_error(error_type, error_descrip, error_location)
+                return_flag = False
+    return return_flag
+
 # report Error to the console
 def report_error(error_type, description, locations):
     # report("ERROR", error_type, description, locations)
@@ -129,7 +145,7 @@ def report_error(error_type, description, locations):
     if isinstance(locations, list):
         locations = ','.join(locations)
 
-    estr = '{:14.14s}  {:50.50s}    {:10.10s}' \
+    estr = '{:14.14s}  {:50.50s}    {:10.100s}' \
         .format(error_type, description, locations)
     print(estr)
 

@@ -8,6 +8,7 @@ US02            Birth of wife occurs after marriage                   @I1@
 US02            Birth of wife occurs after marriage                   @I14@     
 US05            Death of Wife occurs before marriage                  @I1@      
 US05            Death of Wife occurs before marriage                  @I1@      
+US04            Marriage occurs after divorce                         @F8@,@I9@,@I18@
 
 
 +-------+------------------------------+------------+-----+------------+-------+-----------+------------------+
@@ -48,7 +49,7 @@ US05            Death of Wife occurs before marriage                  @I1@
 |  @F5@ | 1964-03-07 |  @I12@  |   ['William', '/Powell/']    |  @I7@ |    ['Victoria', '/Koch/']    |         ['@I13@']         |    None    |
 |  @F6@ |    None    |  @I16@  |   ['Duncan', '/Thomson/']    |  @I8@ | ['Margaret', '/Rothschild/'] |         ['@I17@']         |    None    |
 |  @F7@ | 2014-04-12 |   @I9@  |   ['John', '/Rothschild/']   | @I21@ |     ['Kat', '/Botham/']      |         ['@I22@']         |    None    |
-|  @F8@ | 2005-02-02 |   @I9@  |   ['John', '/Rothschild/']   | @I18@ |    ['Emilia', '/Stone/']     |         ['@I23@']         | 2013-12-04 |
+|  @F8@ | 2014-02-02 |   @I9@  |   ['John', '/Rothschild/']   | @I18@ |    ['Emilia', '/Stone/']     |         ['@I23@']         | 2013-12-04 |
 |  @F9@ | 2006-08-15 |  @I10@  | ['Richard', '/Rothschild/']  | @I19@ |   ['Abigail', '/Jhonson/']   |         ['@I20@']         |    None    |
 | @F10@ | 1987-04-17 |  @I13@  |    ['Edgar', '/Powell/']     | @I14@ |     ['Mary', '/Cornel/']     |         ['@I15@']         |    None    |
 +-------+------------+---------+------------------------------+-------+------------------------------+---------------------------+------------+
