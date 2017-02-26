@@ -1,6 +1,7 @@
 # this file is to check and validate user stories
 
 from datetime import datetime
+from datetime import date
 from unittest import TestCase
 from dateutil.relativedelta import relativedelta
 error_locations = []
@@ -14,11 +15,46 @@ def story_validation(individuals, families):
     print(('-' * 80))
 
     # Sprint 1
+    dates_before_current(individuals, families)
     birth_before_marriage(individuals, families)
     birth_before_death(individuals)
     us05(individuals, families)
     us07(individuals)
-    marriage_before_divorce(families)
+
+
+####################################################################
+# US01 All dates must be before the current date - ERROR
+def dates_before_current(individuals, families):
+    return_flag = True
+    error_type = "US01"
+
+    for indiv in individuals:
+        if indiv.birthday and indiv.birthday > datetime.now().date():
+            error_descrip = "Birth occurs after current date"
+            error_location = [indiv.uid]
+            report_error(error_type, error_descrip, error_location)
+            return_flag = False
+
+        if indiv.deathDate and indiv.deathDate > datetime.now().date():
+            error_descrip = "Death occurs after current date"
+            error_location = [indiv.uid]
+            report_error(error_type, error_descrip, error_location)
+            return_flag = False
+
+    for family in families:
+        if family.marriage and family.marriage > datetime.now().date():
+            error_descrip = "Marriage occurs after current date"
+            error_location = [family.uid, family.husband, family.wife]
+            report_error(error_type, error_descrip, error_location)
+            return_flag = False
+
+        if family.divorce and family.divorce > datetime.now().date():
+            error_descrip = "Divorce occurs after current date"
+            error_location = [family.uid, family.husband, family.wife]
+            report_error(error_type, error_descrip, error_location)
+            return_flag = False
+
+    return return_flag
 
 ###########################################################################################
 

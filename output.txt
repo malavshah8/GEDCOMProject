@@ -3,7 +3,7 @@ Path accepted
 
 User Story             Description:                                  Location
 --------------------------------------------------------------------------------
-US02            Birth of wife occurs after marriage                   @I1@      
+US02            Birth of wife occurs after marriage                   @I1@
 US02            Birth of wife occurs after marriage                   @I1@      
 US02            Birth of wife occurs after marriage                   @I14@     
 US05            Death of Wife occurs before marriage                  @I1@      
