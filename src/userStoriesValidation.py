@@ -210,18 +210,42 @@ def us06(individuals, families):
             if wife.alive == False:
                 if family.divorce < wife.deathDate:
                     # Found a case spouse marries before birthday
-                    error_descrip = "Death of Wife occurs before marriage"
+                    error_descrip = "Death of Wife occurs before divorce"
                     error_location = [wife.uid]
                     report_error(error_type, error_descrip, error_location)
                     return_flag = False
 
             if husband.alive == False:
                 if  family.divorce > husband.deathDate:
-                    error_descrip = "Death of Husband occurs before marriage"
+                    error_descrip = "Death of Husband occurs before divorce"
                     error_location = [husband.uid]
                     report_error(error_type, error_descrip, error_location)
                     return_flag = False
 
+    return return_flag
+
+################################################################################################
+def us08(individuals, families):
+    return_flag = True
+    error_type = "US08"
+    for family in families:
+        if family.marriage:
+            # Search through individuals to get husband and wife
+            child = []
+            for indiv in individuals:
+                id = indiv.uid
+                bday = indiv.birthday
+                if id in family.children:
+                    if bday < family.marriage:
+                        error_descrip = "Birth occurs before marriage"
+                        error_location = [indiv.uid]
+                        report_error(error_type, error_descrip, error_location)
+                        return_flag = False
+                    if relativedelta(bday,family.divorce).month+9:
+                        error_descrip="Birth after divorce of 9 months"
+                        error_location=[indiv.uid]
+                        report_error(error_type,error_descrip,error_location)
+                        return_flag=False
     return return_flag
 
 # report Error to the console
