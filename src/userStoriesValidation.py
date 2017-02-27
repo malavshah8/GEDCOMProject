@@ -194,7 +194,7 @@ def us06(individuals, families):
 
     # For each individual check if divorce occurs before death
     return_flag = True
-    error_type = "US07"
+    error_type = "US06"
     for family in families:
         if family.divorce:
             # Search through individuals to get husband and wife
