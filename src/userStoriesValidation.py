@@ -1,11 +1,9 @@
 # this file is to check and validate user stories
 
 from datetime import datetime
-from datetime import date
-from unittest import TestCase
 from dateutil.relativedelta import relativedelta
-error_locations = []
 
+error_locations = []
 
 def story_validation(individuals, families):
     # To print Errors
@@ -21,6 +19,8 @@ def story_validation(individuals, families):
     us05(individuals, families)
     us07(individuals)
     us06(individuals,families)
+    marriage_before_divorce(families)
+    us08(individuals, families)
 
 ####################################################################
 # US01 All dates must be before the current date - ERROR
@@ -174,22 +174,7 @@ def marriage_before_divorce(families):
                 return_flag = False
     return return_flag
 
-# report Error to the console
-def report_error(error_type, description, locations):
-    # report("ERROR", error_type, description, locations)
-
-    if isinstance(locations, list):
-        locations = ','.join(locations)
-
-    estr = '{:14.14s}  {:50.50s}    {:10.100s}' \
-        .format(error_type, description, locations)
-    print(estr)
-
-
-    error_locations.extend(locations)
-    
-    ##################################################
-    #US06 Divorce before Death
+# US06 Divorce before Death
 def us06(individuals, families):
 
     # For each individual check if divorce occurs before death
@@ -235,18 +220,19 @@ def us08(individuals, families):
             for indiv in individuals:
                 id = indiv.uid
                 bday = indiv.birthday
-                if id in family.children:
+                if id in family.children and family.divorce is not None:
                     if bday < family.marriage:
                         error_descrip = "Birth occurs before marriage"
                         error_location = [indiv.uid]
                         report_error(error_type, error_descrip, error_location)
                         return_flag = False
-                    if relativedelta(bday,family.divorce).month+9:
+                    if relativedelta(bday,family.divorce).months+9:
                         error_descrip="Birth after divorce of 9 months"
                         error_location=[indiv.uid]
                         report_error(error_type,error_descrip,error_location)
                         return_flag=False
     return return_flag
+
 
 # report Error to the console
 def report_error(error_type, description, locations):

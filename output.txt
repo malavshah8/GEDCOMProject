@@ -3,33 +3,42 @@ Path accepted
 
 User Story             Description:                                  Location
 --------------------------------------------------------------------------------
-US02            Birth of wife occurs after marriage                   @I1@
+US01            Birth occurs after current date                       @I12@     
 US02            Birth of wife occurs after marriage                   @I1@      
+US02            Birth of wife occurs after marriage                   @I1@      
+US02            Birth of husband occurs after marraige                @I2@      
+US02            Birth of husband occurs after marraige                @I12@     
 US02            Birth of wife occurs after marriage                   @I14@     
+US03            Birth occurs before death.                            @I2@      
 US05            Death of Wife occurs before marriage                  @I1@      
 US05            Death of Wife occurs before marriage                  @I1@      
-US04            Marriage occurs after divorce                         @F8@,@I9@,@I18@
+US05            Death of Husband occurs before marriage               @I9@      
+US05            Death of Husband occurs before marriage               @I9@      
+US07            lived longer than 150 years                           @I16@     
+US06            Death of Husband occurs before divorce                @I9@      
+US04            Marriage occurs after divorce                         @F8@,@I9@,
+US08            Birth occurs before marriage                          @I23@     
 
 
 +-------+------------------------------+------------+-----+------------+-------+-----------+------------------+
 |   id  |             Name             |  Birthday  | Sex | Death Date | Alive |   Child   |      Spouse      |
 +-------+------------------------------+------------+-----+------------+-------+-----------+------------------+
 |  @I1@ |    ['Edina', '/Schulz/']     | 1936-01-08 |  F  | 1977-08-16 | False |     []    | ['@F1@', '@F2@'] |
-|  @I2@ | ['Charles', '/Bettencourt/'] | 1888-05-18 |  M  | 1933-12-02 | False |     []    |     ['@F2@']     |
+|  @I2@ | ['Charles', '/Bettencourt/'] | 1935-05-18 |  M  | 1933-12-02 | False |     []    |     ['@F2@']     |
 |  @I3@ |   ['Ross', '/Rothschild/']   | 1891-05-15 |  M  | 1986-11-03 | False |     []    |     ['@F1@']     |
 |  @I4@ |  ['Henry', '/Bettencourt/']  | 1915-07-06 |  M  | 1947-04-01 | False |  ['@F2@'] |        []        |
 |  @I5@ |  ['Edward', '/Rothschild/']  | 1938-08-15 |  M  |    None    |  True |  ['@F1@'] |     ['@F3@']     |
 |  @I6@ |   ['Emma', '/Rothschild/']   | 1940-04-06 |  F  |    None    |  True |  ['@F1@'] |     ['@F4@']     |
 |  @I7@ |    ['Victoria', '/Koch/']    | 1938-04-30 |  F  |    None    |  True |     []    | ['@F3@', '@F5@'] |
 |  @I8@ | ['Margaret', '/Rothschild/'] | 1977-11-28 |  F  |    None    |  True |  ['@F3@'] |     ['@F6@']     |
-|  @I9@ |   ['John', '/Rothschild/']   | 1979-09-10 |  M  |    None    |  True |  ['@F3@'] | ['@F7@', '@F8@'] |
+|  @I9@ |   ['John', '/Rothschild/']   | 1979-09-10 |  M  | 2000-12-02 | False |  ['@F3@'] | ['@F7@', '@F8@'] |
 | @I10@ | ['Richard', '/Rothschild/']  | 1981-06-30 |  M  |    None    |  True |  ['@F3@'] |     ['@F9@']     |
 | @I11@ |    ['Harold', '/Walton/']    | 1934-12-01 |  M  |    None    |  True |     []    |     ['@F4@']     |
-| @I12@ |   ['William', '/Powell/']    | 1936-04-24 |  M  |    None    |  True |     []    |     ['@F5@']     |
+| @I12@ |   ['William', '/Powell/']    | 2019-04-24 |  M  |    None    |  True |     []    |     ['@F5@']     |
 | @I13@ |    ['Edgar', '/Powell/']     | 1966-09-02 |  M  |    None    |  True |  ['@F5@'] |    ['@F10@']     |
 | @I14@ |     ['Mary', '/Cornel/']     | 1996-05-17 |  F  |    None    |  True |     []    |    ['@F10@']     |
 | @I15@ |    ['Louis', '/Powell/']     | 1989-01-30 |  M  |    None    |  True | ['@F10@'] |        []        |
-| @I16@ |   ['Duncan', '/Thomson/']    | 1977-02-01 |  M  |    None    |  True |     []    |     ['@F6@']     |
+| @I16@ |   ['Duncan', '/Thomson/']    | 1777-02-01 |  M  |    None    |  True |     []    |     ['@F6@']     |
 | @I17@ |   ['Donald', '/Thomson/']    | 2005-11-24 |  M  |    None    |  True |  ['@F6@'] |        []        |
 | @I18@ |    ['Emilia', '/Stone/']     | 1980-03-03 |  F  |    None    |  True |     []    |     ['@F8@']     |
 | @I19@ |   ['Abigail', '/Jhonson/']   | 1978-06-24 |  F  |    None    |  True |     []    |     ['@F9@']     |
