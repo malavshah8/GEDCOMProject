@@ -187,4 +187,56 @@ def report_error(error_type, description, locations):
 
 
     error_locations.extend(locations)
+    
+    ##################################################
+    #US07 Divorce before Death
+def us07(individuals, families):
+
+    # For each individual check if divorce occurs before death
+    return_flag = True
+    error_type = "US07"
+    for family in families:
+        if family.divorce:
+            # Search through individuals to get husband and wife
+            husband = None
+            wife = None
+
+            for indiv in individuals:
+                if indiv.uid == family.husband:
+                    husband = indiv
+                if indiv.uid == family.wife:
+                    wife = indiv
+
+            if wife.alive == False:
+                if family.divorce < wife.deathDate:
+                    # Found a case spouse marries before birthday
+                    error_descrip = "Death of Wife occurs before marriage"
+                    error_location = [wife.uid]
+                    report_error(error_type, error_descrip, error_location)
+                    return_flag = False
+
+            if husband.alive == False:
+                if  family.divorce > husband.deathDate:
+                    error_descrip = "Death of Husband occurs before marriage"
+                    error_location = [husband.uid]
+                    report_error(error_type, error_descrip, error_location)
+                    return_flag = False
+
+    return return_flag
+
+# report Error to the console
+def report_error(error_type, description, locations):
+    # report("ERROR", error_type, description, locations)
+
+    if isinstance(locations, list):
+        locations = ','.join(locations)
+
+    estr = '{:14.14s}  {:50.50s}    {:10.10s}' \
+        .format(error_type, description, locations)
+    print(estr)
+
+
+    error_locations.extend(locations)
+
+
 
