@@ -20,7 +20,7 @@ def story_validation(individuals, families):
     birth_before_death(individuals)
     us05(individuals, families)
     us07(individuals)
-
+    us06(individuals,families)
 
 ####################################################################
 # US01 All dates must be before the current date - ERROR
@@ -189,8 +189,8 @@ def report_error(error_type, description, locations):
     error_locations.extend(locations)
     
     ##################################################
-    #US07 Divorce before Death
-def us07(individuals, families):
+    #US06 Divorce before Death
+def us06(individuals, families):
 
     # For each individual check if divorce occurs before death
     return_flag = True
