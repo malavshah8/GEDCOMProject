@@ -7,10 +7,10 @@ error_locations = []
 
 def story_validation(individuals, families):
     # To print Errors
-    print(("ERRORS".center(80, ' ')))
-    print("\nUser Story             Description:                             "
+    print(("ERRORS/ANOMALIES".center(120, ' ')))
+    print("\nError/Anomalies:        User Story             Description:                             "
           "     Location")
-    print(('-' * 80))
+    print(('-' * 120))
 
     # Sprint 1
     dates_before_current(individuals, families)
@@ -32,26 +32,26 @@ def dates_before_current(individuals, families):
         if indiv.birthday and indiv.birthday > datetime.now().date():
             error_descrip = "Birth occurs after current date"
             error_location = [indiv.uid]
-            report_error(error_type, error_descrip, error_location)
+            report_error('ERROR', error_type, error_descrip, error_location)
             return_flag = False
 
         if indiv.deathDate and indiv.deathDate > datetime.now().date():
             error_descrip = "Death occurs after current date"
             error_location = [indiv.uid]
-            report_error(error_type, error_descrip, error_location)
+            report_error('ERROR', error_type, error_descrip, error_location)
             return_flag = False
 
     for family in families:
         if family.marriage and family.marriage > datetime.now().date():
             error_descrip = "Marriage occurs after current date"
             error_location = [family.uid, family.husband, family.wife]
-            report_error(error_type, error_descrip, error_location)
+            report_error('ERROR',error_type, error_descrip, error_location)
             return_flag = False
 
         if family.divorce and family.divorce > datetime.now().date():
             error_descrip = "Divorce occurs after current date"
             error_location = [family.uid, family.husband, family.wife]
-            report_error(error_type, error_descrip, error_location)
+            report_error('ERROR',error_type, error_descrip, error_location)
             return_flag = False
 
     return return_flag
@@ -79,13 +79,13 @@ def birth_before_marriage(individuals, families):
                 # Found a case spouse marries before birthday
                 error_descrip = "Birth of wife occurs after marriage"
                 error_location = [wife.uid]
-                report_error(error_type, error_descrip, error_location)
+                report_error('ERROR',error_type, error_descrip, error_location)
                 return_flag = False
 
             if husband.birthday and husband.birthday > family.marriage:
                 error_descrip = "Birth of husband occurs after marraige"
                 error_location = [husband.uid]
-                report_error(error_type, error_descrip, error_location)
+                report_error('ERROR',error_type, error_descrip, error_location)
                 return_flag = False
 
     return return_flag
@@ -101,7 +101,7 @@ def birth_before_death(individuals):
             if individual.deathDate < individual.birthday:
                 error_descrip = "Birth occurs before death."
                 error_location = [individual.uid]
-                report_error(error_type, error_descrip, error_location)
+                report_error('ERROR',error_type, error_descrip, error_location)
                 return_flag = False
     return return_flag
 
@@ -129,14 +129,14 @@ def us05(individuals, families):
                     # Found a case spouse marries before birthday
                     error_descrip = "Death of Wife occurs before marriage"
                     error_location = [wife.uid]
-                    report_error(error_type, error_descrip, error_location)
+                    report_error('ERROR',error_type, error_descrip, error_location)
                     return_flag = False
 
             if husband.alive == False:
                 if  family.marriage > husband.deathDate:
                     error_descrip = "Death of Husband occurs before marriage"
                     error_location = [husband.uid]
-                    report_error(error_type, error_descrip, error_location)
+                    report_error('ERROR',error_type, error_descrip, error_location)
                     return_flag = False
 
     return return_flag
@@ -151,12 +151,12 @@ def us07(individuals):
         if indiv.alive == False and relativedelta(indiv.deathDate, indiv.birthday).years > 150:
             error_descrip="lived longer than 150 years"
             error_location = indiv.uid
-            report_error(error_type,error_descrip,error_location)
+            report_error('ERROR',error_type,error_descrip,error_location)
             return_flag= False
         if indiv.alive == True and relativedelta(today,indiv.birthday).years > 150:
             error_descrip = "lived longer than 150 years"
             error_location = indiv.uid
-            report_error(error_type, error_descrip, error_location)
+            report_error('ERROR',error_type, error_descrip, error_location)
             return_flag = False
     return return_flag
 
@@ -170,13 +170,12 @@ def marriage_before_divorce(families):
             if family.marriage > family.divorce:
                 error_descrip = "Marriage occurs after divorce"
                 error_location = [family.uid, family.husband, family.wife]
-                report_error(error_type, error_descrip, error_location)
+                report_error('ERROR',error_type, error_descrip, error_location)
                 return_flag = False
     return return_flag
 
 # US06 Divorce before Death
 def us06(individuals, families):
-
     # For each individual check if divorce occurs before death
     return_flag = True
     error_type = "US06"
@@ -197,14 +196,14 @@ def us06(individuals, families):
                     # Found a case spouse marries before birthday
                     error_descrip = "Death of Wife occurs before divorce"
                     error_location = [wife.uid]
-                    report_error(error_type, error_descrip, error_location)
+                    report_error('ERROR',error_type, error_descrip, error_location)
                     return_flag = False
 
             if husband.alive == False:
                 if  family.divorce > husband.deathDate:
                     error_descrip = "Death of Husband occurs before divorce"
                     error_location = [husband.uid]
-                    report_error(error_type, error_descrip, error_location)
+                    report_error('ERROR',error_type, error_descrip, error_location)
                     return_flag = False
 
     return return_flag
@@ -224,25 +223,25 @@ def us08(individuals, families):
                     if bday < family.marriage:
                         error_descrip = "Birth occurs before marriage"
                         error_location = [indiv.uid]
-                        report_error(error_type, error_descrip, error_location)
+                        report_error('ERROR',error_type, error_descrip, error_location)
                         return_flag = False
                     if relativedelta(bday,family.divorce).months+9:
                         error_descrip="Birth after divorce of 9 months"
                         error_location=[indiv.uid]
-                        report_error(error_type,error_descrip,error_location)
+                        report_error('ERROR',error_type,error_descrip,error_location)
                         return_flag=False
     return return_flag
 
 
 # report Error to the console
-def report_error(error_type, description, locations):
+def report_error(rtype, error_type, description, locations):
     # report("ERROR", error_type, description, locations)
 
     if isinstance(locations, list):
         locations = ','.join(locations)
 
-    estr = '{:14.14s}  {:50.50s}    {:10.10s}' \
-        .format(error_type, description, locations)
+    estr = '{:26.7s} {:14.14s}  {:50.50s}    {:10.10s}' \
+        .format(rtype, error_type, description, locations)
     print(estr)
 
 

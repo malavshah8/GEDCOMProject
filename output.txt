@@ -1,23 +1,23 @@
 Path accepted
-                                     ERRORS                                     
+                                                    ERRORS/ANOMALIES                                                    
 
-User Story             Description:                                  Location
---------------------------------------------------------------------------------
-US01            Birth occurs after current date                       @I12@     
-US02            Birth of wife occurs after marriage                   @I1@      
-US02            Birth of wife occurs after marriage                   @I1@      
-US02            Birth of husband occurs after marraige                @I2@      
-US02            Birth of husband occurs after marraige                @I12@     
-US02            Birth of wife occurs after marriage                   @I14@     
-US03            Birth occurs before death.                            @I2@      
-US05            Death of Wife occurs before marriage                  @I1@      
-US05            Death of Wife occurs before marriage                  @I1@      
-US05            Death of Husband occurs before marriage               @I9@      
-US05            Death of Husband occurs before marriage               @I9@      
-US07            lived longer than 150 years                           @I16@     
-US06            Death of Husband occurs before divorce                @I9@      
-US04            Marriage occurs after divorce                         @F8@,@I9@,
-US08            Birth occurs before marriage                          @I23@     
+Error/Anomalies:        User Story             Description:                                  Location
+------------------------------------------------------------------------------------------------------------------------
+ERROR                      US01            Birth occurs after current date                       @I12@     
+ERROR                      US02            Birth of wife occurs after marriage                   @I1@      
+ERROR                      US02            Birth of wife occurs after marriage                   @I1@      
+ERROR                      US02            Birth of husband occurs after marraige                @I2@      
+ERROR                      US02            Birth of husband occurs after marraige                @I12@     
+ERROR                      US02            Birth of wife occurs after marriage                   @I14@     
+ERROR                      US03            Birth occurs before death.                            @I2@      
+ERROR                      US05            Death of Wife occurs before marriage                  @I1@      
+ERROR                      US05            Death of Wife occurs before marriage                  @I1@      
+ERROR                      US05            Death of Husband occurs before marriage               @I9@      
+ERROR                      US05            Death of Husband occurs before marriage               @I9@      
+ERROR                      US07            lived longer than 150 years                           @I16@     
+ERROR                      US06            Death of Husband occurs before divorce                @I9@      
+ERROR                      US04            Marriage occurs after divorce                         @F8@,@I9@,
+ERROR                      US08            Birth occurs before marriage                          @I23@     
 
 
 +-------+------------------------------+------------+-----+------------+-------+-----------+------------------+
