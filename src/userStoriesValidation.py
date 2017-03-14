@@ -21,6 +21,8 @@ def story_validation(individuals, families):
     us06(individuals,families)
     marriage_before_divorce(families)
     us08(individuals, families)
+    #Sprint 2
+    us11(individuals, families)
 
 ####################################################################
 # US01 All dates must be before the current date - ERROR
@@ -231,7 +233,130 @@ def us08(individuals, families):
                         report_error('ERROR',error_type,error_descrip,error_location)
                         return_flag=False
     return return_flag
+#####################################################################################
+#US11
+def us11(individuals,families):
+    return_flag = True
+    error_type = "US11"
+    bigamy=[]
+    check = []
+    for family in families:
+        if family.marriage:
+            husband = None
+            wife = None
+            first_current_marriage = True
+            first_marriage_start = family.marriage
+            for indiv in individuals:
+                if indiv.uid == family.husband:
+                    husband = indiv
+                if indiv.uid == family.wife:
+                    wife = indiv
+            if family.divorce!=None:
+                first_current_marriage = False
+                first_marriage_end=family.divorce
 
+
+            else:
+                if wife.alive == False and husband.alive == False:
+                    if wife.deathDate < husband.deathDate:
+                        first_marriage_end = wife.deathDate
+                        first_current_marriage = False
+                    else:
+                        first_marriage_end = husband.deathDate
+                        first_current_marriage = False
+                else:
+                    if wife.alive==False:
+                        first_marriage_end=wife.deathDate
+                        first_current_marriage = False
+                    if husband.alive==False:
+                        first_marriage_end=husband.deathDate
+                        first_current_marriage = False
+
+            # Search through individuals to get husband and wife
+            for family2 in families:
+                #find the spouse
+                if family.marriage != family2.marriage:
+                    if family2.marriage:
+                        husband2 = None
+                        wife2 = None
+                        second_current_marriage = True
+                        second_marriage_start = family2.marriage
+                        for indiv1 in individuals:
+                            if indiv1.uid == family2.husband:
+                                husband2 = indiv1
+                            if indiv1.uid == family2.wife:
+                                wife2 = indiv1
+                        if family2.divorce != None:
+                            second_current_marriage = False
+                            second_marriage_end = family2.divorce
+                        else:
+                            if wife2.alive==False and husband2.alive==False:
+                                if wife2.deathDate<husband2.deathDate:
+                                    second_marriage_end = wife2.deathDate
+                                    second_current_marriage = False
+                                else:
+                                    second_marriage_end = husband2.deathDate
+                                    second_current_marriage = False
+                            else:
+                                if wife2.alive == False:
+                                    second_marriage_end = wife2.deathDate
+                                    second_current_marriage = False
+                                if husband2.alive == False:
+                                    second_marriage_end = husband2.deathDate
+                                    second_current_marriage = False
+                        if husband.uid==husband2.uid or wife.uid==wife2.uid:
+
+                            if first_current_marriage== True and second_current_marriage==True:
+                                if husband.uid==husband2.uid:
+                                    check.append((husband.uid))
+                                    for element in check:
+                                        if element not in bigamy:
+                                            bigamy.append((husband.uid))
+                                            error_descrip = "Bigamy Occurs in family"
+                                            error_location = [family.uid ,family2.uid,husband.uid]
+                                            report_error(error_type, error_descrip, error_location)
+                                            return_flag = False
+                                if wife.uid==wife2.uid:
+                                    check.append((wife.uid))
+                                    for element in check:
+                                        if element not in bigamy:
+                                            bigamy.append((wife.uid))
+                                            error_descrip = "Bigamy Occurs in family"
+                                            error_location = [family.uid ,family2.uid, wife.uid]
+                                            report_error(error_type, error_descrip, error_location)
+                                            return_flag = False
+                            else:
+                                if first_marriage_start > second_marriage_start:
+                                    s_m_s = first_marriage_start
+                                    f_m_s = second_marriage_start
+                                    second_marriage_start=s_m_s
+                                    first_marriage_start=f_m_s
+                                    f_m_e=second_marriage_end
+                                    second_marriage_end=first_marriage_end
+                                    first_marriage_end=f_m_e
+
+                                if first_marriage_end != None  and second_marriage_end!=None:
+                                    if first_marriage_end > second_marriage_start :
+                                        if husband.uid == husband2.uid:
+                                            check.append((husband.uid))
+                                            for element in check:
+                                                if element not in bigamy:
+                                                    bigamy.append(( husband.uid))
+                                                    error_descrip = "Bigamy Occurs in family"
+                                                    error_location = [family.uid ,family2.uid ,husband.uid]
+                                                    report_error(error_type, error_descrip, error_location)
+                                                    return_flag = False
+                                        if wife.uid == wife2.uid:
+                                            check.append((wife.uid))
+                                            for element in check:
+                                                if element not in bigamy:
+                                                    bigamy.append(( wife.uid))
+                                                    error_descrip = "Bigamy Occurs in families and the bigamist is "
+                                                    error_location = [family.uid ,family2.uid, wife.uid]
+                                                    report_error(error_type, error_descrip, error_location)
+                                                    return_flag = False
+
+    return return_flag
 
 # report Error to the console
 def report_error(rtype, error_type, description, locations):
@@ -240,7 +365,7 @@ def report_error(rtype, error_type, description, locations):
     if isinstance(locations, list):
         locations = ','.join(locations)
 
-    estr = '{:26.7s} {:14.14s}  {:50.50s}    {:10.10s}' \
+    estr = '{:26.7s} {:14.14s}  {:50.50s}    {:50.50s}' \
         .format(rtype, error_type, description, locations)
     print(estr)
 
