@@ -23,6 +23,7 @@ def story_validation(individuals, families):
     us08(individuals, families)
     #Sprint 2
     us11(individuals, families)
+    us16(individuals, families)
 
 ####################################################################
 # US01 All dates must be before the current date - ERROR
@@ -355,6 +356,31 @@ def us11(individuals,families):
                                                     error_location = [family.uid ,family2.uid, wife.uid]
                                                     report_error(error_type, error_descrip, error_location)
                                                     return_flag = False
+
+    return return_flag
+#########################################################
+# US16
+def us16(individuals,families):
+    return_flag = True
+    error_type = "US16"
+    for family in families:
+        if family.marriage:
+            # Search through individuals to get husband and wife
+            lastname=family.husbandName[1]
+            for indiv in individuals:
+                id=indiv.uid
+                name=indiv.name
+                gender=indiv.sex
+                if id in family.children:
+                    if gender == "M":
+                        if lastname not in name:
+                            error_descrip = "Lastname not the same as father "
+                            error_location = [indiv.uid]
+                            report_error(error_type, error_descrip, error_location)
+                            return_flag = False
+
+
+
 
     return return_flag
 
