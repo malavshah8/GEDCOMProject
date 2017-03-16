@@ -1,6 +1,6 @@
 # this file is to check and validate user stories
 
-from datetime import datetime
+from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
 error_locations = []
@@ -22,6 +22,7 @@ def story_validation(individuals, families):
     marriage_before_divorce(families)
     us08(individuals, families)
     #Sprint 2
+    birth_before_death_of_parents(individuals, families)
     us11(individuals, families)
     us16(individuals, families)
 
@@ -234,6 +235,51 @@ def us08(individuals, families):
                         report_error('ERROR',error_type,error_descrip,error_location)
                         return_flag=False
     return return_flag
+
+####################################################################
+# US09 - Birth before death of parents
+def birth_before_death_of_parents(individuals, families):
+    return_flag = True
+    error_type = "US09"
+
+    for individual in individuals:
+
+        if len(individual.famc) > 0:
+            father = None
+            father_id = None
+            mother = None
+            mother_id = None
+            fam = None
+
+            # Get the UID of parents for an individual
+            for family in families:
+                if family.uid == individual.famc[0]:
+                    father_id = family.husband
+                    mother_id = family.wife
+                    fam = family
+                    break
+
+            # Get the UID of individuals
+            for ind in individuals:
+                if ind.uid == father_id:
+                    father = ind
+                if ind.uid == mother_id:
+                    mother = ind
+
+            if father.deathDate is not None and father.deathDate < individual.birthdate - timedelta(days=266):
+                error_description = "Child is born more than 9 months or after death of father"
+                error_location = [fam.uid, individual.uid]
+                report_error(error_type, error_description, error_location)
+                return_flag = False
+
+            if mother.death is not None and mother.death < individual.birthdate:
+                error_descrip = "Child is born after death of mother"
+                error_location = [fam.uid, individual.uid]
+                report_error(error_type, error_descrip, error_location)
+                return_flag = False
+    return return_flag
+
+
 #####################################################################################
 #US11
 def us11(individuals,families):
