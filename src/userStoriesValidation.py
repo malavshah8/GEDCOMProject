@@ -24,6 +24,7 @@ def story_validation(individuals, families):
     #Sprint 2
     us11(individuals, families)
     us16(individuals, families)
+    us15(families)
 
 ####################################################################
 # US01 All dates must be before the current date - ERROR
@@ -315,7 +316,7 @@ def us11(individuals,families):
                                             bigamy.append((husband.uid))
                                             error_descrip = "Bigamy Occurs in family"
                                             error_location = [family.uid ,family2.uid,husband.uid]
-                                            report_error(error_type, error_descrip, error_location)
+                                            report_error('ERROR',error_type, error_descrip, error_location)
                                             return_flag = False
                                 if wife.uid==wife2.uid:
                                     check.append((wife.uid))
@@ -324,7 +325,7 @@ def us11(individuals,families):
                                             bigamy.append((wife.uid))
                                             error_descrip = "Bigamy Occurs in family"
                                             error_location = [family.uid ,family2.uid, wife.uid]
-                                            report_error(error_type, error_descrip, error_location)
+                                            report_error('ERROR',error_type, error_descrip, error_location)
                                             return_flag = False
                             else:
                                 if first_marriage_start > second_marriage_start:
@@ -354,7 +355,7 @@ def us11(individuals,families):
                                                     bigamy.append(( wife.uid))
                                                     error_descrip = "Bigamy Occurs in families and the bigamist is "
                                                     error_location = [family.uid ,family2.uid, wife.uid]
-                                                    report_error(error_type, error_descrip, error_location)
+                                                    report_error('ERROR',error_type, error_descrip, error_location)
                                                     return_flag = False
 
     return return_flag
@@ -376,12 +377,27 @@ def us16(individuals,families):
                         if lastname not in name:
                             error_descrip = "Lastname not the same as father "
                             error_location = [indiv.uid]
-                            report_error(error_type, error_descrip, error_location)
+                            report_error('ERROR',error_type, error_descrip, error_location)
                             return_flag = False
 
 
 
 
+    return return_flag
+
+#########################################################
+
+def us15(families):
+    """ US15 - Families should not have more than 15 children - ANOMALY """
+    error_type = "US15"
+    return_flag = True
+
+    for family in families:
+        if len(family.children) >= 15:
+            error_descrip = "Family has 15 or more siblings"
+            error_location = [family.uid]
+            report_error('ERROR', error_type, error_descrip, error_location)
+            return_flag = False
     return return_flag
 
 # report Error to the console
