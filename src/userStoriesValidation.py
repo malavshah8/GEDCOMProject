@@ -1,7 +1,7 @@
 # this file is to check and validate user stories
 
 from datetime import datetime, timedelta
-from dateutil.relativedelta import relativedelta
+#from dateutil.relativedelta import relativedelta
 
 error_locations = []
 
@@ -17,10 +17,10 @@ def story_validation(individuals, families):
     birth_before_marriage(individuals, families)
     birth_before_death(individuals)
     us05(individuals, families)
-    us07(individuals)
+    #us07(individuals)
     us06(individuals,families)
     marriage_before_divorce(families)
-    us08(individuals, families)
+    #us08(individuals, families)
     #Sprint 2
     birth_before_death_of_parents(individuals, families)
     us11(individuals, families)
@@ -267,16 +267,16 @@ def birth_before_death_of_parents(individuals, families):
                 if ind.uid == mother_id:
                     mother = ind
 
-            if father.deathDate is not None and father.deathDate < individual.birthdate - timedelta(days=266):
-                error_description = "Child is born more than 9 months or after death of father"
+            if father.deathDate is not None and father.deathDate < individual.birthday - timedelta(days=266):
+                error_descrip = "Child is born more than 9 months or after death of father"
                 error_location = [fam.uid, individual.uid]
-                report_error(error_type, error_description, error_location)
+                report_error('ERROR',error_type, error_descrip, error_location)
                 return_flag = False
 
-            if mother.death is not None and mother.death < individual.birthdate:
+            if mother.deathDate is not None and mother.deathDate < individual.birthday:
                 error_descrip = "Child is born after death of mother"
                 error_location = [fam.uid, individual.uid]
-                report_error(error_type, error_descrip, error_location)
+                report_error('ERROR',error_type, error_descrip, error_location)
                 return_flag = False
     return return_flag
 

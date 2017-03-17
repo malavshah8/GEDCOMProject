@@ -12,7 +12,8 @@ __email__ = "ppandya4@stevens.edu, mshah64@stevens.edu, srangar1@stevens.edu, rk
 
 #default file path
 
-FILENAME = 'gedcom_files/fail/Family.ged'
+#FILENAME = 'gedcom_files/fail/Family.ged'
+FILENAME = '/Users/malavshah/GEDCOMProject/gedcom_files/fail/Family.ged'
 
 x = PrettyTable()
 y = PrettyTable()
