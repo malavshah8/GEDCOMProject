@@ -3,21 +3,26 @@ Path accepted
 
 Error/Anomalies:        User Story             Description:                                  Location
 ------------------------------------------------------------------------------------------------------------------------
-ERROR                      US01            Birth occurs after current date                       @I12@     
-ERROR                      US02            Birth of wife occurs after marriage                   @I1@      
-ERROR                      US02            Birth of wife occurs after marriage                   @I1@      
-ERROR                      US02            Birth of husband occurs after marraige                @I2@      
-ERROR                      US02            Birth of husband occurs after marraige                @I12@     
-ERROR                      US02            Birth of wife occurs after marriage                   @I14@     
-ERROR                      US03            Birth occurs before death.                            @I2@      
-ERROR                      US05            Death of Wife occurs before marriage                  @I1@      
-ERROR                      US05            Death of Wife occurs before marriage                  @I1@      
-ERROR                      US05            Death of Husband occurs before marriage               @I9@      
-ERROR                      US05            Death of Husband occurs before marriage               @I9@      
-ERROR                      US07            lived longer than 150 years                           @I16@     
-ERROR                      US06            Death of Husband occurs before divorce                @I9@      
-ERROR                      US04            Marriage occurs after divorce                         @F8@,@I9@,
-ERROR                      US08            Birth occurs before marriage                          @I23@     
+ERROR                      US01            Birth occurs after current date                       @I9@                                              
+ERROR                      US01            Birth occurs after current date                       @I12@                                             
+ERROR                      US02            Birth of wife occurs after marriage                   @I1@                                              
+ERROR                      US02            Birth of wife occurs after marriage                   @I1@                                              
+ERROR                      US02            Birth of husband occurs after marraige                @I2@                                              
+ERROR                      US02            Birth of husband occurs after marraige                @I12@                                             
+ERROR                      US02            Birth of husband occurs after marraige                @I9@                                              
+ERROR                      US02            Birth of husband occurs after marraige                @I9@                                              
+ERROR                      US02            Birth of wife occurs after marriage                   @I14@                                             
+ERROR                      US03            Birth occurs before death.                            @I2@                                              
+ERROR                      US03            Birth occurs before death.                            @I9@                                              
+ERROR                      US05            Death of Wife occurs before marriage                  @I1@                                              
+ERROR                      US05            Death of Wife occurs before marriage                  @I1@                                              
+ERROR                      US05            Death of Husband occurs before marriage               @I9@                                              
+ERROR                      US05            Death of Husband occurs before marriage               @I9@                                              
+ERROR                      US06            Death of Husband occurs before divorce                @I9@                                              
+ERROR                      US04            Marriage occurs after divorce                         @F8@,@I9@,@I18@                                   
+ERROR                      US09            Child is born more than 9 months or after death of    @F7@,@I22@                                        
+ERROR                      US09            Child is born more than 9 months or after death of    @F8@,@I23@                                        
+ERROR                      US11            Bigamy Occurs in family                               @F3@,@F5@,@I7@                                    
 
 
 +-------+------------------------------+------------+-----+------------+-------+-----------+------------------+
@@ -31,7 +36,7 @@ ERROR                      US08            Birth occurs before marriage         
 |  @I6@ |   ['Emma', '/Rothschild/']   | 1940-04-06 |  F  |    None    |  True |  ['@F1@'] |     ['@F4@']     |
 |  @I7@ |    ['Victoria', '/Koch/']    | 1938-04-30 |  F  |    None    |  True |     []    | ['@F3@', '@F5@'] |
 |  @I8@ | ['Margaret', '/Rothschild/'] | 1977-11-28 |  F  |    None    |  True |  ['@F3@'] |     ['@F6@']     |
-|  @I9@ |   ['John', '/Rothschild/']   | 1979-09-10 |  M  | 2000-12-02 | False |  ['@F3@'] | ['@F7@', '@F8@'] |
+|  @I9@ |   ['John', '/Rothschild/']   | 2018-09-10 |  M  | 2000-12-02 | False |  ['@F3@'] | ['@F7@', '@F8@'] |
 | @I10@ | ['Richard', '/Rothschild/']  | 1981-06-30 |  M  |    None    |  True |  ['@F3@'] |     ['@F9@']     |
 | @I11@ |    ['Harold', '/Walton/']    | 1934-12-01 |  M  |    None    |  True |     []    |     ['@F4@']     |
 | @I12@ |   ['William', '/Powell/']    | 2019-04-24 |  M  |    None    |  True |     []    |     ['@F5@']     |
