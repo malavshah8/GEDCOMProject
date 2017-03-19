@@ -1,7 +1,8 @@
 # this file is to check and validate user stories
 
 from datetime import datetime, timedelta
-#from dateutil.relativedelta import relativedelta
+from dateutil.relativedelta import relativedelta
+from collections import Counter
 
 error_locations = []
 
@@ -17,15 +18,16 @@ def story_validation(individuals, families):
     birth_before_marriage(individuals, families)
     birth_before_death(individuals)
     us05(individuals, families)
-    #us07(individuals)
+    us07(individuals)
     us06(individuals,families)
     marriage_before_divorce(families)
-    #us08(individuals, families)
+    us08(individuals, families)
     #Sprint 2
     birth_before_death_of_parents(individuals, families)
     us11(individuals, families)
     us16(individuals, families)
     us15(families)
+    multiple_births_less_5(individuals, families)
 
 ####################################################################
 # US01 All dates must be before the current date - ERROR
@@ -405,6 +407,31 @@ def us11(individuals,families):
                                                     return_flag = False
 
     return return_flag
+##########################################################
+
+#US14  -  No more than five siblings should be born at the same time
+
+def multiple_births_less_5(individuals,families):
+
+    error_type = "US14"
+    return_flag = True
+
+    for family in families:
+        sibling_uids = family.children
+        siblings = list(x for x in individuals if x.uid in sibling_uids)
+        sib_birthdays = []
+        for sibling in siblings:
+            sib_birthdays.append(sibling.birthday)
+        result = Counter(sib_birthdays).most_common(1)
+        for (a,b) in result:
+            if b > 5:
+                error_descrip = "More than 5 siblings born at once"
+                error_location = [family.uid]
+                report_error('ERROR',error_type, error_descrip, error_location)
+                return_flag = False
+
+    return return_flag
+
 #########################################################
 # US16
 def us16(individuals,families):
@@ -425,9 +452,6 @@ def us16(individuals,families):
                             error_location = [indiv.uid]
                             report_error('ERROR',error_type, error_descrip, error_location)
                             return_flag = False
-
-
-
 
     return return_flag
 

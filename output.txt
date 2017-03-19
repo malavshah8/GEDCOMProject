@@ -3,85 +3,82 @@ Path accepted
 
 Error/Anomalies:        User Story             Description:                                  Location
 ------------------------------------------------------------------------------------------------------------------------
-<<<<<<< HEAD
+ERROR                      US01            Birth occurs after current date                       @I10@                                             
 ERROR                      US01            Birth occurs after current date                       @I15@                                             
 ERROR                      US02            Birth of wife occurs after marriage                   @I1@                                              
 ERROR                      US02            Birth of wife occurs after marriage                   @I1@                                              
 ERROR                      US02            Birth of husband occurs after marraige                @I3@                                              
 ERROR                      US02            Birth of husband occurs after marraige                @I15@                                             
+ERROR                      US02            Birth of husband occurs after marraige                @I10@                                             
+ERROR                      US02            Birth of husband occurs after marraige                @I10@                                             
 ERROR                      US02            Birth of wife occurs after marriage                   @I17@                                             
 ERROR                      US03            Birth occurs before death.                            @I3@                                              
+ERROR                      US03            Birth occurs before death.                            @I10@                                             
 ERROR                      US05            Death of Wife occurs before marriage                  @I1@                                              
 ERROR                      US05            Death of Wife occurs before marriage                  @I1@                                              
 ERROR                      US05            Death of Husband occurs before marriage               @I10@                                             
 ERROR                      US05            Death of Husband occurs before marriage               @I10@                                             
-ERROR                      US07            lived longer than 150 years                           @I9@                                              
 ERROR                      US06            Death of Husband occurs before divorce                @I10@                                             
 ERROR                      US04            Marriage occurs after divorce                         @F8@,@I10@,@I20@                                  
-ERROR                      US08            Birth occurs before marriage                          @I23@                                             
-=======
-ERROR                      US01            Birth occurs after current date                       @I9@                                              
-ERROR                      US01            Birth occurs after current date                       @I12@                                             
-ERROR                      US02            Birth of wife occurs after marriage                   @I1@                                              
-ERROR                      US02            Birth of wife occurs after marriage                   @I1@                                              
-ERROR                      US02            Birth of husband occurs after marraige                @I2@                                              
-ERROR                      US02            Birth of husband occurs after marraige                @I12@                                             
-ERROR                      US02            Birth of husband occurs after marraige                @I9@                                              
-ERROR                      US02            Birth of husband occurs after marraige                @I9@                                              
-ERROR                      US02            Birth of wife occurs after marriage                   @I14@                                             
-ERROR                      US03            Birth occurs before death.                            @I2@                                              
-ERROR                      US03            Birth occurs before death.                            @I9@                                              
-ERROR                      US05            Death of Wife occurs before marriage                  @I1@                                              
-ERROR                      US05            Death of Wife occurs before marriage                  @I1@                                              
-ERROR                      US05            Death of Husband occurs before marriage               @I9@                                              
-ERROR                      US05            Death of Husband occurs before marriage               @I9@                                              
-ERROR                      US06            Death of Husband occurs before divorce                @I9@                                              
-ERROR                      US04            Marriage occurs after divorce                         @F8@,@I9@,@I18@                                   
 ERROR                      US09            Child is born more than 9 months or after death of    @F7@,@I22@                                        
 ERROR                      US09            Child is born more than 9 months or after death of    @F8@,@I23@                                        
-ERROR                      US11            Bigamy Occurs in family                               @F3@,@F5@,@I7@                                    
+ERROR                      US11            Bigamy Occurs in family                               @F3@,@F4@,@I6@                                    
+ERROR                      US15            Family has 15 or more siblings                        @F3@                                              
+ERROR                      US14            More than 5 siblings born at once                     @F3@                                              
 
 
 +-------+------------------------------+------------+-----+------------+-------+-----------+------------------+
 |   id  |             Name             |  Birthday  | Sex | Death Date | Alive |   Child   |      Spouse      |
 +-------+------------------------------+------------+-----+------------+-------+-----------+------------------+
 |  @I1@ |    ['Edina', '/Schulz/']     | 1936-01-08 |  F  | 1977-08-16 | False |     []    | ['@F1@', '@F2@'] |
-|  @I2@ | ['Charles', '/Bettencourt/'] | 1935-05-18 |  M  | 1933-12-02 | False |     []    |     ['@F2@']     |
-|  @I3@ |   ['Ross', '/Rothschild/']   | 1891-05-15 |  M  | 1986-11-03 | False |     []    |     ['@F1@']     |
+|  @I2@ |   ['Ross', '/Rothschild/']   | 1891-05-15 |  M  | 1986-11-03 | False |     []    |     ['@F1@']     |
+|  @I3@ | ['Charles', '/Bettencourt/'] | 1935-05-18 |  M  | 1933-12-02 | False |     []    |     ['@F2@']     |
 |  @I4@ |  ['Henry', '/Bettencourt/']  | 1915-07-06 |  M  | 1947-04-01 | False |  ['@F2@'] |        []        |
 |  @I5@ |  ['Edward', '/Rothschild/']  | 1938-08-15 |  M  |    None    |  True |  ['@F1@'] |     ['@F3@']     |
-|  @I6@ |   ['Emma', '/Rothschild/']   | 1940-04-06 |  F  |    None    |  True |  ['@F1@'] |     ['@F4@']     |
-|  @I7@ |    ['Victoria', '/Koch/']    | 1938-04-30 |  F  |    None    |  True |     []    | ['@F3@', '@F5@'] |
+|  @I6@ |    ['Victoria', '/Koch/']    | 1938-04-30 |  F  |    None    |  True |     []    | ['@F3@', '@F4@'] |
+|  @I7@ |   ['Emma', '/Rothschild/']   | 1940-04-06 |  F  |    None    |  True |  ['@F1@'] |     ['@F5@']     |
 |  @I8@ | ['Margaret', '/Rothschild/'] | 1977-11-28 |  F  |    None    |  True |  ['@F3@'] |     ['@F6@']     |
-|  @I9@ |   ['John', '/Rothschild/']   | 2018-09-10 |  M  | 2000-12-02 | False |  ['@F3@'] | ['@F7@', '@F8@'] |
-| @I10@ | ['Richard', '/Rothschild/']  | 1981-06-30 |  M  |    None    |  True |  ['@F3@'] |     ['@F9@']     |
-| @I11@ |    ['Harold', '/Walton/']    | 1934-12-01 |  M  |    None    |  True |     []    |     ['@F4@']     |
-| @I12@ |   ['William', '/Powell/']    | 2019-04-24 |  M  |    None    |  True |     []    |     ['@F5@']     |
-| @I13@ |    ['Edgar', '/Powell/']     | 1966-09-02 |  M  |    None    |  True |  ['@F5@'] |    ['@F10@']     |
-| @I14@ |     ['Mary', '/Cornel/']     | 1996-05-17 |  F  |    None    |  True |     []    |    ['@F10@']     |
-| @I15@ |    ['Louis', '/Powell/']     | 1989-01-30 |  M  |    None    |  True | ['@F10@'] |        []        |
-| @I16@ |   ['Duncan', '/Thomson/']    | 1777-02-01 |  M  |    None    |  True |     []    |     ['@F6@']     |
-| @I17@ |   ['Donald', '/Thomson/']    | 2005-11-24 |  M  |    None    |  True |  ['@F6@'] |        []        |
-| @I18@ |    ['Emilia', '/Stone/']     | 1980-03-03 |  F  |    None    |  True |     []    |     ['@F8@']     |
-| @I19@ |   ['Abigail', '/Jhonson/']   | 1978-06-24 |  F  |    None    |  True |     []    |     ['@F9@']     |
-| @I20@ |   ['Ned', '/Rothschild/']    | 2010-10-07 |  M  |    None    |  True |  ['@F9@'] |        []        |
-| @I21@ |     ['Kat', '/Botham/']      | 1986-07-05 |  F  |    None    |  True |     []    |     ['@F7@']     |
+|  @I9@ |   ['Duncan', '/Thomson/']    | 1777-02-01 |  M  |    None    |  True |     []    |     ['@F6@']     |
+| @I10@ |   ['John', '/Rothschild/']   | 2018-09-10 |  M  | 2000-12-02 | False |  ['@F3@'] | ['@F7@', '@F8@'] |
+| @I11@ |     ['Kat', '/Botham/']      | 1986-07-05 |  F  |    None    |  True |     []    |     ['@F7@']     |
+| @I12@ | ['Richard', '/Rothschild/']  | 1981-06-30 |  M  |    None    |  True |  ['@F3@'] |     ['@F9@']     |
+| @I13@ |   ['Abigail', '/Jhonson/']   | 1978-06-24 |  F  |    None    |  True |     []    |     ['@F9@']     |
+| @I14@ |    ['Harold', '/Walton/']    | 1934-12-01 |  M  |    None    |  True |     []    |     ['@F5@']     |
+| @I15@ |   ['William', '/Powell/']    | 2019-04-24 |  M  |    None    |  True |     []    |     ['@F4@']     |
+| @I16@ |    ['Edgar', '/Powell/']     | 1966-09-02 |  M  |    None    |  True |  ['@F4@'] |    ['@F10@']     |
+| @I17@ |     ['Mary', '/Cornel/']     | 1996-05-17 |  F  |    None    |  True |     []    |    ['@F10@']     |
+| @I18@ |    ['Louis', '/Powell/']     | 1989-01-30 |  M  |    None    |  True | ['@F10@'] |        []        |
+| @I19@ |   ['Donald', '/Thomson/']    | 2005-11-24 |  M  |    None    |  True |  ['@F6@'] |        []        |
+| @I20@ |    ['Emilia', '/Stone/']     | 1980-03-03 |  F  |    None    |  True |     []    |     ['@F8@']     |
+| @I21@ |   ['Ned', '/Rothschild/']    | 2010-10-07 |  M  |    None    |  True |  ['@F9@'] |        []        |
 | @I22@ |   ['Jane', '/Rothschild/']   | 2015-12-30 |  F  |    None    |  True |  ['@F7@'] |        []        |
 | @I23@ | ['Phillip', '/Rothschild/']  | 2007-02-28 |  M  |    None    |  True |  ['@F8@'] |        []        |
+| @I24@ |  ['Amily', '/Rothschild/']   | 1982-03-07 |  F  |    None    |  True |  ['@F3@'] |        []        |
+| @I25@ |  ['Donna', '/Rothschild/']   | 1982-03-07 |  F  |    None    |  True |  ['@F3@'] |        []        |
+| @I26@ |  ['Harvey', '/Rothschild/']  | 1982-03-07 |  M  |    None    |  True |  ['@F3@'] |        []        |
+| @I27@ |   ['Mike', '/Rothschild/']   | 1982-03-07 |  M  |    None    |  True |  ['@F3@'] |        []        |
+| @I28@ |  ['Rachel', '/Rothschild/']  | 1982-03-07 |  F  |    None    |  True |  ['@F3@'] |        []        |
+| @I29@ |   ['Luis', '/Rothschild/']   | 1982-03-07 |  M  |    None    |  True |  ['@F3@'] |        []        |
+| @I30@ | ['Katrina', '/Rothschild/']  | 1988-02-01 |  F  |    None    |  True |  ['@F3@'] |        []        |
+| @I31@ | ['Jessica', '/Rothschild/']  | 1990-04-03 |  F  |    None    |  True |  ['@F3@'] |        []        |
+| @I32@ |  ['Daniel', '/Rothschild/']  | 1991-02-05 |  M  |    None    |  True |  ['@F3@'] |        []        |
+| @I33@ |  ['Darby', '/Rothschild/']   | 1992-04-12 |  M  |    None    |  True |  ['@F3@'] |        []        |
+| @I34@ |   ['Tess', '/Rothschild/']   | 1992-03-05 |  F  |    None    |  True |  ['@F3@'] |        []        |
+| @I35@ |  ['Harold', '/Rothschild/']  | 1993-09-05 |  M  |    None    |  True |  ['@F3@'] |        []        |
+| @I36@ |   ['Ava', '/Rothschild/']    | 1993-03-04 |  F  |    None    |  True |  ['@F3@'] |        []        |
 +-------+------------------------------+------------+-----+------------+-------+-----------+------------------+
 ----------------------------------------------------------------------------------------------------------------------------------------
-+-------+------------+---------+------------------------------+-------+------------------------------+---------------------------+------------+
-|  Fid  |  Marriage  | Husband |         Husband Name         |  Wife |          Wife Name           |          Children         |  Divorce   |
-+-------+------------+---------+------------------------------+-------+------------------------------+---------------------------+------------+
-|  @F1@ | 1935-08-15 |   @I3@  |   ['Ross', '/Rothschild/']   |  @I1@ |    ['Edina', '/Schulz/']     |      ['@I5@', '@I6@']     |    None    |
-|  @F2@ | 1913-01-01 |   @I2@  | ['Charles', '/Bettencourt/'] |  @I1@ |    ['Edina', '/Schulz/']     |          ['@I4@']         |    None    |
-|  @F3@ | 1976-09-17 |   @I5@  |  ['Edward', '/Rothschild/']  |  @I7@ |    ['Victoria', '/Koch/']    | ['@I8@', '@I9@', '@I10@'] |    None    |
-|  @F4@ |    None    |  @I11@  |    ['Harold', '/Walton/']    |  @I6@ |   ['Emma', '/Rothschild/']   |             []            |    None    |
-|  @F5@ | 1964-03-07 |  @I12@  |   ['William', '/Powell/']    |  @I7@ |    ['Victoria', '/Koch/']    |         ['@I13@']         |    None    |
-|  @F6@ |    None    |  @I16@  |   ['Duncan', '/Thomson/']    |  @I8@ | ['Margaret', '/Rothschild/'] |         ['@I17@']         |    None    |
-|  @F7@ | 2014-04-12 |   @I9@  |   ['John', '/Rothschild/']   | @I21@ |     ['Kat', '/Botham/']      |         ['@I22@']         |    None    |
-|  @F8@ | 2014-02-02 |   @I9@  |   ['John', '/Rothschild/']   | @I18@ |    ['Emilia', '/Stone/']     |         ['@I23@']         | 2013-12-04 |
-|  @F9@ | 2006-08-15 |  @I10@  | ['Richard', '/Rothschild/']  | @I19@ |   ['Abigail', '/Jhonson/']   |         ['@I20@']         |    None    |
-| @F10@ | 1987-04-17 |  @I13@  |    ['Edgar', '/Powell/']     | @I14@ |     ['Mary', '/Cornel/']     |         ['@I15@']         |    None    |
-+-------+------------+---------+------------------------------+-------+------------------------------+---------------------------+------------+
->>>>>>> 49dd56f4b1ab6a344721ae1b9edbe32e849528cd
++-------+------------+---------+------------------------------+-------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------+
+|  Fid  |  Marriage  | Husband |         Husband Name         |  Wife |          Wife Name           |                                                                     Children                                                                    |  Divorce   |
++-------+------------+---------+------------------------------+-------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------+
+|  @F1@ | 1935-08-15 |   @I2@  |   ['Ross', '/Rothschild/']   |  @I1@ |    ['Edina', '/Schulz/']     |                                                                 ['@I5@', '@I7@']                                                                |    None    |
+|  @F2@ | 1913-01-01 |   @I3@  | ['Charles', '/Bettencourt/'] |  @I1@ |    ['Edina', '/Schulz/']     |                                                                     ['@I4@']                                                                    |    None    |
+|  @F3@ | 1976-09-17 |   @I5@  |  ['Edward', '/Rothschild/']  |  @I6@ |    ['Victoria', '/Koch/']    | ['@I8@', '@I10@', '@I12@', '@I24@', '@I25@', '@I26@', '@I27@', '@I28@', '@I29@', '@I30@', '@I31@', '@I32@', '@I33@', '@I34@', '@I35@', '@I36@'] |    None    |
+|  @F4@ | 1964-03-07 |  @I15@  |   ['William', '/Powell/']    |  @I6@ |    ['Victoria', '/Koch/']    |                                                                    ['@I16@']                                                                    |    None    |
+|  @F5@ |    None    |  @I14@  |    ['Harold', '/Walton/']    |  @I7@ |   ['Emma', '/Rothschild/']   |                                                                        []                                                                       |    None    |
+|  @F6@ |    None    |   @I9@  |   ['Duncan', '/Thomson/']    |  @I8@ | ['Margaret', '/Rothschild/'] |                                                                    ['@I19@']                                                                    |    None    |
+|  @F7@ | 2014-04-12 |  @I10@  |   ['John', '/Rothschild/']   | @I11@ |     ['Kat', '/Botham/']      |                                                                    ['@I22@']                                                                    |    None    |
+|  @F8@ | 2014-02-02 |  @I10@  |   ['John', '/Rothschild/']   | @I20@ |    ['Emilia', '/Stone/']     |                                                                    ['@I23@']                                                                    | 2013-12-04 |
+|  @F9@ | 2006-08-15 |  @I12@  | ['Richard', '/Rothschild/']  | @I13@ |   ['Abigail', '/Jhonson/']   |                                                                    ['@I21@']                                                                    |    None    |
+| @F10@ | 1987-04-17 |  @I16@  |    ['Edgar', '/Powell/']     | @I17@ |     ['Mary', '/Cornel/']     |                                                                    ['@I18@']                                                                    |    None    |
++-------+------------+---------+------------------------------+-------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------+
