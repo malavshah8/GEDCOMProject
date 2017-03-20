@@ -27,6 +27,7 @@ def story_validation(individuals, families):
     us11(individuals, families)
     us16(individuals, families)
     us15(families)
+    us10(individuals, families)
     multiple_births_less_5(individuals, families)
 
 ####################################################################
@@ -469,6 +470,45 @@ def us15(families):
             report_error('ERROR', error_type, error_descrip, error_location)
             return_flag = False
     return return_flag
+
+##############################################################
+
+def us10(individuals, families):
+    """ US10 - Marriage should be atleast 14 years after the birth of both spouses"""
+
+    error_type = "US10"
+    return_flag = True
+
+    curr_date = datetime.today()
+    min_birt = datetime(curr_date.year - 14,
+                        curr_date.month, curr_date.day)
+
+    for family in families:
+        husband = None
+        wife = None
+        for individual in individuals:
+            if individual.uid == family.husband:
+                husband = individual
+            if individual.uid == family.wife:
+                wife = individual
+
+            if husband is not None and wife is not None:
+                break
+
+        if husband.birthday > min_birt.date():
+            error_descrip = "Husband is married before 14 years old"
+            error_location = [family.uid, husband.uid]
+            report_error('ANOMALY',error_type, error_descrip, error_location)
+            return_flag = False
+
+        if wife.birthday > min_birt.date():
+            error_descrip = "Wife is married before 14 years old"
+            error_location = [family.uid, wife.uid]
+            report_error('ANOMALY',error_type, error_descrip, error_location)
+            return_flag = False
+    return return_flag
+
+#################################################################
 
 # report Error to the console
 def report_error(rtype, error_type, description, locations):

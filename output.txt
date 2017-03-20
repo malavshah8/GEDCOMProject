@@ -26,6 +26,10 @@ ERROR                      US09            Child is born more than 9 months or a
 ERROR                      US09            Child is born more than 9 months or after death of    @F8@,@I23@                                        
 ERROR                      US11            Bigamy Occurs in family                               @F3@,@F4@,@I6@                                    
 ERROR                      US15            Family has 15 or more siblings                        @F3@                                              
+ANOMALY                    US10            Husband is married before 14 years old                @F4@,@I15@                                        
+ANOMALY                    US10            Husband is married before 14 years old                @F7@,@I10@                                        
+ANOMALY                    US10            Husband is married before 14 years old                @F8@,@I10@                                        
+ANOMALY                    US10            Wife is married before 14 years old                   @F10@,@I17@                                       
 ERROR                      US14            More than 5 siblings born at once                     @F3@                                              
 
 
@@ -48,7 +52,7 @@ ERROR                      US14            More than 5 siblings born at once    
 | @I14@ |    ['Harold', '/Walton/']    | 1934-12-01 |  M  |    None    |  True |     []    |     ['@F5@']     |
 | @I15@ |   ['William', '/Powell/']    | 2019-04-24 |  M  |    None    |  True |     []    |     ['@F4@']     |
 | @I16@ |    ['Edgar', '/Powell/']     | 1966-09-02 |  M  |    None    |  True |  ['@F4@'] |    ['@F10@']     |
-| @I17@ |     ['Mary', '/Cornel/']     | 1996-05-17 |  F  |    None    |  True |     []    |    ['@F10@']     |
+| @I17@ |     ['Mary', '/Cornel/']     | 2004-05-17 |  F  |    None    |  True |     []    |    ['@F10@']     |
 | @I18@ |    ['Louis', '/Powell/']     | 1989-01-30 |  M  |    None    |  True | ['@F10@'] |        []        |
 | @I19@ |   ['Donald', '/Thomson/']    | 2005-11-24 |  M  |    None    |  True |  ['@F6@'] |        []        |
 | @I20@ |    ['Emilia', '/Stone/']     | 1980-03-03 |  F  |    None    |  True |     []    |     ['@F8@']     |
