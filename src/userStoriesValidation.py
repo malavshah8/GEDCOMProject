@@ -582,10 +582,9 @@ def us17(families):
             error_location = [family.wife, family.husband]
             report_error('ERROR',error_type, error_descrip, error_location)
             return_flag = False
-
     return return_flag
 
- """ Helper function for no_marriage_to_decendants """
+ ### Helper function for no_marriage_to_decendants
 def return_children(uid, families):
     
     # find family where uid is a Parents
