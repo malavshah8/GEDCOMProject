@@ -556,6 +556,50 @@ def us12(individuals, families):
                 return_flag = False
     return return_flag
 
+#############################################################################################################
+def us17(families):
+    """ Parents should not marry any of their descendants"""
+    error_type = "US17"
+    return_flag = True
+
+    for family in families:
+        decendants = []
+
+        decendants.extend(family.children)
+        for decendant in decendants:
+            temp_decs = return_children(decendant, families)
+            if temp_decs is not None:
+                decendants.extend(temp_decs)
+
+        if family.husband and family.wife and family.wife in decendants:
+            error_descrip = "Wife is decendant of spouse"
+            error_location = [family.wife, family.husband]
+            report_error('ERROR',error_type, error_descrip, error_location)
+            return_flag = False
+
+        if family.husband and family.wife and family.husband in decendants:
+            error_descrip = "Husband is decendant of spouse"
+            error_location = [family.wife, family.husband]
+            report_error('ERROR',error_type, error_descrip, error_location)
+            return_flag = False
+
+    return return_flag
+
+ """ Helper function for no_marriage_to_decendants """
+def return_children(uid, families):
+    
+    # find family where uid is a Parents
+    family = next((x for x in families if x.husband == uid), None)
+    if family is None:
+        family = next((x for x in families if x.wife == uid), None)
+
+    if family is None:  # Is never a parent
+        return None
+    else:
+        return family.children
+
+
+
 # report Error to the console
 def report_error(rtype, error_type, description, locations):
     # report("ERROR", error_type, description, locations)
