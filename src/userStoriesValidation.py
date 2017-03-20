@@ -29,6 +29,7 @@ def story_validation(individuals, families):
     us15(families)
     us10(individuals, families)
     multiple_births_less_5(individuals, families)
+    us12(individuals,Families)
 
 ####################################################################
 # US01 All dates must be before the current date - ERROR
@@ -509,6 +510,80 @@ def us10(individuals, families):
     return return_flag
 
 #################################################################
+
+'''def us12(individuals,Families):
+    """Mother should be less than 60 years older than her children and father should be less than 80 years older than his children   """
+    
+    return_flag = True
+    error_type = "US12"
+    for family in families:
+        if family.marriage:
+            # Search through individuals to get husband and wife
+            child = []
+            for indiv in individuals:
+                id = indiv.uid
+                bday = indiv.birthday
+              
+            if individual.uid == family.husband:
+                husband = individual
+            if individual.uid == family.wife:
+                wife = individual
+
+                if id in family.children is not None:
+                    if bday < family.marriage:
+                        error_descrip = "Birth occurs before marriage"
+                        error_location = [indiv.uid]
+                        report_error('ERROR',error_type, error_descrip, error_location)
+                        return_flag = False
+                    if relativedelta(bday,family.divorce).months+9:
+                        error_descrip="Birth after divorce of 9 months"
+                        error_location=[indiv.uid]
+                        report_error('ERROR',error_type,error_descrip,error_location)
+                        return_flag=False
+    return return_flag'''
+
+def US12(individuals, families):
+    return_flag = True
+    error_type = "US12"
+
+
+
+    for individual in individuals:
+
+        if len(individual.famc) > 0:
+            father = None
+            father_id = None
+            mother = None
+            mother_id = None
+            fam = None
+
+            # Get the UID of parents for an individual
+            for family in families:
+                if family.uid == individual.famc[0]:
+                    father_id = family.husband
+                    mother_id = family.wife
+                    fam = family
+                    break
+
+            # Get the UID of individuals
+            for ind in individuals:
+                if ind.uid == father_id:
+                    father = ind
+                if ind.uid == mother_id:
+                    mother = ind
+
+            if father.birthday is not None and father.birthday < individual.birthday - timedelta(days=29200):
+                error_descrip = "Father is older than 80 years"
+                error_location = [fam.uid, individual.uid]
+                report_error('ERROR',error_type, error_descrip, error_location)
+                return_flag = False
+
+            if mother.birthday is not None and mother.birthday < individual.birthday - timedelta(days=21900):
+                error_descrip = "Mother is older than 60 years"
+                error_location = [fam.uid, individual.uid]
+                report_error('ERROR',error_type, error_descrip, error_location)
+                return_flag = False
+    return return_flag
 
 # report Error to the console
 def report_error(rtype, error_type, description, locations):
