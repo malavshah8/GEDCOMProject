@@ -30,6 +30,7 @@ def story_validation(individuals, families):
     us10(individuals, families)
     multiple_births_less_5(individuals, families)
     us12(individuals,families)
+    us17(families)
 
 ####################################################################
 # US01 All dates must be before the current date - ERROR
