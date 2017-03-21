@@ -558,8 +558,9 @@ def us12(individuals, families):
     return return_flag
 
 #############################################################################################################
+ #Parents should not marry any of their descendants
 def us17(families):
-    """ Parents should not marry any of their descendants"""
+   
     error_type = "US17"
     return_flag = True
 
