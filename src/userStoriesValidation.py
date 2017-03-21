@@ -24,13 +24,14 @@ def story_validation(individuals, families):
     us08(individuals, families)
     #Sprint 2
     birth_before_death_of_parents(individuals, families)
-    us11(individuals, families)
-    us16(individuals, families)
-    us15(families)
     us10(individuals, families)
+    us11(individuals, families)
+    us12(individuals, families)
     multiple_births_less_5(individuals, families)
-    us12(individuals,families)
+    us15(families)
+    us16(individuals, families)
     us17(families)
+
 
 ####################################################################
 # US01 All dates must be before the current date - ERROR

@@ -24,16 +24,17 @@ ERROR                      US04            Marriage occurs after divorce        
 ERROR                      US08            Birth after divorce of 9 months                       @I10@                                             
 ERROR                      US09            Child is born more than 9 months or after death of    @F7@,@I22@                                        
 ERROR                      US09            Child is born more than 9 months or after death of    @F8@,@I23@                                        
-ERROR                      US11            Bigamy Occurs in family                               @F3@,@F4@,@I6@                                    
-ERROR                      US15            Family has 15 or more siblings                        @F3@                                              
 ANOMALY                    US10            Husband is married before 14 years old                @F4@,@I15@                                        
 ANOMALY                    US10            Husband is married before 14 years old                @F7@,@I10@                                        
 ANOMALY                    US10            Husband is married before 14 years old                @F8@,@I10@                                        
 ANOMALY                    US10            Wife is married before 14 years old                   @F10@,@I17@                                       
-ERROR                      US14            More than 5 siblings born at once                     @F3@                                              
+ERROR                      US11            Bigamy Occurs in family                               @F3@,@F4@,@I6@                                    
 ERROR                      US12            Father is older than 80 years                         @F3@,@I10@                                        
 ERROR                      US12            Mother is older than 60 years                         @F3@,@I10@                                        
 ERROR                      US12            Father is older than 80 years                         @F6@,@I19@                                        
+ERROR                      US14            More than 5 siblings born at once                     @F3@                                              
+ERROR                      US15            Family has 15 or more siblings                        @F3@                                              
+ERROR                      US16            Lastname not the same as father                       @I32@                                             
 ERROR                      US17            Husband is decendant of spouse                        @I20@,@I10@                                       
 
 
@@ -59,7 +60,7 @@ ERROR                      US17            Husband is decendant of spouse       
 | @I17@ |     ['Mary', '/Cornel/']     | 2004-05-17 |  F  |    None    |  True |     []    |    ['@F10@']     |
 | @I18@ |    ['Louis', '/Powell/']     | 1989-01-30 |  M  |    None    |  True | ['@F10@'] |        []        |
 | @I19@ |   ['Donald', '/Thomson/']    | 2005-11-24 |  M  |    None    |  True |  ['@F6@'] |        []        |
-| @I20@ |    ['Emilia', '/Stone/']     | 1980-03-03 |  F  |    None    |  True |     []    |     ['@F8@']     |
+| @I20@ |    ['Emilia', '/Stone/']     | 1979-03-03 |  F  |    None    |  True |     []    |     ['@F8@']     |
 | @I21@ |   ['Ned', '/Rothschild/']    | 2010-10-07 |  M  |    None    |  True |  ['@F9@'] |        []        |
 | @I22@ |   ['Jane', '/Rothschild/']   | 2015-12-30 |  F  |    None    |  True |  ['@F7@'] |        []        |
 | @I23@ | ['Phillip', '/Rothschild/']  | 2007-02-28 |  M  |    None    |  True |  ['@F8@'] |        []        |
@@ -71,7 +72,7 @@ ERROR                      US17            Husband is decendant of spouse       
 | @I29@ |   ['Luis', '/Rothschild/']   | 1982-03-07 |  M  |    None    |  True |  ['@F3@'] |        []        |
 | @I30@ | ['Katrina', '/Rothschild/']  | 1988-02-01 |  F  |    None    |  True |  ['@F3@'] |        []        |
 | @I31@ | ['Jessica', '/Rothschild/']  | 1990-04-03 |  F  |    None    |  True |  ['@F3@'] |        []        |
-| @I32@ |  ['Daniel', '/Rothschild/']  | 1991-02-05 |  M  |    None    |  True |  ['@F3@'] |        []        |
+| @I32@ |    ['Daniel', '/Galler/']    | 1991-02-05 |  M  |    None    |  True |  ['@F3@'] |        []        |
 | @I33@ |  ['Darby', '/Rothschild/']   | 1992-04-12 |  M  |    None    |  True |  ['@F3@'] |        []        |
 | @I34@ |   ['Tess', '/Rothschild/']   | 1992-03-05 |  F  |    None    |  True |  ['@F3@'] |        []        |
 | @I35@ |  ['Harold', '/Rothschild/']  | 1993-09-05 |  M  |    None    |  True |  ['@F3@'] |        []        |
