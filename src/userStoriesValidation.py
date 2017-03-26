@@ -22,6 +22,7 @@ def story_validation(individuals, families):
     us06(individuals,families)
     marriage_before_divorce(families)
     us08(individuals, families)
+
     #Sprint 2
     birth_before_death_of_parents(individuals, families)
     us10(individuals, families)
@@ -32,6 +33,8 @@ def story_validation(individuals, families):
     us16(individuals, families)
     us17(families)
 
+    #Sprint 3
+    us21(individuals, families)
 
 ####################################################################
 # US01 All dates must be before the current date - ERROR
@@ -599,7 +602,39 @@ def return_children(uid, families):
     else:
         return family.children
 
+################################################################################################
 
+def us21(individuals, families):
+    """ US21 - Correct Gender for Role; husband should be male, wife should
+    be female  """
+    error_type = "US21"
+    return_flag = True
+
+    for family in families:
+        husband_id = family.husband
+        wife_id = family.wife
+
+        husband = None
+        wife = None
+
+        for individual in individuals:
+            if individual.uid == husband_id:
+                husband = individual
+            if individual.uid == wife_id:
+                wife = individual
+
+        if husband.sex is not "M":
+            error_descrip = "Husband is not a male"
+            error_location = [husband.uid, family.uid]
+            report_error('ANOMALY',error_type, error_descrip, error_location)
+            return_flag = False
+
+        if wife.sex is not "F":
+            error_descrip = "Wife is not a female"
+            error_location = [wife.uid, family.uid]
+            report_error('ANOMALY',error_type, error_descrip, error_location)
+            return_flag = False
+    return return_flag
 
 # report Error to the console
 def report_error(rtype, error_type, description, locations):
