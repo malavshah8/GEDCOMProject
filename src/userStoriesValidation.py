@@ -35,6 +35,7 @@ def story_validation(individuals, families):
 
     #Sprint 3
     us21(individuals, families)
+    us30(individuals, families)
 
 ####################################################################
 # US01 All dates must be before the current date - ERROR
@@ -636,6 +637,35 @@ def us21(individuals, families):
             return_flag = False
     return return_flag
 
+###################################################################################
+
+def us30(individuals, families):
+    """ US30 - List all Married People in the families. """
+    error_type = "US30"
+    return_flag = True
+
+    for family in families:
+        husband_id = family.husband
+        wife_id = family.wife
+
+        husband = None
+        wife = None
+
+        for individual in individuals:
+            if individual.uid == husband_id:
+                husband = individual
+            if individual.uid == wife_id:
+                wife = individual
+
+        if husband.alive is True and wife.alive is True:
+            error_descrip = "Both Husband and Wife are not dead"
+            error_location = [family.uid]
+            report_error('-', error_type, error_descrip, error_location)
+            return_flag = False
+
+    return return_flag
+
+################################################################################3
 # report Error to the console
 def report_error(rtype, error_type, description, locations):
     # report("ERROR", error_type, description, locations)
