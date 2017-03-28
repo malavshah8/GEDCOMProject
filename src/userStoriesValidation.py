@@ -660,7 +660,7 @@ def us30(individuals, families):
         if husband.alive is True and wife.alive is True:
             error_descrip = "Both Husband and Wife are not dead"
             error_location = [family.uid]
-            report_error('-', error_type, error_descrip, error_location)
+            report_error('INFORMATION', error_type, error_descrip, error_location)
             return_flag = False
 
     return return_flag
@@ -673,7 +673,7 @@ def report_error(rtype, error_type, description, locations):
     if isinstance(locations, list):
         locations = ','.join(locations)
 
-    estr = '{:26.7s} {:14.14s}  {:50.50s}    {:50.50s}' \
+    estr = '{:26.12s} {:14.14s}  {:50.50s}    {:50.50s}' \
         .format(rtype, error_type, description, locations)
     print(estr)
 
