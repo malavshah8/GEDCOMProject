@@ -36,6 +36,8 @@ def story_validation(individuals, families):
     #Sprint 3
     us21(individuals, families)
     us30(individuals, families)
+    us22(individuals, families)
+    us31(individuals,families)
 
 ####################################################################
 # US01 All dates must be before the current date - ERROR
@@ -664,6 +666,60 @@ def us30(individuals, families):
             return_flag = False
 
     return return_flag
+    ###################################################3
+# US22
+def us22(individuals,families):
+    """ US 22- Check for unique IDS"""
+    error_type="US22"
+    return_flag = True
+    seen = set()
+    notseen=set()
+    uniq = []
+    check=[]
+    for indiv in individuals:
+        indiv_id=indiv.uid
+        check.append(indiv_id)
+    for family in families:
+        fam_id=family.uid
+        check.append(fam_id)
+    for x in check:
+        if x not in seen:
+            seen.add(x)
+        else:
+            notseen.add(x)
+    for dup in notseen:
+        error_descrip = "Duplicate ID Found"
+        error_location = [dup]
+        report_error('Error', error_type, error_descrip, error_location)
+        return_flag = False
+    return return_flag
+
+###########################################################################################
+#US31
+def us31(individuals, families):
+    """ US31 - List all Single People. """
+    error_type = "US31"
+    return_flag = True
+    curr_date= datetime.now()
+    check=[]
+    for family in families:
+        husb = family.husband
+        wife = family.wife
+        check.append(husb)
+        check.append(wife)
+    for individual in individuals:
+        indiv =individual.uid
+        bday = individual.birthday
+        if relativedelta(curr_date,bday).years > 30:
+            if indiv not in check:
+                error_descrip = "Single and over thirty"
+                error_location = [indiv]
+                report_error('INFORMATION', error_type, error_descrip, error_location)
+                return_flag = False
+
+    return return_flag
+########################################################################
+
 
 ################################################################################3
 # report Error to the console
