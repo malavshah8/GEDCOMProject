@@ -38,6 +38,10 @@ def story_validation(individuals, families):
     us30(individuals, families)
     us22(individuals, families)
     us31(individuals,families)
+    
+    #Sprint 4
+    us35(individuals)
+    us36(individuals)
 
 ####################################################################
 # US01 All dates must be before the current date - ERROR
@@ -720,6 +724,45 @@ def us31(individuals, families):
     return return_flag
 ########################################################################
 
+# US35 Anyone born in the last 30 days
+def us35(individuals):
+    error_type = "US35"
+    return_flag = True
+    curr_date = date.today()
+
+
+    for individual in individuals:
+        indiv = individual.uid
+        bday = individual.birthday
+        diff=(curr_date-bday).days
+        if diff<= 30:
+                error_descrip = "Born in the last 30 days:"
+                error_location = [indiv]
+                report_error('INFORMATION', error_type, error_descrip, error_location)
+                return_flag = False
+
+    return return_flag
+########################################
+# US36 Anyone died in the last 30 days
+def us36(individuals):
+    error_type = "US36"
+    return_flag = True
+    curr_date = date.today()
+
+
+    for individual in individuals:
+        indiv = individual.uid
+        if individual.alive==False:
+            deathday = individual.deathDate
+            diff=(curr_date-deathday).days
+        if diff<= 30:
+                error_descrip = "Died in the last 30 days:"
+                error_location = [indiv]
+                report_error('INFORMATION', error_type, error_descrip, error_location)
+                return_flag = False
+
+    return return_flag
+########################################################################
 
 ################################################################################3
 # report Error to the console
