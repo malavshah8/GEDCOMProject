@@ -39,12 +39,21 @@ ERROR                      US17            Husband is decendant of spouse       
 ANOMALY                    US21            Husband is not a male                                 @I2@,@F1@                                         
 ANOMALY                    US21            Wife is not a female                                  @I1@,@F1@                                         
 ANOMALY                    US21            Wife is not a female                                  @I1@,@F2@                                         
+<<<<<<< HEAD
 -                          US30            Both Husband and Wife are not dead                    @F3@                                              
 -                          US30            Both Husband and Wife are not dead                    @F4@                                              
 -                          US30            Both Husband and Wife are not dead                    @F5@                                              
 -                          US30            Both Husband and Wife are not dead                    @F6@                                              
 -                          US30            Both Husband and Wife are not dead                    @F9@                                              
 -                          US30            Both Husband and Wife are not dead                    @F10@                                             
+=======
+INFORMATION                US30            Both Husband and Wife are not dead                    @F3@                                              
+INFORMATION                US30            Both Husband and Wife are not dead                    @F4@                                              
+INFORMATION                US30            Both Husband and Wife are not dead                    @F5@                                              
+INFORMATION                US30            Both Husband and Wife are not dead                    @F6@                                              
+INFORMATION                US30            Both Husband and Wife are not dead                    @F9@                                              
+INFORMATION                US30            Both Husband and Wife are not dead                    @F10@                                             
+>>>>>>> 2d86d49e668096f37e890c9f0b64225794610c66
 
 
 +-------+------------------------------+------------+-----+------------+-------+-----------+------------------+

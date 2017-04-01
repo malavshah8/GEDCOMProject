@@ -36,6 +36,15 @@ def story_validation(individuals, families):
     #Sprint 3
     us21(individuals, families)
     us30(individuals, families)
+<<<<<<< HEAD
+=======
+    us22(individuals, families)
+    us31(individuals,families)
+    
+    #Sprint 4
+    us35(individuals)
+    us36(individuals)
+>>>>>>> 2d86d49e668096f37e890c9f0b64225794610c66
 
 ####################################################################
 # US01 All dates must be before the current date - ERROR
@@ -605,6 +614,7 @@ def return_children(uid, families):
         return family.children
 
 ################################################################################################
+<<<<<<< HEAD
 
 def us21(individuals, families):
     """ US21 - Correct Gender for Role; husband should be male, wife should
@@ -690,7 +700,163 @@ def Us23(individuals, families):
     return return_flag
 
 #######################################################################################################
+=======
 
+def us21(individuals, families):
+    """ US21 - Correct Gender for Role; husband should be male, wife should
+    be female  """
+    error_type = "US21"
+    return_flag = True
+
+    for family in families:
+        husband_id = family.husband
+        wife_id = family.wife
+
+        husband = None
+        wife = None
+
+        for individual in individuals:
+            if individual.uid == husband_id:
+                husband = individual
+            if individual.uid == wife_id:
+                wife = individual
+
+        if husband.sex is not "M":
+            error_descrip = "Husband is not a male"
+            error_location = [husband.uid, family.uid]
+            report_error('ANOMALY',error_type, error_descrip, error_location)
+            return_flag = False
+
+        if wife.sex is not "F":
+            error_descrip = "Wife is not a female"
+            error_location = [wife.uid, family.uid]
+            report_error('ANOMALY',error_type, error_descrip, error_location)
+            return_flag = False
+    return return_flag
+
+###################################################################################
+
+def us30(individuals, families):
+    """ US30 - List all Married People in the families. """
+    error_type = "US30"
+    return_flag = True
+
+    for family in families:
+        husband_id = family.husband
+        wife_id = family.wife
+
+        husband = None
+        wife = None
+
+        for individual in individuals:
+            if individual.uid == husband_id:
+                husband = individual
+            if individual.uid == wife_id:
+                wife = individual
+
+        if husband.alive is True and wife.alive is True:
+            error_descrip = "Both Husband and Wife are not dead"
+            error_location = [family.uid]
+            report_error('INFORMATION', error_type, error_descrip, error_location)
+            return_flag = False
+
+    return return_flag
+    ###################################################3
+# US22
+def us22(individuals,families):
+    """ US 22- Check for unique IDS"""
+    error_type="US22"
+    return_flag = True
+    seen = set()
+    notseen=set()
+    uniq = []
+    check=[]
+    for indiv in individuals:
+        indiv_id=indiv.uid
+        check.append(indiv_id)
+    for family in families:
+        fam_id=family.uid
+        check.append(fam_id)
+    for x in check:
+        if x not in seen:
+            seen.add(x)
+        else:
+            notseen.add(x)
+    for dup in notseen:
+        error_descrip = "Duplicate ID Found"
+        error_location = [dup]
+        report_error('Error', error_type, error_descrip, error_location)
+        return_flag = False
+    return return_flag
+
+###########################################################################################
+#US31
+def us31(individuals, families):
+    """ US31 - List all Single People. """
+    error_type = "US31"
+    return_flag = True
+    curr_date= datetime.now()
+    check=[]
+    for family in families:
+        husb = family.husband
+        wife = family.wife
+        check.append(husb)
+        check.append(wife)
+    for individual in individuals:
+        indiv =individual.uid
+        bday = individual.birthday
+        if relativedelta(curr_date,bday).years > 30:
+            if indiv not in check:
+                error_descrip = "Single and over thirty"
+                error_location = [indiv]
+                report_error('INFORMATION', error_type, error_descrip, error_location)
+                return_flag = False
+
+    return return_flag
+########################################################################
+
+# US35 Anyone born in the last 30 days
+def us35(individuals):
+    error_type = "US35"
+    return_flag = True
+    curr_date = date.today()
+
+
+    for individual in individuals:
+        indiv = individual.uid
+        bday = individual.birthday
+        diff=(curr_date-bday).days
+        if diff<= 30:
+                error_descrip = "Born in the last 30 days:"
+                error_location = [indiv]
+                report_error('INFORMATION', error_type, error_descrip, error_location)
+                return_flag = False
+
+    return return_flag
+########################################
+# US36 Anyone died in the last 30 days
+def us36(individuals):
+    error_type = "US36"
+    return_flag = True
+    curr_date = date.today()
+
+
+    for individual in individuals:
+        indiv = individual.uid
+        if individual.alive==False:
+            deathday = individual.deathDate
+            diff=(curr_date-deathday).days
+        if diff<= 30:
+                error_descrip = "Died in the last 30 days:"
+                error_location = [indiv]
+                report_error('INFORMATION', error_type, error_descrip, error_location)
+                return_flag = False
+
+    return return_flag
+########################################################################
+>>>>>>> 2d86d49e668096f37e890c9f0b64225794610c66
+
+################################################################################3
 # report Error to the console
 def report_error(rtype, error_type, description, locations):
     # report("ERROR", error_type, description, locations)
@@ -698,7 +864,7 @@ def report_error(rtype, error_type, description, locations):
     if isinstance(locations, list):
         locations = ','.join(locations)
 
-    estr = '{:26.7s} {:14.14s}  {:50.50s}    {:50.50s}' \
+    estr = '{:26.12s} {:14.14s}  {:50.50s}    {:50.50s}' \
         .format(rtype, error_type, description, locations)
     print(estr)
 
