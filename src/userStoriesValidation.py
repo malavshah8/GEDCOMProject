@@ -41,6 +41,7 @@ def story_validation(individuals, families):
     us22(individuals, families)
     us31(individuals,families)
     us23(individuals,families)
+    us25(families)
     
     #Sprint 4
     us35(individuals)
@@ -678,8 +679,7 @@ def us30(individuals, families):
     return return_flag
 
 ################################################################################3
-""" US23 - No more than one individual with the same name and birth
-        date should appear in a GEDCOM file"""
+""" US23 - No more than one individual with the same name and birth date should appear in a GEDCOM file"""
 def us23(individuals, families):
     
     error_type = "US23"
@@ -858,9 +858,22 @@ def us36(individuals):
 >>>>>>> 2d86d49e668096f37e890c9f0b64225794610c66
 
 ################################################################################3
+def us25(Families):
+    error_type = "US25"
+    return_flag = True
 
+     for Family in Families:
+        for compare_family in Families:
+            if Family.child.name and compare_family.child.name \
+                    and Family.child.name == compare_family.child.name:
 
-   
+                    error_descrip = "Two child share a common name in family"
+                    error_location = [individual.uid, compare_indiv.uid]
+                    report_error('-', error_type, error_descrip, error_location)
+                    return_flag = False
+
+    return return_flag
+
 ########################################################################    
 
 
