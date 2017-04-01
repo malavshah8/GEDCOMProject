@@ -868,7 +868,7 @@ def us25(Families):
                     and Family.child.name == compare_family.child.name:
 
                     error_descrip = "Two child share a common name in family"
-                    error_location = [individual.uid, compare_indiv.uid]
+                    error_location = [Family.child.name]
                     report_error('-', error_type, error_descrip, error_location)
                     return_flag = False
 
