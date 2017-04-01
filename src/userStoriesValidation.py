@@ -40,6 +40,7 @@ def story_validation(individuals, families):
 =======
     us22(individuals, families)
     us31(individuals,families)
+    us23(individuals,families)
     
     #Sprint 4
     us35(individuals)
@@ -679,7 +680,7 @@ def us30(individuals, families):
 ################################################################################3
 """ US23 - No more than one individual with the same name and birth
         date should appear in a GEDCOM file"""
-def Us23(individuals, families):
+def us23(individuals, families):
     
     error_type = "US23"
     return_flag = True
@@ -857,6 +858,14 @@ def us36(individuals):
 >>>>>>> 2d86d49e668096f37e890c9f0b64225794610c66
 
 ################################################################################3
+
+
+   
+########################################################################    
+
+
+
+
 # report Error to the console
 def report_error(rtype, error_type, description, locations):
     # report("ERROR", error_type, description, locations)
