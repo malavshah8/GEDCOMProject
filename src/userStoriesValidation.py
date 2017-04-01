@@ -22,15 +22,20 @@ def story_validation(individuals, families):
     us06(individuals,families)
     marriage_before_divorce(families)
     us08(individuals, families)
+
     #Sprint 2
     birth_before_death_of_parents(individuals, families)
-    us11(individuals, families)
-    us16(individuals, families)
-    us15(families)
     us10(individuals, families)
+    us11(individuals, families)
+    us12(individuals, families)
     multiple_births_less_5(individuals, families)
-    us12(individuals,families)
+    us15(families)
+    us16(individuals, families)
     us17(families)
+
+    #Sprint 3
+    us21(individuals, families)
+    us30(individuals, families)
 
 ####################################################################
 # US01 All dates must be before the current date - ERROR
@@ -599,7 +604,92 @@ def return_children(uid, families):
     else:
         return family.children
 
+################################################################################################
 
+def us21(individuals, families):
+    """ US21 - Correct Gender for Role; husband should be male, wife should
+    be female  """
+    error_type = "US21"
+    return_flag = True
+
+    for family in families:
+        husband_id = family.husband
+        wife_id = family.wife
+
+        husband = None
+        wife = None
+
+        for individual in individuals:
+            if individual.uid == husband_id:
+                husband = individual
+            if individual.uid == wife_id:
+                wife = individual
+
+        if husband.sex is not "M":
+            error_descrip = "Husband is not a male"
+            error_location = [husband.uid, family.uid]
+            report_error('ANOMALY',error_type, error_descrip, error_location)
+            return_flag = False
+
+        if wife.sex is not "F":
+            error_descrip = "Wife is not a female"
+            error_location = [wife.uid, family.uid]
+            report_error('ANOMALY',error_type, error_descrip, error_location)
+            return_flag = False
+    return return_flag
+
+###################################################################################
+
+def us30(individuals, families):
+    """ US30 - List all Married People in the families. """
+    error_type = "US30"
+    return_flag = True
+
+    for family in families:
+        husband_id = family.husband
+        wife_id = family.wife
+
+        husband = None
+        wife = None
+
+        for individual in individuals:
+            if individual.uid == husband_id:
+                husband = individual
+            if individual.uid == wife_id:
+                wife = individual
+
+        if husband.alive is True and wife.alive is True:
+            error_descrip = "Both Husband and Wife are not dead"
+            error_location = [family.uid]
+            report_error('-', error_type, error_descrip, error_location)
+            return_flag = False
+
+    return return_flag
+
+################################################################################3
+""" US23 - No more than one individual with the same name and birth
+        date should appear in a GEDCOM file"""
+def Us23(individuals, families):
+    
+    error_type = "US23"
+    return_flag = True
+
+    for individual in individuals:
+        for compare_indiv in individuals:
+            if individual.name and compare_indiv.name \
+                    and individual.name == compare_indiv.name:
+                # same name, compare birthdate
+                if compare_indiv.birthdate and individual.birthdate \
+                        and compare_indiv.birthdate and individual.birthdate:
+
+                    error_descrip = "Two individuals share a name and birthdate"
+                    error_location = [individual.uid, compare_indiv.uid]
+                    report_error('-', error_type, error_descrip, error_location)
+                    return_flag = False
+
+    return return_flag
+
+#######################################################################################################
 
 # report Error to the console
 def report_error(rtype, error_type, description, locations):
