@@ -36,17 +36,17 @@ def story_validation(individuals, families):
     #Sprint 3
     us21(individuals, families)
     us30(individuals, families)
-<<<<<<< HEAD
-=======
+
     us22(individuals, families)
     us31(individuals,families)
     us23(individuals,families)
     us25(families)
+    no_sibling_marriage(individuals, families)
     
     #Sprint 4
     us35(individuals)
     us36(individuals)
->>>>>>> 2d86d49e668096f37e890c9f0b64225794610c66
+
 
 ####################################################################
 # US01 All dates must be before the current date - ERROR
@@ -616,7 +616,6 @@ def return_children(uid, families):
         return family.children
 
 ################################################################################################
-<<<<<<< HEAD
 
 def us21(individuals, families):
     """ US21 - Correct Gender for Role; husband should be male, wife should
@@ -701,7 +700,7 @@ def us23(individuals, families):
     return return_flag
 
 #######################################################################################################
-=======
+
 
 def us21(individuals, families):
     """ US21 - Correct Gender for Role; husband should be male, wife should
@@ -855,27 +854,49 @@ def us36(individuals):
 
     return return_flag
 ########################################################################
->>>>>>> 2d86d49e668096f37e890c9f0b64225794610c66
+
 
 ################################################################################3
 def us25(Families):
     error_type = "US25"
     return_flag = True
 
-     for Family in Families:
+ #    for Family in Families:
         for compare_family in Families:
-            if Family.child.name and compare_family.child.name \
-                    and Family.child.name == compare_family.child.name:
+            if family.child.name and compare_family.child.name \
+                    and family.child.name == compare_family.child.name:
 
                     error_descrip = "Two child share a common name in family"
-                    error_location = [Family.child.name]
+                    error_location = [family.child.name]
                     report_error('-', error_type, error_descrip, error_location)
                     return_flag = False
 
+  #  return return_flag
+
+######################################################################
+
+# US18 - Siblings should not marry one another - ANOMALY """
+
+def no_sibling_marriage(individuals, families):
+    error_type = "US18"
+    return_flag = True
+
+    for family in families:
+        sibling_uids = family.children
+        siblings = list(x for x in individuals if x.uid in sibling_uids)
+
+        for sibling in siblings:
+            sib_fam = next((x for x in families if x.husband == sibling.uid),None)
+
+            if sib_fam and sib_fam.wife in sibling_uids:
+                error_descrip = "Sibling is married to another sibling"
+                error_location = [sibling.uid, sib_fam.wife]
+                report_error("ERROR",error_type,error_descrip, error_location)
+                return_flag = False
+
     return return_flag
 
-########################################################################    
-
+######################################################################
 
 
 
