@@ -695,7 +695,7 @@ def us23(individuals, families):
 
                     error_descrip = "Two individuals share a name and birthdate"
                     error_location = [individual.uid, compare_indiv.uid]
-                    report_error('-', error_type, error_descrip, error_location)
+                    report_error('ERROR', error_type, error_descrip, error_location)
                     return_flag = False
 
     return return_flag
