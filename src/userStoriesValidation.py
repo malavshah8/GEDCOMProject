@@ -42,6 +42,7 @@ def story_validation(individuals, families):
     us23(individuals,families)
     us25(families)
     no_sibling_marriage(individuals, families)
+    list_deceased(individuals)
     
     #Sprint 4
     us35(individuals)
@@ -819,7 +820,7 @@ def us31(individuals, families):
 def us35(individuals):
     error_type = "US35"
     return_flag = True
-    curr_date = date.today()
+    curr_date = datetime.today()
 
 
     for individual in individuals:
@@ -838,7 +839,7 @@ def us35(individuals):
 def us36(individuals):
     error_type = "US36"
     return_flag = True
-    curr_date = date.today()
+    curr_date = datetime.date.today()
 
 
     for individual in individuals:
@@ -861,7 +862,7 @@ def us25(Families):
     error_type = "US25"
     return_flag = True
 
- #    for Family in Families:
+    for family in Families:
         for compare_family in Families:
             if family.child.name and compare_family.child.name \
                     and family.child.name == compare_family.child.name:
@@ -870,8 +871,7 @@ def us25(Families):
                     error_location = [family.child.name]
                     report_error('-', error_type, error_descrip, error_location)
                     return_flag = False
-
-  #  return return_flag
+    return return_flag
 
 ######################################################################
 
@@ -898,6 +898,22 @@ def no_sibling_marriage(individuals, families):
 
 ######################################################################
 
+#US29 - List the deceased individuals
+def list_deceased(individuals):
+    error_type = "US29"
+    return_flag = True
+
+    for individual in individuals:
+        if individual.deathDate is not None:
+            error_descrip = "Deceased individuals"
+            error_location = [individual.uid]
+            report_error('INFORMATION', error_type, error_descrip, error_location)
+            return_flag = False
+
+    return return_flag
+
+
+######################################################################
 
 
 # report Error to the console
