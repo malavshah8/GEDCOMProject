@@ -855,9 +855,7 @@ def us36(individuals):
 
     return return_flag
 ########################################################################
-
-
-################################################################################3
+"""No more than one child with the same name and birth date should appear in a family """
 def us25(individuals,families):
     error_type = "US25"
     return_flag = True
