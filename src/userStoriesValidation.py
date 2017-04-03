@@ -40,7 +40,7 @@ def story_validation(individuals, families):
     us22(individuals, families)
     us31(individuals,families)
     us23(individuals,families)
-    us25(families)
+    us25(individuals, families)
     no_sibling_marriage(individuals, families)
     list_deceased(individuals)
     
@@ -858,19 +858,22 @@ def us36(individuals):
 
 
 ################################################################################3
-def us25(Families):
+def us25(individuals,families):
     error_type = "US25"
     return_flag = True
+    for family in families:
+        if family.marraige:
+            childFirstName= family.children[1]
+            for indiv in individuals:
+                id= indiv.uid
+                name=indiv.name
+                if id in family.children:
+                    if childFirstName in name:
+                        error_descrip="Child's Firstname is not unique"
+                        error_location= [indiv.uid]
+                        report_error('ERROR',error_type,error_descrip,error_location)
+                        return_flag= False
 
-    for family in Families:
-        for compare_family in Families:
-            if family.child.name and compare_family.child.name \
-                    and family.child.name == compare_family.child.name:
-
-                    error_descrip = "Two child share a common name in family"
-                    error_location = [family.child.name]
-                    report_error('-', error_type, error_descrip, error_location)
-                    return_flag = False
     return return_flag
 
 ######################################################################
