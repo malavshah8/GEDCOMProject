@@ -34,19 +34,19 @@ def story_validation(individuals, families):
     us17(families)
 
     #Sprint 3
-    us21(individuals, families)
-    us30(individuals, families)
-
-    us22(individuals, families)
-    us31(individuals,families)
-    us23(individuals,families)
-    us25(families)
     no_sibling_marriage(individuals, families)
+    us21(individuals, families)
+    us22(individuals, families)
+    # us23(individuals,families)
+    # us25(families)
     list_deceased(individuals)
-    
+    us30(individuals, families)
+    us31(individuals,families)
+
+
     #Sprint 4
-    us35(individuals)
-    us36(individuals)
+    # us35(individuals)
+    # us36(individuals)
 
 
 ####################################################################

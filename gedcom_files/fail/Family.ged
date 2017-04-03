@@ -16,7 +16,7 @@
 2 GIVN Edina
 2 SURN Schulz
 2 _MARNM Bettencourt
-1 SEX F
+1 SEX M
 1 BIRT
 2 DATE 8 JAN 1936
 1 DEAT Y
@@ -28,7 +28,7 @@
 2 GIVN Ross
 2 SURN Rothschild
 2 _MARNM Rothschild
-1 SEX M
+1 SEX F
 1 BIRT
 2 DATE 15 MAY 1891
 1 DEAT Y
@@ -260,8 +260,8 @@
 0 @I26@ INDI
 1 NAME Harvey /Rothschild/
 2 GIVN Harvey
-2 SURN Rothschild
-2 _MARNM Rothschild
+2 SURN Specter
+2 _MARNM Specter
 1 SEX M
 1 BIRT
 2 DATE 7 MAR 1982
@@ -322,9 +322,9 @@
 2 DATE 5 FEB 1991
 1 FAMC @F3@
 0 @I33@ INDI
-1 NAME Darby /Rothschild/
+1 NAME Darby /Ron/
 2 GIVN Darby
-2 SURN Rothschild
+2 SURN Ron
 2 _MARNM Rothschild
 1 SEX M
 1 BIRT
@@ -348,7 +348,7 @@
 1 BIRT
 2 DATE 5 SEP 1993
 1 FAMC @F3@
-0 @I36@ INDI
+0 @I35@ INDI
 1 NAME Ava /Rothschild/
 2 GIVN Ava
 2 SURN Rothschild
@@ -401,7 +401,7 @@
 1 CHIL @I33@
 1 CHIL @I34@
 1 CHIL @I35@
-1 CHIL @I36@
+1 CHIL @I35@
 1 MARR
 2 DATE 17 SEP 1976
 1 _CURRENT Y
