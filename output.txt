@@ -41,6 +41,43 @@ ANOMALY                    US21            Husband is not a male                
 ANOMALY                    US21            Wife is not a female                                  @I1@,@F1@                                         
 ANOMALY                    US21            Wife is not a female                                  @I1@,@F2@                                         
 Error                      US22            Duplicate ID Found                                    @I35@                                             
+ERROR                      US23            Two individuals share a name and birthdate            @I1@,@I1@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I2@,@I2@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I3@,@I3@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I4@,@I4@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I5@,@I5@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I6@,@I6@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I7@,@I7@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I8@,@I8@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I9@,@I9@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I10@,@I10@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I11@,@I11@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I12@,@I12@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I13@,@I13@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I14@,@I14@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I15@,@I15@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I16@,@I16@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I17@,@I17@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I18@,@I18@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I19@,@I19@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I20@,@I20@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I21@,@I21@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I22@,@I22@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I23@,@I23@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I24@,@I24@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I25@,@I25@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I26@,@I26@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I27@,@I27@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I28@,@I28@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I29@,@I29@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I30@,@I30@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I31@,@I31@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I32@,@I32@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I33@,@I33@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I34@,@I34@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I35@,@I35@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I35@,@I35@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I37@,@I37@                                       
 INFORMATION                US29            Deceased individuals                                  @I1@                                              
 INFORMATION                US29            Deceased individuals                                  @I2@                                              
 INFORMATION                US29            Deceased individuals                                  @I3@                                              
@@ -59,63 +96,3 @@ INFORMATION                US31            Single and over thirty               
 INFORMATION                US31            Single and over thirty                                @I27@                                             
 INFORMATION                US31            Single and over thirty                                @I28@                                             
 INFORMATION                US31            Single and over thirty                                @I29@                                             
-
-
-+-------+------------------------------+------------+-----+------------+-------+-----------+------------------+
-|   id  |             Name             |  Birthday  | Sex | Death Date | Alive |   Child   |      Spouse      |
-+-------+------------------------------+------------+-----+------------+-------+-----------+------------------+
-|  @I1@ |    ['Edina', '/Schulz/']     | 1936-01-08 |  M  | 1977-08-16 | False |     []    | ['@F1@', '@F2@'] |
-|  @I2@ |   ['Ross', '/Rothschild/']   | 1891-05-15 |  F  | 1986-11-03 | False |     []    |     ['@F1@']     |
-|  @I3@ | ['Charles', '/Bettencourt/'] | 1935-05-18 |  M  | 1933-12-02 | False |     []    |     ['@F2@']     |
-|  @I4@ |  ['Henry', '/Bettencourt/']  | 1915-07-06 |  M  | 1947-04-01 | False |  ['@F2@'] |        []        |
-|  @I5@ |  ['Edward', '/Rothschild/']  | 1938-08-15 |  M  |    None    |  True |  ['@F1@'] |     ['@F3@']     |
-|  @I6@ |    ['Victoria', '/Koch/']    | 1938-04-30 |  F  |    None    |  True |     []    | ['@F3@', '@F4@'] |
-|  @I7@ |   ['Emma', '/Rothschild/']   | 1940-04-06 |  F  |    None    |  True |  ['@F1@'] |     ['@F5@']     |
-|  @I8@ | ['Margaret', '/Rothschild/'] | 1977-11-28 |  F  |    None    |  True |  ['@F3@'] |     ['@F6@']     |
-|  @I9@ |   ['Duncan', '/Thomson/']    | 1777-02-01 |  M  |    None    |  True |     []    |     ['@F6@']     |
-| @I10@ |   ['John', '/Rothschild/']   | 2018-09-10 |  M  | 2000-12-02 | False |  ['@F3@'] | ['@F7@', '@F8@'] |
-| @I11@ |     ['Kat', '/Botham/']      | 1986-07-05 |  F  |    None    |  True |     []    |     ['@F7@']     |
-| @I12@ | ['Richard', '/Rothschild/']  | 1981-06-30 |  M  |    None    |  True |  ['@F3@'] |     ['@F9@']     |
-| @I13@ |   ['Abigail', '/Jhonson/']   | 1978-06-24 |  F  |    None    |  True |     []    |     ['@F9@']     |
-| @I14@ |    ['Harold', '/Walton/']    | 1934-12-01 |  M  |    None    |  True |     []    |     ['@F5@']     |
-| @I15@ |   ['William', '/Powell/']    | 2019-04-24 |  M  |    None    |  True |     []    |     ['@F4@']     |
-| @I16@ |    ['Edgar', '/Powell/']     | 1966-09-02 |  M  |    None    |  True |  ['@F4@'] |    ['@F10@']     |
-| @I17@ |     ['Mary', '/Cornel/']     | 2004-05-17 |  F  |    None    |  True |     []    |    ['@F10@']     |
-| @I18@ |    ['Louis', '/Powell/']     | 1989-01-30 |  M  |    None    |  True | ['@F10@'] |        []        |
-| @I19@ |   ['Donald', '/Thomson/']    | 2005-11-24 |  M  |    None    |  True |  ['@F6@'] |        []        |
-| @I20@ |    ['Emilia', '/Stone/']     | 1980-03-03 |  F  |    None    |  True |     []    |     ['@F8@']     |
-| @I21@ |   ['Ned', '/Rothschild/']    | 2010-10-07 |  M  |    None    |  True |  ['@F9@'] |        []        |
-| @I22@ |   ['Jane', '/Rothschild/']   | 2015-12-30 |  F  |    None    |  True |  ['@F7@'] |        []        |
-| @I23@ | ['Phillip', '/Rothschild/']  | 2007-02-28 |  M  |    None    |  True |  ['@F8@'] |    ['@F11@']     |
-| @I24@ |  ['Amily', '/Rothschild/']   | 1982-03-07 |  F  |    None    |  True |  ['@F3@'] |        []        |
-| @I25@ |  ['Donna', '/Rothschild/']   | 1982-03-07 |  F  |    None    |  True |  ['@F3@'] |    ['@F12@']     |
-| @I26@ |  ['Harvey', '/Rothschild/']  | 1982-03-07 |  M  |    None    |  True |  ['@F3@'] |    ['@F12@']     |
-| @I27@ |   ['Mike', '/Rothschild/']   | 1982-03-07 |  M  |    None    |  True |  ['@F3@'] |        []        |
-| @I28@ |  ['Rachel', '/Rothschild/']  | 1982-03-07 |  F  |    None    |  True |  ['@F3@'] |        []        |
-| @I29@ |   ['Luis', '/Rothschild/']   | 1982-03-07 |  M  |    None    |  True |  ['@F3@'] |        []        |
-| @I30@ | ['Katrina', '/Rothschild/']  | 1988-02-01 |  F  |    None    |  True |  ['@F3@'] |        []        |
-| @I31@ | ['Jessica', '/Rothschild/']  | 1990-04-03 |  F  |    None    |  True |  ['@F3@'] |        []        |
-| @I32@ |  ['Daniel', '/Rothschild/']  | 1991-02-05 |  M  |    None    |  True |  ['@F3@'] |        []        |
-| @I33@ |      ['Darby', '/Ron/']      | 1992-04-12 |  M  |    None    |  True |  ['@F3@'] |        []        |
-| @I34@ |   ['Tess', '/Rothschild/']   | 1992-03-05 |  F  |    None    |  True |  ['@F3@'] |        []        |
-| @I35@ |  ['Harold', '/Rothschild/']  | 1993-09-05 |  M  |    None    |  True |  ['@F3@'] |        []        |
-| @I35@ |   ['Ava', '/Rothschild/']    | 1993-03-04 |  F  |    None    |  True |  ['@F3@'] |        []        |
-| @I37@ | ['Emilia', '/New', 'Name/']  | 2001-06-11 |  F  |    None    |  True |     []    |    ['@F11@']     |
-+-------+------------------------------+------------+-----+------------+-------+-----------+------------------+
-----------------------------------------------------------------------------------------------------------------------------------------
-+-------+------------+---------+------------------------------+-------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------+
-|  Fid  |  Marriage  | Husband |         Husband Name         |  Wife |          Wife Name           |                                                                     Children                                                                    |  Divorce   |
-+-------+------------+---------+------------------------------+-------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------+
-|  @F1@ | 1935-08-15 |   @I2@  |   ['Ross', '/Rothschild/']   |  @I1@ |    ['Edina', '/Schulz/']     |                                                                 ['@I5@', '@I7@']                                                                |    None    |
-|  @F2@ | 1913-01-01 |   @I3@  | ['Charles', '/Bettencourt/'] |  @I1@ |    ['Edina', '/Schulz/']     |                                                                     ['@I4@']                                                                    |    None    |
-|  @F3@ | 1976-09-17 |   @I5@  |  ['Edward', '/Rothschild/']  |  @I6@ |    ['Victoria', '/Koch/']    | ['@I8@', '@I10@', '@I12@', '@I24@', '@I25@', '@I26@', '@I27@', '@I28@', '@I29@', '@I30@', '@I31@', '@I32@', '@I33@', '@I34@', '@I35@', '@I35@'] |    None    |
-|  @F4@ | 1964-03-07 |  @I15@  |   ['William', '/Powell/']    |  @I6@ |    ['Victoria', '/Koch/']    |                                                                    ['@I16@']                                                                    |    None    |
-|  @F5@ |    None    |  @I14@  |    ['Harold', '/Walton/']    |  @I7@ |   ['Emma', '/Rothschild/']   |                                                                        []                                                                       |    None    |
-|  @F6@ |    None    |   @I9@  |   ['Duncan', '/Thomson/']    |  @I8@ | ['Margaret', '/Rothschild/'] |                                                                    ['@I19@']                                                                    |    None    |
-|  @F7@ | 2014-04-12 |  @I10@  |   ['John', '/Rothschild/']   | @I11@ |     ['Kat', '/Botham/']      |                                                                    ['@I22@']                                                                    |    None    |
-|  @F8@ | 2014-02-02 |  @I10@  |   ['John', '/Rothschild/']   | @I20@ |    ['Emilia', '/Stone/']     |                                                                    ['@I23@']                                                                    | 2013-12-04 |
-|  @F9@ | 2006-08-15 |  @I12@  | ['Richard', '/Rothschild/']  | @I13@ |   ['Abigail', '/Jhonson/']   |                                                                    ['@I21@']                                                                    |    None    |
-| @F10@ | 1987-04-17 |  @I16@  |    ['Edgar', '/Powell/']     | @I17@ |     ['Mary', '/Cornel/']     |                                                                    ['@I18@']                                                                    |    None    |
-| @F11@ | 2014-04-06 |  @I23@  | ['Phillip', '/Rothschild/']  | @I37@ | ['Emilia', '/New', 'Name/']  |                                                                        []                                                                       |    None    |
-| @F12@ |    None    |  @I26@  |  ['Harvey', '/Rothschild/']  | @I25@ |  ['Donna', '/Rothschild/']   |                                                                        []                                                                       |    None    |
-+-------+------------+---------+------------------------------+-------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+------------+

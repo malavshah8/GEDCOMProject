@@ -37,21 +37,14 @@ def story_validation(individuals, families):
     no_sibling_marriage(individuals, families)
     us21(individuals, families)
     us22(individuals, families)
-<<<<<<< HEAD
-    us31(individuals,families)
     us23(individuals,families)
     us25(individuals, families)
-    no_sibling_marriage(individuals, families)
-=======
-    # us23(individuals,families)
-    # us25(families)
->>>>>>> 942ba2703330177c79b2b01080e892097bdad3e5
     list_deceased(individuals)
     us30(individuals, families)
     us31(individuals,families)
 
 
-    #Sprint 4
+    # #Sprint 4
     # us35(individuals)
     # us36(individuals)
 
@@ -697,8 +690,8 @@ def us23(individuals, families):
             if individual.name and compare_indiv.name \
                     and individual.name == compare_indiv.name:
                 # same name, compare birthdate
-                if compare_indiv.birthdate and individual.birthdate \
-                        and compare_indiv.birthdate and individual.birthdate:
+                if compare_indiv.birthday and individual.birthday \
+                        and compare_indiv.birthday and individual.birthday:
 
                     error_descrip = "Two individuals share a name and birthdate"
                     error_location = [individual.uid, compare_indiv.uid]
@@ -867,8 +860,11 @@ def us25(individuals,families):
     error_type = "US25"
     return_flag = True
     for family in families:
-        if family.marraige:
-            childFirstName= family.children[1]
+        if family.marriage is not None:
+            if len(family.children) != 0:
+                childFirstName= family.children[0]
+            else:
+                continue
             for indiv in individuals:
                 id= indiv.uid
                 name=indiv.name
