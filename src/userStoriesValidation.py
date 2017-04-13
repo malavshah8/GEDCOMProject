@@ -45,8 +45,11 @@ def story_validation(individuals, families):
 
 
     # #Sprint 4
-    # us35(individuals)
-    # us36(individuals)
+    us35(individuals)
+    us36(individuals)
+    living_spouses(individuals, families)
+    illegitimate_dates(individuals)
+
 
 
 ####################################################################
@@ -841,7 +844,6 @@ def us36(individuals):
     return_flag = True
     curr_date = datetime.date.today()
 
-
     for individual in individuals:
         indiv = individual.uid
         if individual.alive==False:
@@ -919,7 +921,50 @@ def list_deceased(individuals):
 
 ######################################################################
 
+#US37
+def living_spouses(individuals,families):
+    error_type = "US37"
+    return_flag = True
+    curr_date = datetime.now().date()
 
+    for individual in individuals:
+        indiv = individual.uid
+        if individual.alive == False:
+            deathday = individual.deathDate
+            diff = (curr_date - deathday).days
+        if diff <= 30 and len(individual.fams) > 0:
+            for family in families:
+                if family.uid == individual.fams[0]:
+                    husband_id = family.husband
+                    wife_id = family.wife
+                    error_descrip = "Living Spouses"
+                    error_location = [wife_id,husband_id]
+                    report_error('INFORMATION', error_type, error_descrip, error_location)
+                    return_flag = False
+
+    return return_flag
+
+######################################################################
+
+#US42
+def illegitimate_dates(individuals):
+    error_type = "US42"
+    return_flag = True
+
+    for individual in individuals:
+        indiv = individual.uid
+        date = individual.birthday
+        date_text = str(date)
+        if not datetime.strptime(date_text, '%Y-%m-%d'):
+            error_descrip = "Illegitimate Dates"
+            error_location = [indiv]
+            report_error('ERROR', error_type, error_descrip, error_location)
+            return_flag = False
+
+    return return_flag
+
+
+######################################################################
 # report Error to the console
 def report_error(rtype, error_type, description, locations):
     # report("ERROR", error_type, description, locations)

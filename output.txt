@@ -18,10 +18,8 @@ ERROR                      US05            Death of Wife occurs before marriage 
 ERROR                      US05            Death of Wife occurs before marriage                  @I1@                                              
 ERROR                      US05            Death of Husband occurs before marriage               @I10@                                             
 ERROR                      US05            Death of Husband occurs before marriage               @I10@                                             
-ERROR                      US07            lived longer than 150 years                           @I9@                                              
 ERROR                      US06            Death of Husband occurs before divorce                @I10@                                             
 ERROR                      US04            Marriage occurs after divorce                         @F8@,@I10@,@I20@                                  
-ERROR                      US08            Birth occurs before marriage                          @I23@                                             
 ERROR                      US09            Child is born more than 9 months or after death of    @F7@,@I22@                                        
 ERROR                      US09            Child is born more than 9 months or after death of    @F8@,@I23@                                        
 ANOMALY                    US10            Husband is married before 14 years old                @F4@,@I15@                                        
@@ -41,58 +39,9 @@ ANOMALY                    US21            Husband is not a male                
 ANOMALY                    US21            Wife is not a female                                  @I1@,@F1@                                         
 ANOMALY                    US21            Wife is not a female                                  @I1@,@F2@                                         
 Error                      US22            Duplicate ID Found                                    @I35@                                             
-ERROR                      US23            Two individuals share a name and birthdate            @I1@,@I1@                                         
-ERROR                      US23            Two individuals share a name and birthdate            @I2@,@I2@                                         
-ERROR                      US23            Two individuals share a name and birthdate            @I3@,@I3@                                         
-ERROR                      US23            Two individuals share a name and birthdate            @I4@,@I4@                                         
-ERROR                      US23            Two individuals share a name and birthdate            @I5@,@I5@                                         
-ERROR                      US23            Two individuals share a name and birthdate            @I6@,@I6@                                         
-ERROR                      US23            Two individuals share a name and birthdate            @I7@,@I7@                                         
-ERROR                      US23            Two individuals share a name and birthdate            @I8@,@I8@                                         
-ERROR                      US23            Two individuals share a name and birthdate            @I9@,@I9@                                         
-ERROR                      US23            Two individuals share a name and birthdate            @I10@,@I10@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I11@,@I11@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I12@,@I12@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I13@,@I13@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I14@,@I14@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I15@,@I15@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I16@,@I16@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I17@,@I17@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I18@,@I18@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I19@,@I19@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I20@,@I20@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I21@,@I21@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I22@,@I22@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I23@,@I23@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I24@,@I24@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I25@,@I25@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I26@,@I26@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I27@,@I27@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I28@,@I28@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I29@,@I29@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I30@,@I30@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I31@,@I31@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I32@,@I32@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I33@,@I33@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I34@,@I34@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I35@,@I35@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I35@,@I35@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I37@,@I37@                                       
 INFORMATION                US29            Deceased individuals                                  @I1@                                              
 INFORMATION                US29            Deceased individuals                                  @I2@                                              
 INFORMATION                US29            Deceased individuals                                  @I3@                                              
 INFORMATION                US29            Deceased individuals                                  @I4@                                              
 INFORMATION                US29            Deceased individuals                                  @I10@                                             
-INFORMATION                US30            Both Husband and Wife are not dead                    @F3@                                              
-INFORMATION                US30            Both Husband and Wife are not dead                    @F4@                                              
-INFORMATION                US30            Both Husband and Wife are not dead                    @F5@                                              
-INFORMATION                US30            Both Husband and Wife are not dead                    @F6@                                              
-INFORMATION                US30            Both Husband and Wife are not dead                    @F9@                                              
-INFORMATION                US30            Both Husband and Wife are not dead                    @F10@                                             
-INFORMATION                US30            Both Husband and Wife are not dead                    @F11@                                             
-INFORMATION                US30            Both Husband and Wife are not dead                    @F12@                                             
-INFORMATION                US31            Single and over thirty                                @I4@                                              
-INFORMATION                US31            Single and over thirty                                @I24@                                             
-INFORMATION                US31            Single and over thirty                                @I27@                                             
-INFORMATION                US31            Single and over thirty                                @I28@                                             
-INFORMATION                US31            Single and over thirty                                @I29@                                             
+INFORMATION                US37            Living Spouses                                        @I1@,@I2@                                         
