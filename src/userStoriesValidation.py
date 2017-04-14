@@ -44,7 +44,9 @@ def story_validation(individuals, families):
     us31(individuals,families)
 
 
-    # #Sprint 4
+    # Sprint 4
+    us32(individuals, families)
+    us33(individuals, families)
     us35(individuals)
     us36(individuals)
     living_spouses(individuals, families)
@@ -765,7 +767,10 @@ def us30(individuals, families):
             return_flag = False
 
     return return_flag
-    ###################################################3
+
+
+
+###################################################
 # US22
 def us22(individuals,families):
     """ US 22- Check for unique IDS"""
@@ -829,7 +834,7 @@ def us35(individuals):
     for individual in individuals:
         indiv = individual.uid
         bday = individual.birthday
-        diff=(curr_date-bday).days
+        diff=(curr_date.date()-bday).days
         if diff<= 30:
                 error_descrip = "Born in the last 30 days:"
                 error_location = [indiv]
@@ -842,13 +847,13 @@ def us35(individuals):
 def us36(individuals):
     error_type = "US36"
     return_flag = True
-    curr_date = datetime.date.today()
+    curr_date = datetime.today()
 
     for individual in individuals:
         indiv = individual.uid
         if individual.alive==False:
             deathday = individual.deathDate
-            diff=(curr_date-deathday).days
+            diff=(curr_date.date()-deathday).days
         if diff<= 30:
                 error_descrip = "Died in the last 30 days:"
                 error_location = [indiv]
@@ -856,6 +861,8 @@ def us36(individuals):
                 return_flag = False
 
     return return_flag
+
+
 ########################################################################
 """No more than one child with the same name and birth date should appear in a family """
 def us25(individuals,families):
@@ -962,6 +969,96 @@ def illegitimate_dates(individuals):
             return_flag = False
 
     return return_flag
+
+# US 32 - Multiple Birth in GEDCOM file
+######################################################################################################
+def us32(individuals,families):
+
+    error_type = "US32"
+    return_flag = True
+
+    for family in families:
+        sibling_uids = family.children
+        siblings = list(x for x in individuals if x.uid in sibling_uids)
+        sib_birthdays = []
+        for sibling in siblings:
+            sib_birthdays.append(sibling.birthday)
+        result = Counter(sib_birthdays).most_common(1)
+        for (a,b) in result:
+            if b > 2:
+                error_descrip = "Multiple Birth in Family"
+                error_location = [family.uid]
+                report_error('ANAMOLY',error_type, error_descrip, error_location)
+                return_flag = False
+
+    return return_flag
+
+
+###################################################################################
+def us30(individuals, families):
+    """ US30 - List all Married People in the families. """
+    error_type = "US30"
+    return_flag = True
+
+    for family in families:
+        husband_id = family.husband
+        wife_id = family.wife
+
+        husband = None
+        wife = None
+
+        for individual in individuals:
+            if individual.uid == husband_id:
+                husband = individual
+            if individual.uid == wife_id:
+                wife = individual
+
+        if husband.alive is True and wife.alive is True:
+            error_descrip = "Both Husband and Wife are not dead"
+            error_location = [family.uid]
+            report_error('INFORMATION', error_type, error_descrip, error_location)
+            return_flag = False
+
+    return return_flag
+
+
+###################################################################################
+def us33(individuals, families):
+    """ US33 - List all orphan children. """
+    error_type = "US33"
+    return_flag = True
+
+    for family in families:
+        husband_id = family.husband
+        wife_id = family.wife
+
+        husband = None
+        wife = None
+
+        if len(family.children) == 0:
+            break
+
+        for individual in individuals:
+            if individual.uid == husband_id:
+                husband = individual
+            if individual.uid == wife_id:
+                wife = individual
+
+        if husband.alive is False and wife.alive is False:
+            siblings = list(x for x in individuals if x.uid in family.children)
+            for child in siblings:
+                if calculate_age(child.birthday) < 18:
+                    error_descrip = "Orphan Children"
+                    error_location = [family.uid, child.uid]
+                    report_error('INFORMATION', error_type, error_descrip, error_location)
+                    return_flag = False
+
+    return return_flag
+
+
+def calculate_age(born):
+    today = datetime.today().date()
+    return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
 
 
 ######################################################################
