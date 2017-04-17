@@ -1,7 +1,7 @@
 # this file is to check and validate user stories
 
 from datetime import datetime, timedelta
-from dateutil.relativedelta import relativedelta
+#from dateutil.relativedelta import relativedelta
 from collections import Counter
 
 error_locations = []
@@ -50,11 +50,9 @@ def story_validation(individuals, families):
     us35(individuals)
     us36(individuals)
     living_spouses(individuals, families)
-    illegitimate_dates(individuals)
+    sibling_spacing(individuals, families)
     us38(individuals)
     us39(families)
-
-
 
 ####################################################################
 # US01 All dates must be before the current date - ERROR
@@ -954,6 +952,30 @@ def living_spouses(individuals,families):
     return return_flag
 
 ######################################################################
+
+#US13
+def sibling_spacing(individuals,families):
+    error_type = "US13"
+    return_flag = True
+
+    for family in families:
+        sibling_uids = family.children
+        siblings = list(x for x in individuals if x.uid in sibling_uids)
+
+        sib_birthdays = sorted(siblings, key=lambda ind: ind.birthday, reverse=False)
+        i=0
+        count = len(sib_birthdays)
+        while i < count-1:
+            diff = sib_birthdays[i+1].birthday - sib_birthdays[i].birthday
+            if (diff > timedelta(days=2) and diff < timedelta(days=243)):
+                error_descrip = "Difference in sibling age impossible!"
+                error_location = [sib_birthdays[i+1].uid, sib_birthdays[i].uid]
+                report_error("ERROR",error_type, error_descrip, error_location)
+                return_flag = False
+            i+=1
+        return return_flag
+
+#######################################################################
 
 #US42
 def illegitimate_dates(individuals):
