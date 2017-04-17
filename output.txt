@@ -106,6 +106,51 @@ INFORMATION                US35            Born in the last 30 days:            
 INFORMATION                US35            Born in the last 30 days:                             @I15@                                             
 INFORMATION                US36            Died in the last 30 days:                             @I2@                                              
 INFORMATION                US37            Living Spouses                                        @I2@,@I1@                                         
+INFORMATION                US38            Birthday is coming in next 30 days                    @I1@                                              
+INFORMATION                US38            Birthday is coming in next 30 days                    @I2@                                              
+INFORMATION                US38            Birthday is coming in next 30 days                    @I3@                                              
+INFORMATION                US38            Birthday is coming in next 30 days                    @I4@                                              
+INFORMATION                US38            Birthday is coming in next 30 days                    @I5@                                              
+INFORMATION                US38            Birthday is coming in next 30 days                    @I6@                                              
+INFORMATION                US38            Birthday is coming in next 30 days                    @I7@                                              
+INFORMATION                US38            Birthday is coming in next 30 days                    @I8@                                              
+INFORMATION                US38            Birthday is coming in next 30 days                    @I9@                                              
+INFORMATION                US38            Birthday is coming in next 30 days                    @I11@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I12@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I13@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I14@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I16@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I17@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I18@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I19@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I20@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I21@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I22@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I23@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I24@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I25@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I26@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I27@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I28@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I29@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I30@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I31@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I32@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I33@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I34@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I35@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I36@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I37@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I38@                                             
+INFORMATION                US39            Anniversary is coming in next 30 days                 @F1@                                              
+INFORMATION                US39            Anniversary is coming in next 30 days                 @F2@                                              
+INFORMATION                US39            Anniversary is coming in next 30 days                 @F3@                                              
+INFORMATION                US39            Anniversary is coming in next 30 days                 @F4@                                              
+INFORMATION                US39            Anniversary is coming in next 30 days                 @F7@                                              
+INFORMATION                US39            Anniversary is coming in next 30 days                 @F8@                                              
+INFORMATION                US39            Anniversary is coming in next 30 days                 @F9@                                              
+INFORMATION                US39            Anniversary is coming in next 30 days                 @F10@                                             
+INFORMATION                US39            Anniversary is coming in next 30 days                 @F11@                                             
 
 
 +-----------+-------+------------------+-------+------------+------------+------------+------------------------------+

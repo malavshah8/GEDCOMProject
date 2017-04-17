@@ -51,6 +51,8 @@ def story_validation(individuals, families):
     us36(individuals)
     living_spouses(individuals, families)
     illegitimate_dates(individuals)
+    us38(individuals)
+    us39(families)
 
 
 
@@ -1062,6 +1064,48 @@ def calculate_age(born):
 
 
 ######################################################################
+def us38(individuals):
+    error_type = "US38"
+    return_flag = True
+    curr_date = datetime.today()
+
+
+    for individual in individuals:
+        indiv = individual.uid
+        bday = individual.birthday
+        upcoming_birthday=(bday - curr_date.date()).days
+        if upcoming_birthday<= 30:
+                error_descrip = "Birthday is coming in next 30 days"
+                error_location = [indiv]
+                report_error('INFORMATION', error_type, error_descrip, error_location)
+                return_flag = False
+
+    return return_flag
+
+###########################################################################  
+def us39(families):
+    error_type = "US39"
+    return_flag = True
+    curr_date = datetime.today()
+
+
+    for family in families:
+        if family.marriage:
+            family_id= family.uid
+            M_date = family.marriage
+            upcoming_Anniversary = (M_date - curr_date.date()).days
+            if upcoming_Anniversary<= 30:
+                 error_descrip = "Anniversary is coming in next 30 days"
+                 error_location = [family_id]
+                 report_error('INFORMATION', error_type, error_descrip, error_location)
+                 return_flag = False
+            
+            
+
+    return return_flag
+##################################################################################      
+
+
 # report Error to the console
 def report_error(rtype, error_type, description, locations):
     # report("ERROR", error_type, description, locations)
