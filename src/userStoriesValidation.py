@@ -1072,13 +1072,17 @@ def us38(individuals):
 
     for individual in individuals:
         indiv = individual.uid
-        bday = individual.birthday
-        upcoming_birthday=(bday - curr_date.date()).days
-        if upcoming_birthday<= 30:
-                error_descrip = "Birthday is coming in next 30 days"
-                error_location = [indiv]
-                report_error('INFORMATION', error_type, error_descrip, error_location)
-                return_flag = False
+        if individual.alive == True:
+            
+            bday = individual.birthday
+            bday = datetime(curr_date.year,bday.month,bday.day)
+            upcoming_birthday=(bday - curr_date).days
+            if upcoming_birthday<= 30 and upcoming_birthday >= 0:
+                    error_descrip = "Birthday is coming in next 30 days"
+                    #error_descrip = str(upcoming_birthday)
+                    error_location = [indiv]
+                    report_error('INFORMATION', error_type, error_descrip, error_location)
+                    return_flag = False
 
     return return_flag
 
@@ -1093,8 +1097,9 @@ def us39(families):
         if family.marriage:
             family_id= family.uid
             M_date = family.marriage
-            upcoming_Anniversary = (M_date - curr_date.date()).days
-            if upcoming_Anniversary<= 30:
+            M_date = datetime(curr_date.year,M_date.month,M_date.day)
+            upcoming_Anniversary = (M_date - curr_date).days
+            if upcoming_Anniversary<= 30 and upcoming_Anniversary >= 0:
                  error_descrip = "Anniversary is coming in next 30 days"
                  error_location = [family_id]
                  report_error('INFORMATION', error_type, error_descrip, error_location)
