@@ -14,12 +14,14 @@ ERROR                      US02            Birth of husband occurs after marraig
 ERROR                      US02            Birth of wife occurs after marriage                   @I17@                                             
 ERROR                      US03            Birth occurs before death.                            @I3@                                              
 ERROR                      US03            Birth occurs before death.                            @I10@                                             
+ERROR                      US04            Marriage occurs after divorce                         @F8@,@I10@,@I20@                                  
 ERROR                      US05            Death of Wife occurs before marriage                  @I2@                                              
 ERROR                      US05            Death of Wife occurs before marriage                  @I3@                                              
 ERROR                      US05            Death of Husband occurs before marriage               @I10@                                             
 ERROR                      US05            Death of Husband occurs before marriage               @I10@                                             
 ERROR                      US06            Death of Husband occurs before divorce                @I10@                                             
-ERROR                      US04            Marriage occurs after divorce                         @F8@,@I10@,@I20@                                  
+ERROR                      US07            lived longer than 150 years                           @I9@                                              
+ERROR                      US08            Birth after divorce of 9 months                       @I10@                                             
 ERROR                      US09            Child is born more than 9 months or after death of    @F7@,@I22@                                        
 ERROR                      US09            Child is born more than 9 months or after death of    @F8@,@I23@                                        
 ERROR                      US09            Child is born more than 9 months or after death of    @F1@,@I38@                                        
@@ -40,8 +42,10 @@ ERROR                      US16            Lastname not the same as father      
 ERROR                      US16            Lastname not the same as father                       @I4@                                              
 ERROR                      US16            Lastname not the same as father                       @I27@                                             
 ERROR                      US16            Lastname not the same as father                       @I34@                                             
+ERROR                      US17            Husband is decendant of spouse                        @I20@,@I10@                                       
 ERROR                      US18            Sibling is married to another sibling                 @I27@,@I26@                                       
 ANOMALY                    US21            Wife is not a female                                  @I3@,@F2@                                         
+Error                      US22            Duplicate ID Found                                    @I35@                                             
 ERROR                      US23            Two individuals share a name and birthdate            @I1@,@I1@                                         
 ERROR                      US23            Two individuals share a name and birthdate            @I2@,@I2@                                         
 ERROR                      US23            Two individuals share a name and birthdate            @I3@,@I3@                                         
@@ -67,6 +71,8 @@ ERROR                      US23            Two individuals share a name and birt
 ERROR                      US23            Two individuals share a name and birthdate            @I23@,@I23@                                       
 ERROR                      US23            Two individuals share a name and birthdate            @I24@,@I24@                                       
 ERROR                      US23            Two individuals share a name and birthdate            @I25@,@I25@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I25@,@I26@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I26@,@I25@                                       
 ERROR                      US23            Two individuals share a name and birthdate            @I26@,@I26@                                       
 ERROR                      US23            Two individuals share a name and birthdate            @I27@,@I27@                                       
 ERROR                      US23            Two individuals share a name and birthdate            @I28@,@I28@                                       
@@ -77,9 +83,10 @@ ERROR                      US23            Two individuals share a name and birt
 ERROR                      US23            Two individuals share a name and birthdate            @I33@,@I33@                                       
 ERROR                      US23            Two individuals share a name and birthdate            @I34@,@I34@                                       
 ERROR                      US23            Two individuals share a name and birthdate            @I35@,@I35@                                       
-ERROR                      US23            Two individuals share a name and birthdate            @I36@,@I36@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I35@,@I35@                                       
 ERROR                      US23            Two individuals share a name and birthdate            @I37@,@I37@                                       
 ERROR                      US23            Two individuals share a name and birthdate            @I38@,@I38@                                       
+ERROR                      US25            Child's Firstname is not unique                       @I5@                                              
 INFORMATION                US29            Deceased individuals                                  @I1@                                              
 INFORMATION                US29            Deceased individuals                                  @I2@                                              
 INFORMATION                US29            Deceased individuals                                  @I3@                                              
@@ -93,6 +100,11 @@ INFORMATION                US30            Both Husband and Wife are not dead   
 INFORMATION                US30            Both Husband and Wife are not dead                    @F10@                                             
 INFORMATION                US30            Both Husband and Wife are not dead                    @F11@                                             
 INFORMATION                US30            Both Husband and Wife are not dead                    @F12@                                             
+INFORMATION                US31            Single and over thirty                                @I4@                                              
+INFORMATION                US31            Single and over thirty                                @I25@                                             
+INFORMATION                US31            Single and over thirty                                @I28@                                             
+INFORMATION                US31            Single and over thirty                                @I29@                                             
+INFORMATION                US31            Single and over thirty                                @I30@                                             
 ANAMOLY                    US32            Multiple Birth in Family                              @F3@                                              
 INFORMATION                US33            Orphan Children                                       @F1@,@I38@                                        
 INFORMATION                US35            Born in the last 30 days:                             @I10@                                             
@@ -113,7 +125,7 @@ INFORMATION                US39            Anniversary is coming in next 30 days
 |  @I2@ |   ['Ross', '/Rothschild/']   | 1891-05-08 |  F  | 2017-04-03 | False |     []    |     ['@F1@']     |
 |  @I3@ | ['Charles', '/Bettencourt/'] | 1935-05-18 |  M  | 1933-12-02 | False |     []    |     ['@F2@']     |
 |  @I4@ |  ['Henry', '/Bettencourt/']  | 1915-07-06 |  M  | 1947-04-01 | False |  ['@F2@'] |        []        |
-|  @I5@ |  ['Edward', '/Rothschild/']  | 1938-08-15 |  M  |    None    |  True |  ['@F1@'] |     ['@F3@']     |
+|  @I5@ |   ['@I5@', '/Rothschild/']   | 1938-08-15 |  M  |    None    |  True |  ['@F1@'] |     ['@F3@']     |
 |  @I6@ |    ['Victoria', '/Koch/']    | 1938-04-30 |  F  |    None    |  True |     []    | ['@F3@', '@F4@'] |
 |  @I7@ |   ['Emma', '/Rothschild/']   | 1938-08-20 |  F  |    None    |  True |  ['@F1@'] |     ['@F5@']     |
 |  @I8@ | ['Margaret', '/Rothschild/'] | 1977-11-28 |  F  |    None    |  True |  ['@F3@'] |     ['@F6@']     |
@@ -133,7 +145,7 @@ INFORMATION                US39            Anniversary is coming in next 30 days
 | @I22@ |   ['Jane', '/Rothschild/']   | 2015-12-30 |  F  |    None    |  True |  ['@F7@'] |        []        |
 | @I23@ | ['Phillip', '/Rothschild/']  | 2007-02-28 |  M  |    None    |  True |  ['@F8@'] |    ['@F11@']     |
 | @I24@ | ['Emilia', '/New', 'Name/']  | 2001-06-11 |  F  |    None    |  True |     []    |    ['@F11@']     |
-| @I25@ |  ['Amily', '/Rothschild/']   | 1982-03-07 |  F  |    None    |  True |  ['@F3@'] |        []        |
+| @I25@ |  ['Donna', '/Rothschild/']   | 1982-03-07 |  F  |    None    |  True |  ['@F3@'] |        []        |
 | @I26@ |  ['Donna', '/Rothschild/']   | 1982-03-07 |  F  |    None    |  True |  ['@F3@'] |    ['@F12@']     |
 | @I27@ |   ['Harvey', '/Specter/']    | 1982-03-07 |  M  |    None    |  True |  ['@F3@'] |    ['@F12@']     |
 | @I28@ |   ['Mike', '/Rothschild/']   | 1982-03-07 |  M  |    None    |  True |  ['@F3@'] |        []        |
@@ -144,7 +156,7 @@ INFORMATION                US39            Anniversary is coming in next 30 days
 | @I33@ |  ['Daniel', '/Rothschild/']  | 1991-02-05 |  M  |    None    |  True |  ['@F3@'] |        []        |
 | @I34@ |      ['Darby', '/Ron/']      | 1992-04-12 |  M  |    None    |  True |  ['@F3@'] |        []        |
 | @I35@ |   ['Tess', '/Rothschild/']   | 1992-03-05 |  F  |    None    |  True |  ['@F3@'] |        []        |
-| @I36@ |  ['Harold', '/Rothschild/']  | 1993-09-05 |  M  |    None    |  True |     []    |        []        |
+| @I35@ |  ['Harold', '/Rothschild/']  | 1993-09-05 |  M  |    None    |  True |     []    |        []        |
 | @I37@ |   ['Ava', '/Rothschild/']    | 1993-03-04 |  F  |    None    |  True |  ['@F3@'] |        []        |
 | @I38@ |  ['James', '/Rothschild/']   | 2008-07-09 |  M  |    None    |  True |  ['@F1@'] |        []        |
 +-------+------------------------------+------------+-----+------------+-------+-----------+------------------+
@@ -154,12 +166,12 @@ INFORMATION                US39            Anniversary is coming in next 30 days
 +-------+------------+---------+-----------------------------+-------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+------------+
 |  @F1@ | 1935-08-15 |   @I1@  |    ['Edina', '/Schulz/']    |  @I2@ |   ['Ross', '/Rothschild/']   |                                                       ['@I5@', '@I7@', '@I38@']                                                        |    None    |
 |  @F2@ | 1913-01-01 |   @I1@  |    ['Edina', '/Schulz/']    |  @I3@ | ['Charles', '/Bettencourt/'] |                                                                ['@I4@']                                                                |    None    |
-|  @F3@ | 1976-09-17 |   @I5@  |  ['Edward', '/Rothschild/'] |  @I6@ |    ['Victoria', '/Koch/']    | ['@I8@', '@I10@', '@I12@', '@I25@', '@I26@', '@I27@', '@I28@', '@I29@', '@I30@', '@I31@', '@I32@', '@I33@', '@I34@', '@I35@', '@I37@'] |    None    |
+|  @F3@ | 1976-09-17 |   @I5@  |   ['@I5@', '/Rothschild/']  |  @I6@ |    ['Victoria', '/Koch/']    | ['@I8@', '@I10@', '@I12@', '@I25@', '@I26@', '@I27@', '@I28@', '@I29@', '@I30@', '@I31@', '@I32@', '@I33@', '@I34@', '@I35@', '@I37@'] |    None    |
 |  @F4@ | 1964-03-07 |  @I15@  |   ['William', '/Powell/']   |  @I6@ |    ['Victoria', '/Koch/']    |                                                               ['@I16@']                                                                |    None    |
 |  @F5@ |    None    |  @I14@  |    ['Harold', '/Walton/']   |  @I7@ |   ['Emma', '/Rothschild/']   |                                                                   []                                                                   |    None    |
 |  @F6@ |    None    |   @I9@  |   ['Duncan', '/Thomson/']   |  @I8@ | ['Margaret', '/Rothschild/'] |                                                               ['@I19@']                                                                |    None    |
 |  @F7@ | 2014-04-12 |  @I10@  |   ['John', '/Rothschild/']  | @I11@ |     ['Kat', '/Botham/']      |                                                               ['@I22@']                                                                |    None    |
-|  @F8@ | 2014-02-02 |  @I10@  |   ['John', '/Rothschild/']  | @I20@ |    ['Emilia', '/Stone/']     |                                                               ['@I23@']                                                                | 2013-12-04 |
+|  @F8@ | 2014-02-02 |  @I10@  |   ['John', '/Rothschild/']  | @I20@ |    ['Emilia', '/Stone/']     |                                                               ['@I10@']                                                                | 2013-12-04 |
 |  @F9@ | 2006-08-15 |  @I12@  | ['Richard', '/Rothschild/'] | @I13@ |   ['Abigail', '/Jhonson/']   |                                                               ['@I21@']                                                                |    None    |
 | @F10@ | 1987-04-17 |  @I16@  |    ['Edgar', '/Powell/']    | @I17@ |     ['Mary', '/Cornel/']     |                                                               ['@I18@']                                                                |    None    |
 | @F11@ | 2014-04-30 |  @I23@  | ['Phillip', '/Rothschild/'] | @I24@ | ['Emilia', '/New', 'Name/']  |                                                                   []                                                                   |    None    |

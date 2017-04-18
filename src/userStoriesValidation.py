@@ -1,7 +1,7 @@
 # this file is to check and validate user stories
 
 from datetime import datetime, timedelta
-#from dateutil.relativedelta import relativedelta
+from dateutil.relativedelta import relativedelta
 from collections import Counter
 
 error_locations = []
@@ -17,10 +17,10 @@ def story_validation(individuals, families):
     dates_before_current(individuals, families)
     birth_before_marriage(individuals, families)
     birth_before_death(individuals)
-    us05(individuals, families)
-    us07(individuals)
-    us06(individuals,families)
     marriage_before_divorce(families)
+    us05(individuals, families)
+    us06(individuals, families)
+    us07(individuals)
     us08(individuals, families)
 
     #Sprint 2

@@ -1,8 +1,8 @@
 0 HEAD
 1 SOUR Family Echo
 2 WWW http://www.familyecho.com/
-1 FILE Family 6
-1 DATE 14 APR 2017
+1 FILE Family 5
+1 DATE 20 MAR 2017
 1 DEST ANSTFILE
 1 GEDC
 2 VERS 5.5.1
@@ -16,7 +16,7 @@
 2 GIVN Edina
 2 SURN Schulz
 2 _MARNM Bettencourt
-1 SEX M
+1 SEX F
 1 BIRT
 2 DATE 8 JAN 1936
 1 DEAT Y
@@ -28,11 +28,11 @@
 2 GIVN Ross
 2 SURN Rothschild
 2 _MARNM Rothschild
-1 SEX F
+1 SEX M
 1 BIRT
-2 DATE 8 MAY 1891
+2 DATE 15 MAY 1891
 1 DEAT Y
-2 DATE 3 APR 2017
+2 DATE 3 NOV 1986
 1 FAMS @F1@
 0 @I3@ INDI
 1 NAME Charles /Bettencourt/
@@ -83,7 +83,7 @@
 2 _MARNM Rothschild
 1 SEX F
 1 BIRT
-2 DATE 20 AUG 1938
+2 DATE 6 APR 1940
 1 FAMS @F5@
 1 FAMC @F1@
 0 @I8@ INDI
@@ -208,7 +208,7 @@
 2 _MARNM Rothschild
 1 SEX F
 1 BIRT
-2 DATE 3 MAR 1980
+2 DATE 3 MAR 1979
 1 FAMS @F8@
 0 @I21@ INDI
 1 NAME Ned /Rothschild/
@@ -236,18 +236,8 @@
 1 SEX M
 1 BIRT
 2 DATE 28 FEB 2007
-1 FAMS @F11@
 1 FAMC @F8@
 0 @I24@ INDI
-1 NAME Emilia /New Name/
-2 GIVN Emilia
-2 SURN New Name
-2 _MARNM New Name
-1 SEX F
-1 BIRT
-2 DATE 11 JUN 2001
-1 FAMS @F11@
-0 @I25@ INDI
 1 NAME Amily /Rothschild/
 2 GIVN Amily
 2 SURN Rothschild
@@ -256,7 +246,7 @@
 1 BIRT
 2 DATE 7 MAR 1982
 1 FAMC @F3@
-0 @I26@ INDI
+0 @I25@ INDI
 1 NAME Donna /Rothschild/
 2 GIVN Donna
 2 SURN Rothschild
@@ -264,19 +254,17 @@
 1 SEX F
 1 BIRT
 2 DATE 7 MAR 1982
-1 FAMS @F12@
 1 FAMC @F3@
-0 @I27@ INDI
-1 NAME Harvey /Specter/
+0 @I26@ INDI
+1 NAME Harvey /Rothschild/
 2 GIVN Harvey
-2 SURN Specter
-2 _MARNM Specter
+2 SURN Rothschild
+2 _MARNM Rothschild
 1 SEX M
 1 BIRT
 2 DATE 7 MAR 1982
-1 FAMS @F12@
 1 FAMC @F3@
-0 @I28@ INDI
+0 @I27@ INDI
 1 NAME Mike /Rothschild/
 2 GIVN Mike
 2 SURN Rothschild
@@ -285,7 +273,7 @@
 1 BIRT
 2 DATE 7 MAR 1982
 1 FAMC @F3@
-0 @I29@ INDI
+0 @I28@ INDI
 1 NAME Rachel /Rothschild/
 2 GIVN Rachel
 2 SURN Rothschild
@@ -294,7 +282,7 @@
 1 BIRT
 2 DATE 7 MAR 1982
 1 FAMC @F3@
-0 @I30@ INDI
+0 @I29@ INDI
 1 NAME Luis /Rothschild/
 2 GIVN Luis
 2 SURN Rothschild
@@ -303,7 +291,7 @@
 1 BIRT
 2 DATE 7 MAR 1982
 1 FAMC @F3@
-0 @I31@ INDI
+0 @I30@ INDI
 1 NAME Katrina /Rothschild/
 2 GIVN Katrina
 2 SURN Rothschild
@@ -312,7 +300,7 @@
 1 BIRT
 2 DATE 1 FEB 1988
 1 FAMC @F3@
-0 @I32@ INDI
+0 @I31@ INDI
 1 NAME Jessica /Rothschild/
 2 GIVN Jessica
 2 SURN Rothschild
@@ -321,7 +309,7 @@
 1 BIRT
 2 DATE 3 APR 1990
 1 FAMC @F3@
-0 @I33@ INDI
+0 @I32@ INDI
 1 NAME Daniel /Rothschild/
 2 GIVN Daniel
 2 SURN Rothschild
@@ -330,16 +318,16 @@
 1 BIRT
 2 DATE 5 FEB 1991
 1 FAMC @F3@
-0 @I34@ INDI
-1 NAME Darby /Ron/
+0 @I33@ INDI
+1 NAME Darby /Rothschild/
 2 GIVN Darby
-2 SURN Ron
+2 SURN Rothschild
 2 _MARNM Rothschild
 1 SEX M
 1 BIRT
 2 DATE 12 APR 1992
 1 FAMC @F3@
-0 @I35@ INDI
+0 @I34@ INDI
 1 NAME Tess /Rothschild/
 2 GIVN Tess
 2 SURN Rothschild
@@ -348,7 +336,7 @@
 1 BIRT
 2 DATE 5 MAR 1992
 1 FAMC @F3@
-0 @I36@ INDI
+0 @I35@ INDI
 1 NAME Harold /Rothschild/
 2 GIVN Harold
 2 SURN Rothschild
@@ -356,7 +344,8 @@
 1 SEX M
 1 BIRT
 2 DATE 5 SEP 1993
-0 @I37@ INDI
+1 FAMC @F3@
+0 @I36@ INDI
 1 NAME Ava /Rothschild/
 2 GIVN Ava
 2 SURN Rothschild
@@ -365,27 +354,17 @@
 1 BIRT
 2 DATE 4 MAR 1993
 1 FAMC @F3@
-0 @I38@ INDI
-1 NAME James /Rothschild/
-2 GIVN James
-2 SURN Rothschild
-2 _MARNM Rothschild
-1 SEX M
-1 BIRT
-2 DATE 9 JUL 2008
-1 FAMC @F1@
 0 @F1@ FAM
-1 HUSB @I1@
-1 WIFE @I2@
+1 HUSB @I2@
+1 WIFE @I1@
 1 CHIL @I5@
 1 CHIL @I7@
-1 CHIL @I38@
 1 MARR
 2 DATE 15 AUG 1935
 1 _CURRENT Y
 0 @F2@ FAM
-1 HUSB @I1@
-1 WIFE @I3@
+1 HUSB @I3@
+1 WIFE @I1@
 1 CHIL @I4@
 1 MARR
 2 DATE 1 JAN 1913
@@ -398,6 +377,7 @@
 1 CHIL @I8@
 1 CHIL @I10@
 1 CHIL @I12@
+1 CHIL @I24@
 1 CHIL @I25@
 1 CHIL @I26@
 1 CHIL @I27@
@@ -409,7 +389,7 @@
 1 CHIL @I33@
 1 CHIL @I34@
 1 CHIL @I35@
-1 CHIL @I37@
+1 CHIL @I36@
 1 MARR
 2 DATE 17 SEP 1976
 1 _CURRENT Y
@@ -445,7 +425,7 @@
 0 @F8@ FAM
 1 HUSB @I10@
 1 WIFE @I20@
-1 CHIL @I23@
+1 CHIL @I10@
 1 MARR
 2 DATE 2 FEB 2014
 1 DIV
@@ -466,15 +446,5 @@
 2 DATE 17 APR 1987
 1 _SEPR
 2 DATE 1 NOV 1995
-1 _CURRENT Y
-0 @F11@ FAM
-1 HUSB @I23@
-1 WIFE @I24@
-1 MARR
-2 DATE 30 APR 2014
-1 _CURRENT Y
-0 @F12@ FAM
-1 HUSB @I27@
-1 WIFE @I26@
 1 _CURRENT Y
 0 TRLR
