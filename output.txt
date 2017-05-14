@@ -1,955 +1,179 @@
-NOTE Parth Pandya
-0 HEAD
-Level:  0
-Tag:  HEAD
-1 SOUR Family Echo
-Level:  1
-Tag: Invalid Tag
-2 WWW http://www.familyecho.com/
-Level:  2
-Tag: Invalid Tag
-1 FILE Family 2
-Level:  1
-Tag: Invalid Tag
-1 DATE 29 JAN 2017
-Level:  1
-Tag:  DATE
-1 DEST ANSTFILE
-Level:  1
-Tag: Invalid Tag
-1 GEDC
-Level:  1
-Tag: Invalid Tag
-2 VERS 5.5.1
-Level:  2
-Tag: Invalid Tag
-2 FORM LINEAGE-LINKED
-Level:  2
-Tag: Invalid Tag
-1 SUBM @I1@
-Level:  1
-Tag: Invalid Tag
-2 NAME Parth Pandya
-Level:  2
-Tag:  NAME
-1 SUBN
-Level:  1
-Tag: Invalid Tag
-1 CHAR UTF-8
-Level:  1
-Tag: Invalid Tag
-0 @I1@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Edina /Schulz/
-Level:  1
-Tag:  NAME
-2 GIVN Edina
-Level:  2
-Tag: Invalid Tag
-2 SURN Schulz
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Bettencourt
-Level:  2
-Tag: Invalid Tag
-1 SEX F
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 8 JAN 1890
-Level:  2
-Tag:  DATE
-1 DEAT Y
-Level:  1
-Tag:  DEAT
-2 DATE 16 AUG 1977
-Level:  2
-Tag:  DATE
-1 FAMS @F1@
-Level:  1
-Tag:  FAMS
-1 FAMS @F2@
-Level:  1
-Tag:  FAMS
-0 @I2@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Charles /Bettencourt/
-Level:  1
-Tag:  NAME
-2 GIVN Charles
-Level:  2
-Tag: Invalid Tag
-2 SURN Bettencourt
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Bettencourt
-Level:  2
-Tag: Invalid Tag
-1 SEX M
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 18 MAY 1888
-Level:  2
-Tag:  DATE
-1 DEAT Y
-Level:  1
-Tag:  DEAT
-2 DATE 2 DEC 1933
-Level:  2
-Tag:  DATE
-1 FAMS @F2@
-Level:  1
-Tag:  FAMS
-0 @I3@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Ross /Rothschild/
-Level:  1
-Tag:  NAME
-2 GIVN Ross
-Level:  2
-Tag: Invalid Tag
-2 SURN Rothschild
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Rothschild
-Level:  2
-Tag: Invalid Tag
-1 SEX M
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 15 MAY 1891
-Level:  2
-Tag:  DATE
-1 DEAT Y
-Level:  1
-Tag:  DEAT
-2 DATE 3 NOV 1986
-Level:  2
-Tag:  DATE
-1 FAMS @F1@
-Level:  1
-Tag:  FAMS
-0 @I4@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Henry /Bettencourt/
-Level:  1
-Tag:  NAME
-2 GIVN Henry
-Level:  2
-Tag: Invalid Tag
-2 SURN Bettencourt
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Bettencourt
-Level:  2
-Tag: Invalid Tag
-1 SEX M
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 6 JUL 1915
-Level:  2
-Tag:  DATE
-1 DEAT Y
-Level:  1
-Tag:  DEAT
-2 DATE 1 APR 1947
-Level:  2
-Tag:  DATE
-1 FAMC @F2@
-Level:  1
-Tag:  FAMC
-0 @I5@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Edward /Rothschild/
-Level:  1
-Tag:  NAME
-2 GIVN Edward
-Level:  2
-Tag: Invalid Tag
-2 SURN Rothschild
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Rothschild
-Level:  2
-Tag: Invalid Tag
-1 SEX M
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 15 AUG 1938
-Level:  2
-Tag:  DATE
-1 FAMS @F3@
-Level:  1
-Tag:  FAMS
-1 FAMC @F1@
-Level:  1
-Tag:  FAMC
-0 @I6@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Emma /Rothschild/
-Level:  1
-Tag:  NAME
-2 GIVN Emma
-Level:  2
-Tag: Invalid Tag
-2 SURN Rothschild
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Rothschild
-Level:  2
-Tag: Invalid Tag
-1 SEX F
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 6 APR 1940
-Level:  2
-Tag:  DATE
-1 FAMS @F4@
-Level:  1
-Tag:  FAMS
-1 FAMC @F1@
-Level:  1
-Tag:  FAMC
-0 @I7@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Victoria /Koch/
-Level:  1
-Tag:  NAME
-2 GIVN Victoria
-Level:  2
-Tag: Invalid Tag
-2 SURN Koch
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Rothschild
-Level:  2
-Tag: Invalid Tag
-1 SEX F
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 30 APR 1938
-Level:  2
-Tag:  DATE
-1 FAMS @F3@
-Level:  1
-Tag:  FAMS
-1 FAMS @F5@
-Level:  1
-Tag:  FAMS
-0 @I8@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Margaret /Rothschild/
-Level:  1
-Tag:  NAME
-2 GIVN Margaret
-Level:  2
-Tag: Invalid Tag
-2 SURN Rothschild
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Thomson
-Level:  2
-Tag: Invalid Tag
-1 SEX F
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 28 NOV 1977
-Level:  2
-Tag:  DATE
-1 FAMS @F6@
-Level:  1
-Tag:  FAMS
-1 FAMC @F3@
-Level:  1
-Tag:  FAMC
-0 @I9@ INDI
-Level:  0
-Tag:  INDI
-1 NAME John /Rothschild/
-Level:  1
-Tag:  NAME
-2 GIVN John
-Level:  2
-Tag: Invalid Tag
-2 SURN Rothschild
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Rothschild
-Level:  2
-Tag: Invalid Tag
-1 SEX M
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 10 SEP 1979
-Level:  2
-Tag:  DATE
-1 FAMS @F7@
-Level:  1
-Tag:  FAMS
-1 FAMS @F8@
-Level:  1
-Tag:  FAMS
-1 FAMC @F3@
-Level:  1
-Tag:  FAMC
-0 @I10@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Richard /Rothschild/
-Level:  1
-Tag:  NAME
-2 GIVN Richard
-Level:  2
-Tag: Invalid Tag
-2 SURN Rothschild
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Rothschild
-Level:  2
-Tag: Invalid Tag
-1 SEX M
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 30 JUN 1981
-Level:  2
-Tag:  DATE
-1 FAMS @F9@
-Level:  1
-Tag:  FAMS
-1 FAMC @F3@
-Level:  1
-Tag:  FAMC
-0 @I11@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Harold /Walton/
-Level:  1
-Tag:  NAME
-2 GIVN Harold
-Level:  2
-Tag: Invalid Tag
-2 SURN Walton
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Walton
-Level:  2
-Tag: Invalid Tag
-1 SEX M
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 1 DEC 1934
-Level:  2
-Tag:  DATE
-1 FAMS @F4@
-Level:  1
-Tag:  FAMS
-0 @I12@ INDI
-Level:  0
-Tag:  INDI
-1 NAME William /Powell/
-Level:  1
-Tag:  NAME
-2 GIVN William
-Level:  2
-Tag: Invalid Tag
-2 SURN Powell
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Powell
-Level:  2
-Tag: Invalid Tag
-1 SEX M
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 24 APR 1936
-Level:  2
-Tag:  DATE
-1 FAMS @F5@
-Level:  1
-Tag:  FAMS
-0 @I13@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Edgar /Powell/
-Level:  1
-Tag:  NAME
-2 GIVN Edgar
-Level:  2
-Tag: Invalid Tag
-2 SURN Powell
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Powell
-Level:  2
-Tag: Invalid Tag
-1 SEX M
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 2 SEP 1966
-Level:  2
-Tag:  DATE
-1 FAMS @F10@
-Level:  1
-Tag:  FAMS
-1 FAMC @F5@
-Level:  1
-Tag:  FAMC
-0 @I14@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Mary /Cornel/
-Level:  1
-Tag:  NAME
-2 GIVN Mary
-Level:  2
-Tag: Invalid Tag
-2 SURN Cornel
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Powell
-Level:  2
-Tag: Invalid Tag
-1 SEX F
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 17 MAY 1966
-Level:  2
-Tag:  DATE
-1 FAMS @F10@
-Level:  1
-Tag:  FAMS
-0 @I15@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Louis /Powell/
-Level:  1
-Tag:  NAME
-2 GIVN Louis
-Level:  2
-Tag: Invalid Tag
-2 SURN Powell
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Powell
-Level:  2
-Tag: Invalid Tag
-1 SEX M
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 30 JAN 1989
-Level:  2
-Tag:  DATE
-1 FAMC @F10@
-Level:  1
-Tag:  FAMC
-0 @I16@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Duncan /Thomson/
-Level:  1
-Tag:  NAME
-2 GIVN Duncan
-Level:  2
-Tag: Invalid Tag
-2 SURN Thomson
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Thomson
-Level:  2
-Tag: Invalid Tag
-1 SEX M
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 1 FEB 1977
-Level:  2
-Tag:  DATE
-1 FAMS @F6@
-Level:  1
-Tag:  FAMS
-0 @I17@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Donald /Thomson/
-Level:  1
-Tag:  NAME
-2 GIVN Donald
-Level:  2
-Tag: Invalid Tag
-2 SURN Thomson
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Thomson
-Level:  2
-Tag: Invalid Tag
-1 SEX M
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 24 NOV 2005
-Level:  2
-Tag:  DATE
-1 FAMC @F6@
-Level:  1
-Tag:  FAMC
-0 @I18@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Emilia /Stone/
-Level:  1
-Tag:  NAME
-2 GIVN Emilia
-Level:  2
-Tag: Invalid Tag
-2 SURN Stone
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Rothschild
-Level:  2
-Tag: Invalid Tag
-1 SEX F
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 3 MAR 1980
-Level:  2
-Tag:  DATE
-1 FAMS @F8@
-Level:  1
-Tag:  FAMS
-0 @I19@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Abigail /Jhonson/
-Level:  1
-Tag:  NAME
-2 GIVN Abigail
-Level:  2
-Tag: Invalid Tag
-2 SURN Jhonson
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Rothschild
-Level:  2
-Tag: Invalid Tag
-1 SEX F
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 24 JUN 1978
-Level:  2
-Tag:  DATE
-1 FAMS @F9@
-Level:  1
-Tag:  FAMS
-0 @I20@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Ned /Rothschild/
-Level:  1
-Tag:  NAME
-2 GIVN Ned
-Level:  2
-Tag: Invalid Tag
-2 SURN Rothschild
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Rothschild
-Level:  2
-Tag: Invalid Tag
-1 SEX M
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 7 OCT 2010
-Level:  2
-Tag:  DATE
-1 FAMC @F9@
-Level:  1
-Tag:  FAMC
-0 @I21@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Kat /Botham/
-Level:  1
-Tag:  NAME
-2 GIVN Kat
-Level:  2
-Tag: Invalid Tag
-2 SURN Botham
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Rothschild
-Level:  2
-Tag: Invalid Tag
-1 SEX F
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 5 JUL 1986
-Level:  2
-Tag:  DATE
-1 FAMS @F7@
-Level:  1
-Tag:  FAMS
-0 @I22@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Jane /Rothschild/
-Level:  1
-Tag:  NAME
-2 GIVN Jane
-Level:  2
-Tag: Invalid Tag
-2 SURN Rothschild
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Rothschild
-Level:  2
-Tag: Invalid Tag
-1 SEX F
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 30 DEC 2015
-Level:  2
-Tag:  DATE
-1 FAMC @F7@
-Level:  1
-Tag:  FAMC
-0 @I23@ INDI
-Level:  0
-Tag:  INDI
-1 NAME Phillip /Rothschild/
-Level:  1
-Tag:  NAME
-2 GIVN Phillip
-Level:  2
-Tag: Invalid Tag
-2 SURN Rothschild
-Level:  2
-Tag: Invalid Tag
-2 _MARNM Rothschild
-Level:  2
-Tag: Invalid Tag
-1 SEX M
-Level:  1
-Tag:  SEX
-1 BIRT
-Level:  1
-Tag:  BIRT
-2 DATE 28 FEB 2007
-Level:  2
-Tag:  DATE
-1 FAMC @F8@
-Level:  1
-Tag:  FAMC
-0 @F1@ FAM
-Level:  0
-Tag:  FAM
-1 HUSB @I3@
-Level:  1
-Tag:  HUSB
-1 WIFE @I1@
-Level:  1
-Tag:  WIFE
-1 CHIL @I5@
-Level:  1
-Tag:  CHIL
-1 CHIL @I6@
-Level:  1
-Tag:  CHIL
-1 MARR
-Level:  1
-Tag:  MARR
-2 DATE 15 AUG 1935
-Level:  2
-Tag:  DATE
-1 _CURRENT Y
-Level:  1
-Tag: Invalid Tag
-0 @F2@ FAM
-Level:  0
-Tag:  FAM
-1 HUSB @I2@
-Level:  1
-Tag:  HUSB
-1 WIFE @I1@
-Level:  1
-Tag:  WIFE
-1 CHIL @I4@
-Level:  1
-Tag:  CHIL
-1 MARR
-Level:  1
-Tag:  MARR
-2 DATE 1 JAN 1913
-Level:  2
-Tag:  DATE
-1 EVEN
-Level:  1
-Tag: Invalid Tag
-2 TYPE Ending
-Level:  2
-Tag: Invalid Tag
-1 _CURRENT N
-Level:  1
-Tag: Invalid Tag
-0 @F3@ FAM
-Level:  0
-Tag:  FAM
-1 HUSB @I5@
-Level:  1
-Tag:  HUSB
-1 WIFE @I7@
-Level:  1
-Tag:  WIFE
-1 CHIL @I8@
-Level:  1
-Tag:  CHIL
-1 CHIL @I9@
-Level:  1
-Tag:  CHIL
-1 CHIL @I10@
-Level:  1
-Tag:  CHIL
-1 MARR
-Level:  1
-Tag:  MARR
-2 DATE 17 SEP 1976
-Level:  2
-Tag:  DATE
-1 _CURRENT Y
-Level:  1
-Tag: Invalid Tag
-0 @F4@ FAM
-Level:  0
-Tag:  FAM
-1 HUSB @I11@
-Level:  1
-Tag:  HUSB
-1 WIFE @I6@
-Level:  1
-Tag:  WIFE
-1 _CURRENT N
-Level:  1
-Tag: Invalid Tag
-0 @F5@ FAM
-Level:  0
-Tag:  FAM
-1 HUSB @I12@
-Level:  1
-Tag:  HUSB
-1 WIFE @I7@
-Level:  1
-Tag:  WIFE
-1 CHIL @I13@
-Level:  1
-Tag:  CHIL
-1 MARR
-Level:  1
-Tag:  MARR
-2 DATE 7 MAR 1964
-Level:  2
-Tag:  DATE
-1 EVEN
-Level:  1
-Tag: Invalid Tag
-2 TYPE Ending
-Level:  2
-Tag: Invalid Tag
-2 DATE 22 MAY 1975
-Level:  2
-Tag:  DATE
-1 _CURRENT N
-Level:  1
-Tag: Invalid Tag
-0 @F6@ FAM
-Level:  0
-Tag:  FAM
-1 HUSB @I16@
-Level:  1
-Tag:  HUSB
-1 WIFE @I8@
-Level:  1
-Tag:  WIFE
-1 CHIL @I17@
-Level:  1
-Tag:  CHIL
-1 EVEN
-Level:  1
-Tag: Invalid Tag
-2 TYPE Relationship
-Level:  2
-Tag: Invalid Tag
-2 DATE 5 MAY 2000
-Level:  2
-Tag:  DATE
-1 _CURRENT Y
-Level:  1
-Tag: Invalid Tag
-0 @F7@ FAM
-Level:  0
-Tag:  FAM
-1 HUSB @I9@
-Level:  1
-Tag:  HUSB
-1 WIFE @I21@
-Level:  1
-Tag:  WIFE
-1 CHIL @I22@
-Level:  1
-Tag:  CHIL
-1 MARR
-Level:  1
-Tag:  MARR
-2 DATE 12 APR 2014
-Level:  2
-Tag:  DATE
-1 _CURRENT Y
-Level:  1
-Tag: Invalid Tag
-0 @F8@ FAM
-Level:  0
-Tag:  FAM
-1 HUSB @I9@
-Level:  1
-Tag:  HUSB
-1 WIFE @I18@
-Level:  1
-Tag:  WIFE
-1 CHIL @I23@
-Level:  1
-Tag:  CHIL
-1 MARR
-Level:  1
-Tag:  MARR
-2 DATE 2 FEB 2005
-Level:  2
-Tag:  DATE
-1 DIV
-Level:  1
-Tag:  DIV
-2 DATE 4 DEC 2013
-Level:  2
-Tag:  DATE
-1 _CURRENT N
-Level:  1
-Tag: Invalid Tag
-0 @F9@ FAM
-Level:  0
-Tag:  FAM
-1 HUSB @I10@
-Level:  1
-Tag:  HUSB
-1 WIFE @I19@
-Level:  1
-Tag:  WIFE
-1 CHIL @I20@
-Level:  1
-Tag:  CHIL
-1 MARR
-Level:  1
-Tag:  MARR
-2 DATE 15 AUG 2006
-Level:  2
-Tag:  DATE
-1 _CURRENT Y
-Level:  1
-Tag: Invalid Tag
-0 @F10@ FAM
-Level:  0
-Tag:  FAM
-1 HUSB @I13@
-Level:  1
-Tag:  HUSB
-1 WIFE @I14@
-Level:  1
-Tag:  WIFE
-1 CHIL @I15@
-Level:  1
-Tag:  CHIL
-1 MARR
-Level:  1
-Tag:  MARR
-2 DATE 17 APR 1987
-Level:  2
-Tag:  DATE
-1 _SEPR
-Level:  1
-Tag: Invalid Tag
-2 DATE 1 NOV 1995
-Level:  2
-Tag:  DATE
-1 _CURRENT Y
-Level:  1
-Tag: Invalid Tag
-0 TRLR
-Level:  0
-Tag:  TRLR
+Path accepted
+                                                    ERRORS/ANOMALIES                                                    
+
+Error/Anomalies:        User Story             Description:                                  Location
+------------------------------------------------------------------------------------------------------------------------
+ERROR                      US01            Birth occurs after current date                       @I10@                                             
+ERROR                      US01            Birth occurs after current date                       @I15@                                             
+ERROR                      US02            Birth of husband occurs after marraige                @I1@                                              
+ERROR                      US02            Birth of wife occurs after marriage                   @I3@                                              
+ERROR                      US02            Birth of husband occurs after marraige                @I1@                                              
+ERROR                      US02            Birth of husband occurs after marraige                @I15@                                             
+ERROR                      US02            Birth of husband occurs after marraige                @I10@                                             
+ERROR                      US02            Birth of husband occurs after marraige                @I10@                                             
+ERROR                      US02            Birth of wife occurs after marriage                   @I17@                                             
+ERROR                      US03            Birth occurs before death.                            @I3@                                              
+ERROR                      US03            Birth occurs before death.                            @I10@                                             
+ERROR                      US04            Marriage occurs after divorce                         @F8@,@I10@,@I20@                                  
+ERROR                      US05            Death of Wife occurs before marriage                  @I2@                                              
+ERROR                      US05            Death of Wife occurs before marriage                  @I3@                                              
+ERROR                      US05            Death of Husband occurs before marriage               @I10@                                             
+ERROR                      US05            Death of Husband occurs before marriage               @I10@                                             
+ERROR                      US06            Death of Husband occurs before divorce                @I10@                                             
+ERROR                      US07            lived longer than 150 years                           @I9@                                              
+ERROR                      US08            Birth after divorce of 9 months                       @I10@                                             
+ERROR                      US09            Child is born more than 9 months or after death of    @F7@,@I22@                                        
+ERROR                      US09            Child is born more than 9 months or after death of    @F8@,@I23@                                        
+ERROR                      US09            Child is born more than 9 months or after death of    @F1@,@I38@                                        
+ANOMALY                    US10            Husband is married before 14 years old                @F4@,@I15@                                        
+ANOMALY                    US10            Husband is married before 14 years old                @F7@,@I10@                                        
+ANOMALY                    US10            Husband is married before 14 years old                @F8@,@I10@                                        
+ANOMALY                    US10            Wife is married before 14 years old                   @F10@,@I17@                                       
+ANOMALY                    US10            Husband is married before 14 years old                @F11@,@I23@                                       
+ERROR                      US11            Bigamy Occurs in family                               @F3@,@F4@,@I6@                                    
+ERROR                      US12            Father is older than 80 years                         @F3@,@I10@                                        
+ERROR                      US12            Mother is older than 60 years                         @F3@,@I10@                                        
+ERROR                      US12            Father is older than 80 years                         @F6@,@I19@                                        
+ERROR                      US12            Mother is older than 60 years                         @F1@,@I38@                                        
+ERROR                      US14            More than 5 siblings born at once                     @F3@                                              
+ERROR                      US15            Family has 15 or more siblings                        @F3@                                              
+ERROR                      US16            Lastname not the same as father                       @I5@                                              
+ERROR                      US16            Lastname not the same as father                       @I38@                                             
+ERROR                      US16            Lastname not the same as father                       @I4@                                              
+ERROR                      US16            Lastname not the same as father                       @I27@                                             
+ERROR                      US16            Lastname not the same as father                       @I34@                                             
+ERROR                      US17            Husband is decendant of spouse                        @I20@,@I10@                                       
+ERROR                      US18            Sibling is married to another sibling                 @I27@,@I26@                                       
+ANOMALY                    US21            Wife is not a female                                  @I3@,@F2@                                         
+Error                      US22            Duplicate ID Found                                    @I35@                                             
+ERROR                      US23            Two individuals share a name and birthdate            @I1@,@I1@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I2@,@I2@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I3@,@I3@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I4@,@I4@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I5@,@I5@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I6@,@I6@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I7@,@I7@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I8@,@I8@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I9@,@I9@                                         
+ERROR                      US23            Two individuals share a name and birthdate            @I10@,@I10@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I11@,@I11@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I12@,@I12@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I13@,@I13@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I14@,@I14@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I15@,@I15@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I16@,@I16@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I17@,@I17@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I18@,@I18@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I19@,@I19@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I20@,@I20@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I21@,@I21@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I22@,@I22@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I23@,@I23@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I24@,@I24@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I25@,@I25@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I25@,@I26@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I26@,@I25@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I26@,@I26@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I27@,@I27@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I28@,@I28@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I29@,@I29@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I30@,@I30@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I31@,@I31@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I32@,@I32@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I33@,@I33@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I34@,@I34@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I35@,@I35@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I35@,@I35@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I37@,@I37@                                       
+ERROR                      US23            Two individuals share a name and birthdate            @I38@,@I38@                                       
+ERROR                      US25            Child's Firstname is not unique                       @I5@                                              
+INFORMATION                US29            Deceased individuals                                  @I1@                                              
+INFORMATION                US29            Deceased individuals                                  @I2@                                              
+INFORMATION                US29            Deceased individuals                                  @I3@                                              
+INFORMATION                US29            Deceased individuals                                  @I4@                                              
+INFORMATION                US29            Deceased individuals                                  @I10@                                             
+INFORMATION                US30            Both Husband and Wife are not dead                    @F3@                                              
+INFORMATION                US30            Both Husband and Wife are not dead                    @F4@                                              
+INFORMATION                US30            Both Husband and Wife are not dead                    @F5@                                              
+INFORMATION                US30            Both Husband and Wife are not dead                    @F6@                                              
+INFORMATION                US30            Both Husband and Wife are not dead                    @F9@                                              
+INFORMATION                US30            Both Husband and Wife are not dead                    @F10@                                             
+INFORMATION                US30            Both Husband and Wife are not dead                    @F11@                                             
+INFORMATION                US30            Both Husband and Wife are not dead                    @F12@                                             
+INFORMATION                US31            Single and over thirty                                @I4@                                              
+INFORMATION                US31            Single and over thirty                                @I25@                                             
+INFORMATION                US31            Single and over thirty                                @I28@                                             
+INFORMATION                US31            Single and over thirty                                @I29@                                             
+INFORMATION                US31            Single and over thirty                                @I30@                                             
+ANAMOLY                    US32            Multiple Birth in Family                              @F3@                                              
+INFORMATION                US33            Orphan Children                                       @F1@,@I38@                                        
+INFORMATION                US35            Born in the last 30 days:                             @I10@                                             
+INFORMATION                US35            Born in the last 30 days:                             @I15@                                             
+INFORMATION                US36            Died in the last 30 days:                             @I2@                                              
+INFORMATION                US37            Living Spouses                                        @I2@,@I1@                                         
+ERROR                      US13            Difference in sibling age impossible!                 @I7@,@I5@                                         
+INFORMATION                US38            Birthday is coming in next 30 days                    @I6@                                              
+INFORMATION                US38            Birthday is coming in next 30 days                    @I15@                                             
+INFORMATION                US38            Birthday is coming in next 30 days                    @I17@                                             
+INFORMATION                US39            Anniversary is coming in next 30 days                 @F11@                                             
+
+
++-------+------------------------------+------------+-----+------------+-------+-----------+------------------+
+|   id  |             Name             |  Birthday  | Sex | Death Date | Alive |   Child   |      Spouse      |
++-------+------------------------------+------------+-----+------------+-------+-----------+------------------+
+|  @I1@ |    ['Edina', '/Schulz/']     | 1936-01-08 |  M  | 1977-08-16 | False |     []    | ['@F1@', '@F2@'] |
+|  @I2@ |   ['Ross', '/Rothschild/']   | 1891-05-08 |  F  | 2017-04-03 | False |     []    |     ['@F1@']     |
+|  @I3@ | ['Charles', '/Bettencourt/'] | 1935-05-18 |  M  | 1933-12-02 | False |     []    |     ['@F2@']     |
+|  @I4@ |  ['Henry', '/Bettencourt/']  | 1915-07-06 |  M  | 1947-04-01 | False |  ['@F2@'] |        []        |
+|  @I5@ |   ['@I5@', '/Rothschild/']   | 1938-08-15 |  M  |    None    |  True |  ['@F1@'] |     ['@F3@']     |
+|  @I6@ |    ['Victoria', '/Koch/']    | 1938-04-30 |  F  |    None    |  True |     []    | ['@F3@', '@F4@'] |
+|  @I7@ |   ['Emma', '/Rothschild/']   | 1938-08-20 |  F  |    None    |  True |  ['@F1@'] |     ['@F5@']     |
+|  @I8@ | ['Margaret', '/Rothschild/'] | 1977-11-28 |  F  |    None    |  True |  ['@F3@'] |     ['@F6@']     |
+|  @I9@ |   ['Duncan', '/Thomson/']    | 1777-02-01 |  M  |    None    |  True |     []    |     ['@F6@']     |
+| @I10@ |   ['John', '/Rothschild/']   | 2018-09-10 |  M  | 2000-12-02 | False |  ['@F3@'] | ['@F7@', '@F8@'] |
+| @I11@ |     ['Kat', '/Botham/']      | 1986-07-05 |  F  |    None    |  True |     []    |     ['@F7@']     |
+| @I12@ | ['Richard', '/Rothschild/']  | 1981-06-30 |  M  |    None    |  True |  ['@F3@'] |     ['@F9@']     |
+| @I13@ |   ['Abigail', '/Jhonson/']   | 1978-06-24 |  F  |    None    |  True |     []    |     ['@F9@']     |
+| @I14@ |    ['Harold', '/Walton/']    | 1934-12-01 |  M  |    None    |  True |     []    |     ['@F5@']     |
+| @I15@ |   ['William', '/Powell/']    | 2019-04-24 |  M  |    None    |  True |     []    |     ['@F4@']     |
+| @I16@ |    ['Edgar', '/Powell/']     | 1966-09-02 |  M  |    None    |  True |  ['@F4@'] |    ['@F10@']     |
+| @I17@ |     ['Mary', '/Cornel/']     | 2004-05-17 |  F  |    None    |  True |     []    |    ['@F10@']     |
+| @I18@ |    ['Louis', '/Powell/']     | 1989-01-30 |  M  |    None    |  True | ['@F10@'] |        []        |
+| @I19@ |   ['Donald', '/Thomson/']    | 2005-11-24 |  M  |    None    |  True |  ['@F6@'] |        []        |
+| @I20@ |    ['Emilia', '/Stone/']     | 1980-03-03 |  F  |    None    |  True |     []    |     ['@F8@']     |
+| @I21@ |   ['Ned', '/Rothschild/']    | 2010-10-07 |  M  |    None    |  True |  ['@F9@'] |        []        |
+| @I22@ |   ['Jane', '/Rothschild/']   | 2015-12-30 |  F  |    None    |  True |  ['@F7@'] |        []        |
+| @I23@ | ['Phillip', '/Rothschild/']  | 2007-02-28 |  M  |    None    |  True |  ['@F8@'] |    ['@F11@']     |
+| @I24@ | ['Emilia', '/New', 'Name/']  | 2001-06-11 |  F  |    None    |  True |     []    |    ['@F11@']     |
+| @I25@ |  ['Donna', '/Rothschild/']   | 1982-03-07 |  F  |    None    |  True |  ['@F3@'] |        []        |
+| @I26@ |  ['Donna', '/Rothschild/']   | 1982-03-07 |  F  |    None    |  True |  ['@F3@'] |    ['@F12@']     |
+| @I27@ |   ['Harvey', '/Specter/']    | 1982-03-07 |  M  |    None    |  True |  ['@F3@'] |    ['@F12@']     |
+| @I28@ |   ['Mike', '/Rothschild/']   | 1982-03-07 |  M  |    None    |  True |  ['@F3@'] |        []        |
+| @I29@ |  ['Rachel', '/Rothschild/']  | 1982-03-07 |  F  |    None    |  True |  ['@F3@'] |        []        |
+| @I30@ |   ['Luis', '/Rothschild/']   | 1982-03-07 |  M  |    None    |  True |  ['@F3@'] |        []        |
+| @I31@ | ['Katrina', '/Rothschild/']  | 1988-02-01 |  F  |    None    |  True |  ['@F3@'] |        []        |
+| @I32@ | ['Jessica', '/Rothschild/']  | 1990-04-03 |  F  |    None    |  True |  ['@F3@'] |        []        |
+| @I33@ |  ['Daniel', '/Rothschild/']  | 1991-02-05 |  M  |    None    |  True |  ['@F3@'] |        []        |
+| @I34@ |      ['Darby', '/Ron/']      | 1992-04-12 |  M  |    None    |  True |  ['@F3@'] |        []        |
+| @I35@ |   ['Tess', '/Rothschild/']   | 1992-03-05 |  F  |    None    |  True |  ['@F3@'] |        []        |
+| @I35@ |  ['Harold', '/Rothschild/']  | 1993-09-05 |  M  |    None    |  True |     []    |        []        |
+| @I37@ |   ['Ava', '/Rothschild/']    | 1993-03-04 |  F  |    None    |  True |  ['@F3@'] |        []        |
+| @I38@ |  ['James', '/Rothschild/']   | 2008-07-09 |  M  |    None    |  True |  ['@F1@'] |        []        |
++-------+------------------------------+------------+-----+------------+-------+-----------+------------------+
+----------------------------------------------------------------------------------------------------------------------------------------
++-------+------------+---------+-----------------------------+-------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+------------+
+|  Fid  |  Marriage  | Husband |         Husband Name        |  Wife |          Wife Name           |                                                                Children                                                                |  Divorce   |
++-------+------------+---------+-----------------------------+-------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+------------+
+|  @F1@ | 1935-08-15 |   @I1@  |    ['Edina', '/Schulz/']    |  @I2@ |   ['Ross', '/Rothschild/']   |                                                       ['@I5@', '@I7@', '@I38@']                                                        |    None    |
+|  @F2@ | 1913-01-01 |   @I1@  |    ['Edina', '/Schulz/']    |  @I3@ | ['Charles', '/Bettencourt/'] |                                                                ['@I4@']                                                                |    None    |
+|  @F3@ | 1976-09-17 |   @I5@  |   ['@I5@', '/Rothschild/']  |  @I6@ |    ['Victoria', '/Koch/']    | ['@I8@', '@I10@', '@I12@', '@I25@', '@I26@', '@I27@', '@I28@', '@I29@', '@I30@', '@I31@', '@I32@', '@I33@', '@I34@', '@I35@', '@I37@'] |    None    |
+|  @F4@ | 1964-03-07 |  @I15@  |   ['William', '/Powell/']   |  @I6@ |    ['Victoria', '/Koch/']    |                                                               ['@I16@']                                                                |    None    |
+|  @F5@ |    None    |  @I14@  |    ['Harold', '/Walton/']   |  @I7@ |   ['Emma', '/Rothschild/']   |                                                                   []                                                                   |    None    |
+|  @F6@ |    None    |   @I9@  |   ['Duncan', '/Thomson/']   |  @I8@ | ['Margaret', '/Rothschild/'] |                                                               ['@I19@']                                                                |    None    |
+|  @F7@ | 2014-04-12 |  @I10@  |   ['John', '/Rothschild/']  | @I11@ |     ['Kat', '/Botham/']      |                                                               ['@I22@']                                                                |    None    |
+|  @F8@ | 2014-02-02 |  @I10@  |   ['John', '/Rothschild/']  | @I20@ |    ['Emilia', '/Stone/']     |                                                               ['@I10@']                                                                | 2013-12-04 |
+|  @F9@ | 2006-08-15 |  @I12@  | ['Richard', '/Rothschild/'] | @I13@ |   ['Abigail', '/Jhonson/']   |                                                               ['@I21@']                                                                |    None    |
+| @F10@ | 1987-04-17 |  @I16@  |    ['Edgar', '/Powell/']    | @I17@ |     ['Mary', '/Cornel/']     |                                                               ['@I18@']                                                                |    None    |
+| @F11@ | 2014-04-30 |  @I23@  | ['Phillip', '/Rothschild/'] | @I24@ | ['Emilia', '/New', 'Name/']  |                                                                   []                                                                   |    None    |
+| @F12@ |    None    |  @I27@  |   ['Harvey', '/Specter/']   | @I26@ |  ['Donna', '/Rothschild/']   |                                                                   []                                                                   |    None    |
++-------+------------+---------+-----------------------------+-------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+------------+
